@@ -1,0 +1,30 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: src/api/Dockerfile
+    environment:
+      LLM_NAME: ${LLM_NAME:-swiss-ai/Apertus-v1.5-70B}
+      LLM_NAME_SMALL: ${LLM_NAME_SMALL:-}
+      LLM_BASE_URL: ${LLM_BASE_URL:-https://api.inference.cscs.ch/v1}
+      LLM_API_KEY: ${LLM_API_KEY:-}
+      LLM_MODE: ${LLM_MODE:-auto}
+      DATA_DIR: /data
+    volumes:
+      - ./data:/data
+    ports:
+      - "8000:8000"
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/api/health')"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  web:
+    build:
+      context: src/web
+    depends_on:
+      api:
+        condition: service_healthy
+    ports:
+      - "8080:80"
