@@ -4,7 +4,10 @@ ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1 PIP_NO_CACHE_DIR=1
 WORKDIR /app
 
 COPY src/api/requirements.txt /app/requirements.txt
-RUN pip install -r /app/requirements.txt
+# The optional build secret `extra_ca` lets builds behind a TLS-inspecting proxy trust its CA.
+RUN --mount=type=secret,id=extra_ca,required=false \
+    if [ -f /run/secrets/extra_ca ]; then export PIP_CERT=/run/secrets/extra_ca; fi; \
+    pip install -r /app/requirements.txt
 
 COPY src/api /app
 COPY src/eval /app/eval

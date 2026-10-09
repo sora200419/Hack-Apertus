@@ -2,7 +2,10 @@
 FROM node:22-alpine AS build
 WORKDIR /app
 COPY package.json package-lock.json ./
-RUN npm ci --no-audit --no-fund
+# The optional build secret `extra_ca` lets builds behind a TLS-inspecting proxy trust its CA.
+RUN --mount=type=secret,id=extra_ca,required=false \
+    if [ -f /run/secrets/extra_ca ]; then export NODE_EXTRA_CA_CERTS=/run/secrets/extra_ca; fi; \
+    npm ci --no-audit --no-fund
 COPY . .
 RUN npm run build
 
