@@ -403,16 +403,12 @@ def test_empty_bom(hs6, status):
     assert v.status is status and v.lines == [] and v.fixes == [] and v.nom_pct == 0.0
 
 
-def test_duplicate_line_ids_are_counted_and_flagged():
+def test_duplicate_line_ids_are_rejected():
     """Bug: duplicated line ids were silently accepted, so 're-source line L1' could mean either line."""
-    bom = [line("L1", "901890", "US", 30), line("L1", "901890", "US", 30)]
-    v = evaluate(product("901890", bom), pack())
-    assert v.status is FAIL and v.nom_value_chf == 60.0
-    assert any(r.startswith("BOM line id(s) L1 are used by more than one line") for r in v.reasons)
-    with pytest.raises(ValueError, match="matches 2 BOM lines"):
-        apply_changes(product("901890", bom), [{"line_id": "L1", "origin_country": "CH"}])
+    with pytest.raises(ValueError, match="duplicate BOM line_id"):
+        product("901890", [line("L1", "901890", "US", 30), line("L1", "901890", "US", 30)])
     unique = evaluate(product("901890", [line("L1", "901890", "US", 30), line("L2", "901890", "US", 30)]), pack())
-    assert not any("used by more than one line" in r for r in unique.reasons)
+    assert unique.nom_value_chf == 60.0
 
 
 @pytest.mark.parametrize("hs6", ["990100", "000000", "989900"])

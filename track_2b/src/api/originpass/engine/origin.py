@@ -27,7 +27,6 @@ Semantics (no LLM involved; same input always gives the same JSON):
 from __future__ import annotations
 
 import math
-from collections import Counter
 from decimal import ROUND_HALF_UP, Decimal
 
 from ..models import (
@@ -84,7 +83,7 @@ def evaluate(product: Product, pack: RulePack) -> Verdict:
             if hs6 is None
             else f"no product-specific rule encoded for HS {hs6}"
         )
-        reasons = [f"Status UNSURE: {problem}.", summary, *_duplicate_ids_reason(product), *_general_reasons(general)]
+        reasons = [f"Status UNSURE: {problem}.", summary, *_general_reasons(general)]
         return Verdict(
             **base,
             status=VerdictStatus.UNSURE,
@@ -106,7 +105,6 @@ def evaluate(product: Product, pack: RulePack) -> Verdict:
         f"Rule {rule.rule_id} applies to HS {hs6} (most specific encoded scope {matching_prefix(rule, hs6)}); "
         f"source: {rule.source}.",
         summary,
-        *_duplicate_ids_reason(product),
         *_alternative_reasons(alts),
         *_general_reasons(general),
     ]
@@ -148,8 +146,8 @@ def apply_changes(product: Product, changes: list[dict]) -> Product:
     """What-if: return a validated deep copy of `product` with BOM line edits applied.
 
     Each change is {line_id, origin_country?, value_chf?, hs6?, originating_override?};
-    later changes to the same line win. Raises ValueError for an unknown or
-    duplicated line_id, an unknown key, or an invalid value. The input is never mutated.
+    later changes to the same line win. Raises ValueError for an unknown
+    line_id, an unknown key, or an invalid value. The input is never mutated.
     """
     data = product.model_dump()
     for change in changes:
@@ -166,16 +164,6 @@ def apply_changes(product: Product, changes: list[dict]) -> Product:
 def _check_amounts(product: Product) -> None:
     if not all(map(math.isfinite, [product.ex_works_chf, *(line.value_chf for line in product.bom)])):
         raise ValueError("ex_works_chf and every value_chf must be finite numbers")
-
-
-def _duplicate_ids_reason(product: Product) -> list[str]:
-    repeated = sorted(i for i, n in Counter(line.line_id for line in product.bom).items() if n > 1)
-    if not repeated:
-        return []
-    return [
-        f"BOM line id(s) {', '.join(repeated)} are used by more than one line: all lines are counted, but "
-        "line-level results, fixes and what-if changes cannot tell them apart; give every line a unique id."
-    ]
 
 
 def _margin(threshold: float, nom_pct: Decimal) -> float:

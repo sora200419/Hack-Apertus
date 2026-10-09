@@ -196,6 +196,8 @@ class _Gen:
             hs: str | None = code,
         ) -> None:
             ops = list(SUFFICIENT_OPS[:2]) if ops is None else ops
+            # Cases are composed from shared building blocks; renumber so line ids stay unique.
+            lines = [ln.model_copy(update={"line_id": f"L{i:02d}"}) for i, ln in enumerate(lines, start=1)]
             out.append((name, _product(f"{id_prefix}-{name}", hs, e, lines, ops, shipment or Shipment())))
 
         clean = [_line("L01", n1, "DE", e * 20 // 100), _line("L02", n2, "CH", e * 30 // 100)]
@@ -238,6 +240,10 @@ class _Gen:
         if weak:
             add("insufficient_processing_only", clean, ops=[f"{w} for export" for w in weak[:2]])
             add("mixed_processing", clean, ops=[weak[0], SUFFICIENT_OPS[0]])
+            add("mixed_clause_operation", clean, ops=[f"{SUFFICIENT_OPS[0]} and {weak[0]}"])
+        add("same_country_shipment", clean, shipment=Shipment(destination="CH"))
+        wide = str.maketrans("0123456789", "０１２３４５６７８９")
+        add("full_width_codes", [ln.model_copy(update={"hs6": ln.hs6 and ln.hs6.translate(wide)}) for ln in clean])
         add("no_processing_described", clean, ops=[])
         storage = Shipment(transit_countries=["SG"], transshipment_or_storage_in_transit=True)
         add("transit_with_storage", clean, shipment=storage)

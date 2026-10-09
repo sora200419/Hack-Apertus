@@ -316,7 +316,7 @@ def build_general(prov: dict) -> GeneralProvisions:
     ops = prov["minimal_operations"]
     return GeneralProvisions(
         tolerance_pct=10.0,
-        # Art. 3.5(2): not for value criteria; BAZG reads it as WO, CC, CTH, CTSH.
+        # Art. 3.5(1) waives every Annex II condition up to 10%; 3.5(2) excludes only value criteria.
         tolerance_applies_to=[CriterionKind.WO, CriterionKind.CC, CriterionKind.CTH, CriterionKind.CTSH],
         tolerance_text=f"{prov['de_minimis']['article']}: {prov['de_minimis']['en']}",
         insufficient_operations=ops["keywords"],

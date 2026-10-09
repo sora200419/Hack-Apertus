@@ -208,12 +208,6 @@ def test_apply_changes_rejects_bad_changes(changes):
     assert original == base_product()
 
 
-def test_apply_changes_rejects_duplicate_line_ids():
-    p = product(MAXNOM50, [line("A", "901890", "US", 1), line("A", "901890", "US", 2)])
-    with pytest.raises(ValueError, match="matches 2 BOM lines"):
-        apply_changes(p, [{"line_id": "A", "origin_country": "CH"}])
-
-
 def test_validation_error_is_a_value_error():
     assert issubclass(ValidationError, ValueError)
 

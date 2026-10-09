@@ -26,11 +26,13 @@ Semantics implemented:
    - SPECIFIC: None, because a human must decide.
    An alternative is False if any criterion is False and True if all are True. Otherwise it is None.
 4. General checks:
-   - Insufficient processing is None when no operation is described. It is False when every operation
-     contains a listed keyword as a whole-word phrase (case-insensitive, punctuation ignored).
-     Otherwise it is True.
-   - Direct transport is True without transit countries and without the storage flag. Otherwise it
-     is None.
+   - Insufficient processing is None when no operation is described. Each operation is split into
+     clauses (';', '&', '+', a comma not followed by a digit, and/or/then and their DE/FR forms).
+     It is True if some operation contains no listed keyword at all, False if every clause of every
+     operation contains one (whole-word, case-insensitive, punctuation ignored), otherwise None.
+   - Direct transport is None when the exporter ships to its own country, or with transit countries
+     or the storage flag. Otherwise it is True.
+   HS codes and country codes are NFKC-normalised first, so full-width digits and letters count.
 5. Status is FAIL if a general check is False or every alternative is False. It is PASS if some
    alternative is True and every general check is True. Otherwise it is UNSURE.
 """
@@ -38,6 +40,7 @@ Semantics implemented:
 from __future__ import annotations
 
 import re
+import unicodedata
 from dataclasses import dataclass, field
 from fractions import Fraction
 
@@ -60,7 +63,7 @@ class RefVerdict:
 
 
 def clean_hs(code: str | None) -> str:
-    return re.sub(r"[\s.]", "", code or "")
+    return re.sub(r"[\s.]", "", unicodedata.normalize("NFKC", code or ""))
 
 
 def hs6(code: str | None) -> str | None:
@@ -97,9 +100,21 @@ def _words(text: str) -> str:
     return " ".join(re.findall(r"[^\W_]+", text.casefold()))
 
 
-def operation_is_insufficient(operation: str, keywords: list[str]) -> bool:
-    padded = f" {_words(operation)} "
+_SPLIT = re.compile(r"[;&+]|,(?!\d)|\b(?:and|or|then|und|oder|sowie|dann|et|ou|puis)\b", re.IGNORECASE)
+
+
+def has_keyword(text: str, keywords: list[str]) -> bool:
+    padded = f" {_words(text)} "
     return any(_words(k) and f" {_words(k)} " in padded for k in keywords)
+
+
+def operation_kind(operation: str, keywords: list[str]) -> str:
+    """'minimal' (every clause has a keyword), 'other' (no keyword at all) or 'mixed'."""
+    clauses = [c for c in _SPLIT.split(operation) if _words(c)]
+    hits = [has_keyword(c, keywords) for c in clauses]
+    if all(hits):
+        return "minimal"
+    return "mixed" if has_keyword(operation, keywords) else "other"
 
 
 @dataclass(frozen=True)
@@ -152,12 +167,19 @@ def _alternative(states: list[bool | None]) -> bool | None:
 
 def _general(product: Product, pack: RulePack) -> tuple[bool | None, bool | None]:
     ops = [op for op in product.processing if op.strip()]
+    kinds = {operation_kind(op, pack.general.insufficient_operations) for op in ops}
     if not ops:
         processing = None
+    elif "other" in kinds:
+        processing = True
+    elif kinds == {"minimal"}:
+        processing = False
     else:
-        processing = not all(operation_is_insufficient(op, pack.general.insufficient_operations) for op in ops)
+        processing = None
     transit = [c for c in product.shipment.transit_countries if c.strip()]
-    direct = True if not transit and not product.shipment.transshipment_or_storage_in_transit else None
+    same_country = product.exporter_country == product.shipment.destination
+    plain = not transit and not product.shipment.transshipment_or_storage_in_transit
+    direct = True if plain and not same_country else None
     return processing, direct
 
 
@@ -169,7 +191,7 @@ def reference_verdict(product: Product, pack: RulePack) -> RefVerdict:
         if b.originating_override is not None:
             originating = b.originating_override
         else:
-            originating = b.origin_country.strip().upper() in parties
+            originating = unicodedata.normalize("NFKC", b.origin_country).strip().upper() in parties
         lines.append(_Line(b.line_id, hs6(b.hs6), money(b.value_chf), originating))
     ex_works = money(product.ex_works_chf)
     nom = [m for m in lines if not m.originating]

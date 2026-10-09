@@ -9,7 +9,7 @@ from __future__ import annotations
 from enum import Enum
 from typing import Literal
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, model_validator
 
 # Parties to the Switzerland-China FTA. Materials originating in either party
 # count as originating (bilateral cumulation), subject to the rule pack.
@@ -28,7 +28,7 @@ class BomLine(BaseModel):
         default=None, description="6-digit HS 2022 code of the material, if known"
     )
     origin_country: str = Field(description="ISO 3166-1 alpha-2, e.g. CH, CN, DE, JP")
-    value_chf: float = Field(ge=0, description="Value of this material per unit of product, CHF")
+    value_chf: float = Field(ge=0, allow_inf_nan=False, description="Value of this material per unit of product, CHF")
     supplier: str | None = None
     originating_override: bool | None = Field(
         default=None,
@@ -49,7 +49,7 @@ class Product(BaseModel):
     name: str
     description: str
     hs6: str | None = Field(default=None, description="6-digit HS code of the finished product")
-    ex_works_chf: float = Field(gt=0, description="Ex-works price per unit, CHF")
+    ex_works_chf: float = Field(gt=0, allow_inf_nan=False, description="Ex-works price per unit, CHF")
     exporter_country: Literal["CH", "CN"] = "CH"
     processing: list[str] = Field(
         default_factory=list,
@@ -57,6 +57,14 @@ class Product(BaseModel):
     )
     bom: list[BomLine]
     shipment: Shipment = Field(default_factory=Shipment)
+
+    @model_validator(mode="after")
+    def _unique_line_ids(self) -> "Product":
+        ids = [ln.line_id for ln in self.bom]
+        dupes = sorted({i for i in ids if ids.count(i) > 1})
+        if dupes:
+            raise ValueError(f"duplicate BOM line_id(s): {', '.join(dupes)}")
+        return self
 
 
 # ---------------------------------------------------------------------------

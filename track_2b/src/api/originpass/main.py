@@ -6,7 +6,8 @@ import json
 from functools import lru_cache
 from urllib.parse import urlparse
 
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Request
+from fastapi.responses import JSONResponse
 from pydantic import BaseModel, Field
 
 from .bom_io import BomParseError, load_demo_products, parse_bom_csv
@@ -25,6 +26,12 @@ app = FastAPI(
     version="1.0.0",
     description="Rules-of-origin copilot for Swiss SMEs exporting to China (Hack Apertus, Track 2B).",
 )
+
+
+@app.exception_handler(ValueError)
+def _value_error(_: Request, exc: ValueError) -> JSONResponse:
+    # Engine and parsers raise ValueError for inputs they cannot evaluate (e.g. non-finite amounts).
+    return JSONResponse(status_code=422, content={"detail": str(exc)})
 
 
 @lru_cache(maxsize=1)

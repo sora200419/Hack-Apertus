@@ -55,6 +55,10 @@ def parse_bom_csv(
         )
     if not lines:
         raise BomParseError("the CSV has no BOM lines")
+    ids = [ln.line_id for ln in lines]
+    dupes = sorted({i for i in ids if ids.count(i) > 1})
+    if dupes:
+        raise BomParseError(f"duplicate line_id(s): {', '.join(dupes)}")
     return Product(
         product_id=product_id,
         name=name,
