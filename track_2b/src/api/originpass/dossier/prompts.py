@@ -39,9 +39,11 @@ LETTER_SYSTEM = (
     "[日期].\n"
     "- Write the product name exactly as given (do not translate it) and the HS code exactly as given.\n"
     '- If letter_case is "preference": state that the product meets the 原产地规则 of the 中瑞自贸协定, quote '
-    "origin_criterion_zh as the 产品特定原产地规则, say that the shipment will be accompanied by a proof of origin "
-    "(a 原产地证书, or a 原产地声明 made out by an 经核准出口商), and that the importer may apply for the 协定税率 at "
-    "import.\n"
+    "origin_criterion_zh as the 产品特定原产地规则 (or, for origin_criterion_code WP or WO, state "
+    "origin_criterion_code_zh instead), state that the 原产地标准 on the 原产地证书 is origin_criterion_code "
+    "exactly as given (WO, WP or PSR; never another code), say that the shipment will be accompanied by a proof of "
+    "origin (a 原产地证书, or a 原产地声明 made out by an 经核准出口商), and that the importer may apply for the "
+    "协定税率 at import.\n"
     '- If letter_case is "no_preference": state that preferential treatment cannot (yet) be claimed: no 原产地证书 '
     "or 原产地声明 will accompany this shipment and the importer cannot apply for the 协定税率 under the "
     "中瑞自贸协定; the 最惠国税率 applies. Every sentence that mentions 协定税率, 原产地证书 or 原产地声明 must be "

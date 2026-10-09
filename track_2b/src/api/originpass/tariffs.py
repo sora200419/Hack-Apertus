@@ -2,12 +2,15 @@
 
 Rates are only as good as the file: every entry carries its source and a `verified` flag, and an
 unverified source is labelled as such in the estimate. A missing rate stays None; nothing is guessed.
+The committed file holds the rates of the official 2014 schedule (GACC Announcement 2014 No. 53, in force
+from 1 July 2014); each entry's source says so, and the estimate passes it on verbatim.
 """
 
 from __future__ import annotations
 
 import json
 import re
+import unicodedata
 from decimal import ROUND_HALF_UP, Decimal
 from pathlib import Path
 
@@ -17,7 +20,7 @@ from .config import get_settings
 from .models import DutyEstimate
 
 TARIFF_FILE = Path("tariffs") / "cn_import_tariffs.json"
-_HS6 = re.compile(r"^\d{6}$")
+_HS6 = re.compile(r"^[0-9]{6}$")
 _CENT = Decimal("0.01")
 
 
@@ -51,7 +54,8 @@ def estimate_duty(hs6: str, order_value_chf: float, tariffs: dict) -> DutyEstima
 
     duty_saved_chf = order value x (MFN - FTA) / 100, only when both rates are known.
     """
-    code = re.sub(r"[\s.]", "", hs6 or "")
+    # NFKC like the engine (rulepack.loader.normalise_hs): full-width input from a Chinese IME ("８４１３．７０").
+    code = re.sub(r"[\s.]", "", unicodedata.normalize("NFKC", hs6 or ""))
     entry = tariffs.get(code) if _HS6.match(code) else None
     if entry is None:
         return None

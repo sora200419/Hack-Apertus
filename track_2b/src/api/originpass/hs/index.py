@@ -58,10 +58,13 @@ def fold(text: str) -> str:
 
 
 def words(text: str) -> list[str]:
-    """Content words: case-folded, function words and bare numbers removed, accents folded."""
-    return [
-        fold(w) for w in _WORD_RE.findall(text.casefold()) if len(w) > 1 and not w.isdigit() and w not in _STOPWORDS
-    ]
+    """Content words: case-folded, function words and bare numbers removed, accents folded.
+
+    NFC first: in decomposed text (macOS input, "u" + combining diaeresis) the combining mark is not a word
+    character and would split "Kühlwasser" into "ku" + "hlwasser".
+    """
+    text = unicodedata.normalize("NFC", text).casefold()
+    return [fold(w) for w in _WORD_RE.findall(text) if len(w) > 1 and not w.isdigit() and w not in _STOPWORDS]
 
 
 def _stem(token: str) -> str:

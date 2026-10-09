@@ -5,20 +5,25 @@ shares no word with heading 8482 ("Ball or roller bearings") and the char n-gram
 looks alike. `gloss` is a deterministic stand-in for the Apertus rewrite step:
 
 - multi-word terms are matched first ("roulement à billes" -> "ball bearing");
-- single words are looked up after accent folding, with light plural/adjective endings removed
-  ("Schrauben" -> "Schraube", "cuscinetti" -> "cuscinetto", "électriques" -> "électrique");
-- German compounds are split on their longest known head ("Edelstahlgehäuse" -> "Edelstahl" + "Gehäuse"),
+- single words are looked up after accent folding, with light plural/adjective endings of the word's own
+  language removed ("Schrauben" -> "Schraube", "cuscinetti" -> "cuscinetto", "électriques" -> "électrique");
+- German compounds are split on their longest known German head ("Edelstahlgehäuse" -> "Edelstahl" + "Gehäuse"),
   the modifier translated if known and kept as written otherwise ("Zentrifugalpumpe" -> "zentrifugal pump");
-- every other token (part numbers, norms, unknown words) is kept, so cognates still reach the n-gram ranker.
+- every other token (part numbers, norms, unknown words, punctuation) is kept exactly as written;
+- English lines are left alone: a line is glossed only if it shows it is not English (a translated word that
+  is not also an English word or is written with an accent, or a German/French/Italian function word).
 
 The English side uses HS vocabulary where an exact equivalent exists ("Typenschild" -> "name-plate"). Entries
 translate words; none encodes an HS code or a classification decision. They were written by hand from general
-technical and customs vocabulary for the parts Swiss SMEs list in BOMs, not from the evaluation set.
+technical and customs vocabulary for the parts Swiss SMEs list in BOMs, not from the evaluation set; the three
+"Sicherungs-" entries were added after a dev-split line was glossed as "fuse nut" instead of "lock nut".
 """
 
 from __future__ import annotations
 
 import re
+import unicodedata
+from dataclasses import dataclass
 
 from .index import fold
 
@@ -136,6 +141,9 @@ DE: dict[str, str] = {
     "Taster": "push button switch",
     "Relais": "relay",
     "Sicherung": "fuse",
+    "Sicherungsmutter": "lock nut",
+    "Sicherungsring": "retaining ring circlip",
+    "Sicherungsscheibe": "lock washer",
     "Widerstand": "resistor",
     "Kondensator": "capacitor",
     "Spule": "coil inductor",
@@ -246,15 +254,16 @@ DE: dict[str, str] = {
     "Spirale": "spiral",
 }
 
-# French (Swiss usage). Multi-word keys are matched on whole folded tokens, plurals included explicitly.
+# French (Swiss usage), written with accents: lookups fold them, but a stemmed match must not add an accent the
+# key lacks ("fraisée" is not an inflection of "fraise"). Multi-word keys are matched on whole folded tokens.
 FR: dict[str, str] = {
     "roulement": "bearing",
-    "roulement a billes": "ball bearing",
-    "roulements a billes": "ball bearings",
-    "roulement a rouleaux": "roller bearing",
+    "roulement à billes": "ball bearing",
+    "roulements à billes": "ball bearings",
+    "roulement à rouleaux": "roller bearing",
     "bille": "ball",
     "vis": "screw",
-    "ecrou": "nut",
+    "écrou": "nut",
     "boulon": "bolt",
     "rondelle": "washer",
     "goupille": "pin",
@@ -263,53 +272,53 @@ FR: dict[str, str] = {
     "joints toriques": "o-ring seals",
     "joint": "gasket seal",
     "garniture": "packing seal",
-    "boitier": "housing case",
-    "boite": "case box",
+    "boîtier": "housing case",
+    "boîte": "case box",
     "couvercle": "lid cover",
     "fond": "back",
     "cadre": "frame",
     "support": "bracket support",
-    "poignee": "handle",
+    "poignée": "handle",
     "arbre": "shaft",
     "axe": "axle pin",
     "engrenage": "gear",
-    "roue dentee": "toothed wheel gear",
+    "roue dentée": "toothed wheel gear",
     "roue": "wheel",
     "accouplement": "coupling",
     "embrayage": "clutch",
     "courroie": "belt",
-    "chaine": "chain",
+    "chaîne": "chain",
     "poulie": "pulley",
     "douille": "bush sleeve",
     "bague": "ring",
     "plaque": "plate",
-    "tole": "sheet",
+    "tôle": "sheet",
     "barre": "bar",
-    "profile": "profile",
+    "profilé": "profile",
     "tuyau": "pipe tube",
     "flexible": "flexible hose",
     "raccord": "fitting",
     "bride": "flange",
-    "piece": "part",
+    "pièce": "part",
     "membrane": "membrane diaphragm",
-    "verin": "cylinder actuator",
+    "vérin": "cylinder actuator",
     "buse": "nozzle",
     "filtre": "filter",
     "pompe": "pump",
     "vanne": "valve",
     "soupape": "valve",
-    "electrovanne": "solenoid valve",
+    "électrovanne": "solenoid valve",
     "moteur": "motor",
     "actionneur": "actuator",
     "ventilateur": "fan",
     "outil": "tool",
     "fraise": "milling cutter",
-    "machine a cafe": "coffee machine",
-    "circuit imprime": "printed circuit",
-    "circuits imprimes": "printed circuits",
-    "carte electronique": "printed circuit board electronic",
+    "machine à café": "coffee machine",
+    "circuit imprimé": "printed circuit",
+    "circuits imprimés": "printed circuits",
+    "carte électronique": "printed circuit board electronic",
     "carte": "board card",
-    "cable": "cable",
+    "câble": "cable",
     "fil": "wire",
     "fil de cuivre": "copper wire",
     "connecteur": "connector",
@@ -317,7 +326,7 @@ FR: dict[str, str] = {
     "borne": "terminal",
     "interrupteur": "switch",
     "fusible": "fuse",
-    "resistance": "resistor",
+    "résistance": "resistor",
     "condensateur": "capacitor",
     "bobine": "coil",
     "transformateur": "transformer",
@@ -328,19 +337,19 @@ FR: dict[str, str] = {
     "batterie": "battery",
     "accumulateur": "accumulator",
     "afficheur": "display",
-    "ecran": "screen display",
+    "écran": "screen display",
     "lampe": "lamp",
     "capteur": "sensor",
     "sonde": "probe sensor",
-    "debitmetre": "flow meter",
-    "regulateur": "regulator",
-    "electrode": "electrode",
-    "presse etoupe": "cable gland",
-    "presse etoupes": "cable glands",
+    "débitmètre": "flow meter",
+    "régulateur": "regulator",
+    "électrode": "electrode",
+    "presse-étoupe": "cable gland",
+    "presse-étoupes": "cable glands",
     "appareil auditif": "hearing aid",
     "seringue": "syringe",
     "montre": "watch",
-    "montre bracelet": "wrist watch",
+    "montre-bracelet": "wrist watch",
     "horloge": "clock",
     "mouvement": "movement",
     "cadran": "dial",
@@ -353,7 +362,7 @@ FR: dict[str, str] = {
     "verre": "glass",
     "saphir": "sapphire",
     "masse oscillante": "oscillating weight rotor",
-    "ecrin": "case box",
+    "écrin": "case box",
     "acier": "steel",
     "acier inoxydable": "stainless steel",
     "inox": "stainless steel",
@@ -363,13 +372,13 @@ FR: dict[str, str] = {
     "laiton": "brass",
     "titane": "titanium",
     "plastique": "plastic",
-    "matiere plastique": "plastics",
+    "matière plastique": "plastics",
     "caoutchouc": "rubber",
     "cuir": "leather",
     "bois": "wood",
     "papier": "paper",
     "carton": "paperboard carton",
-    "ceramique": "ceramic",
+    "céramique": "ceramic",
     "peinture": "paint",
     "vernis": "varnish",
     "colle": "glue adhesive",
@@ -377,29 +386,29 @@ FR: dict[str, str] = {
     "huile": "oil",
     "emballage": "packing",
     "sachet": "bag",
-    "etiquette": "label",
-    "plaque signaletique": "name-plate",
+    "étiquette": "label",
+    "plaque signalétique": "name-plate",
     "notice": "instructions printed",
-    "electrique": "electric",
-    "electronique": "electronic",
+    "électrique": "electric",
+    "électronique": "electronic",
     "pneumatique": "pneumatic",
     "hydraulique": "hydraulic",
     "automatique": "automatic",
-    "mecanique": "mechanical",
-    "medical": "medical",
+    "mécanique": "mechanical",
+    "médical": "medical",
     "chirurgical": "surgical",
     "centrifuge": "centrifugal",
     "courant continu": "DC direct current",
     "courant alternatif": "AC alternating current",
     "jetable": "disposable",
-    "assemble": "assembled",
-    "soude": "welded",
-    "zingue": "zinc-plated",
-    "nickele": "nickel-plated",
-    "chrome": "chromium-plated",
-    "isole": "insulated",
-    "emaille": "enamelled",
-    "imprime": "printed",
+    "assemblé": "assembled",
+    "soudé": "welded",
+    "zingué": "zinc-plated",
+    "nickelé": "nickel-plated",
+    "chromé": "chromium-plated",
+    "isolé": "insulated",
+    "émaillé": "enamelled",
+    "imprimé": "printed",
     "domestique": "domestic household",
     "jeu": "set",
     "ensemble": "assembly set",
@@ -463,7 +472,7 @@ IT: dict[str, str] = {
     "ventilatore": "fan",
     "utensile": "tool",
     "fresa": "milling cutter",
-    "macchina da caffe": "coffee machine",
+    "macchina da caffè": "coffee machine",
     "circuito stampato": "printed circuit",
     "circuiti stampati": "printed circuits",
     "scheda elettronica": "printed circuit board electronic",
@@ -559,96 +568,199 @@ IT: dict[str, str] = {
     "kit": "set",
 }
 
-# Keys that are also English words: translated only when another glossary word shows the line is not English.
+# Keys that are also English words (or codes): translated only when the line shows it is not English.
 ENGLISH_HOMOGRAPHS = frozenset(
     {
-        "alimentation", "aluminium", "assemble", "axe", "borne", "cable", "cadre", "carte", "carton", "centrifuge",
-        "chrome", "corona", "dado", "electrode", "ensemble", "etiquette", "filo", "filter", "flexible", "fond",
-        "fusible", "glace", "glas", "halter", "inverter", "joint", "kit", "lager", "lunette", "medical", "membrane",
-        "messing", "motor", "mutter", "notice", "piece", "pile", "plaque", "prise", "profile", "rad", "resistance",
-        "ring", "sachet", "sensor", "set", "silicone", "sonde", "splint", "stab", "support", "taster", "titan",
+        "alimentation", "aluminium", "assemble", "axe", "borne", "bride", "cable", "cadre", "carte", "carton",
+        "centrifuge", "chrome", "corona", "dado", "electrode", "ensemble", "etiquette", "ferro", "filo", "filter",
+        "flexible", "fond", "fusible", "glace", "glas", "halter", "inverter", "joint", "kit", "lack", "lager",
+        "lunette", "medical", "membrane", "messing", "motor", "mutter", "notice", "ol", "piece", "pile", "plaque",
+        "prise", "profile", "rad", "resistance", "ring", "sachet", "sensor", "set", "silicone", "sonde", "splint",
+        "stab", "support", "taster", "titan", "ventilator",
     }
 )
 
-MAX_PHRASE = 3
-MIN_HEAD = 4  # shortest German compound head that may be split off ("Lager" in "Kugellager")
-MIN_MODIFIER = 3
-# Endings tried, in order, when a word is not a key: (suffix to remove, replacement).
-_ENDINGS = (
-    ("n", ""), ("s", ""), ("e", ""), ("x", ""), ("en", ""), ("er", ""), ("es", ""), ("em", ""),
-    ("i", "o"), ("i", "e"), ("e", "a"), ("a", "o"), ("e", "o"), ("he", "o"), ("hi", "o"),
+# English words of the HS 2022 nomenclature that would otherwise reach a non-homograph key by stemming or
+# compound splitting ("tube" -> Italian "tubo", "files" -> French "fil"). They are never stemmed or split, so an
+# English line is not mistaken for a foreign one; tests/test_hs_glossary.py re-derives the list from the
+# nomenclature. (Splits onto a homograph head, such as "bearing" -> "bea" + "Ring", are weak evidence and only
+# used in lines that are already known to be foreign.)
+ENGLISH_FORMS = frozenset({"batteries", "buses", "file", "files", "perna", "profiles", "spiegeleisen", "tube"})
+
+# Function words of German, French and Italian BOM lines that English lines do not use. Compared before accent
+# folding, so French "à" counts and English "fur" (from "für") does not. Left out because they double as English
+# words or codes: "an", "am", "die", "in", "per", "pro", "un", "aux", "par", "den", "bis", "en" ("EN AW-6060"),
+# "de" (Germany), "a".
+FOREIGN_FUNCTION_WORDS = frozenset(
+    "für fuer mit aus ohne und oder der das dem des ein eine einer eines einem einen vom zum zur im bei nach zu "
+    "als auf inkl à du et ou avec sans pour au sur dans le la les une il lo gli di del della dei degli delle da "
+    "dal dalla con senza su nel nella alla una uno".split()
 )
+
+LANGS = ("de", "fr", "it")
+MAX_PHRASE = 3
+MIN_HEAD = 4  # shortest German key that may be split off as a compound head ("Ring" in "Polyamidring")
+MIN_MODIFIER = 3  # shortest compound modifier ("Uhr" in "Uhrglas")
+MIN_STEM = 3  # shortest word left after removing an ending
+# Endings tried, in order, when a word is not a key: (suffix to remove, replacement), per language.
+ENDINGS: dict[str, tuple[tuple[str, str], ...]] = {
+    "de": (("n", ""), ("s", ""), ("e", ""), ("en", ""), ("er", ""), ("es", ""), ("em", "")),
+    "fr": (("s", ""), ("x", ""), ("e", ""), ("es", ""), ("aux", "al")),
+    "it": (("i", "o"), ("i", "e"), ("e", "a"), ("a", "o"), ("e", "o"), ("he", "o"), ("hi", "o")),
+}
 _WORD_RE = re.compile(r"[^\W_]+")
 
 
+@dataclass(frozen=True)
+class Entry:
+    key: str  # folded lookup key
+    source: str  # the glossary spelling, case-folded with its accents
+    english: str
+    lang: str
+
+
+@dataclass(frozen=True)
+class _Match:
+    start: int  # character span in the input text
+    end: int
+    english: str
+    strong: bool  # evidence on its own that the line is not English
+
+
+def _nfc(text: str) -> str:
+    return unicodedata.normalize("NFC", text)
+
+
 def _key(text: str) -> str:
-    return " ".join(fold(w) for w in _WORD_RE.findall(text))
+    return " ".join(fold(w) for w in _WORD_RE.findall(_nfc(text)))
 
 
-def _merge() -> dict[str, str]:
-    merged: dict[str, str] = {}
-    for table in (DE, FR, IT):
+def _build() -> tuple[dict[str, dict[str, Entry]], dict[str, Entry]]:
+    words: dict[str, dict[str, Entry]] = {lang: {} for lang in LANGS}
+    phrases: dict[str, Entry] = {}
+    seen: dict[str, str] = {}
+    for lang, table in zip(LANGS, (DE, FR, IT)):
         for source, english in table.items():
             key = _key(source)
-            if merged.get(key, english) != english:
+            if seen.get(key, english) != english:
                 raise ValueError(f"glossary key {key!r} has two translations")
-            merged[key] = english
-    return merged
+            seen[key] = english
+            entry = Entry(key, _nfc(source).casefold(), english, lang)
+            (phrases if " " in key else words[lang])[key] = entry
+    return words, phrases
 
 
-LEXICON: dict[str, str] = _merge()
-_WORDS = {k: v for k, v in LEXICON.items() if " " not in k}
-_PHRASES = {k: v for k, v in LEXICON.items() if " " in k}
+WORDS, PHRASES = _build()
+# Every folded key (words and phrases) -> English.
+LEXICON: dict[str, str] = {e.key: e.english for table in (*WORDS.values(), PHRASES) for e in table.values()}
 
 
 def gloss(text: str) -> str | None:
-    """English customs gloss of a DE/FR/IT line (unknown tokens kept), or None if no word was translated."""
-    tokens = [fold(w) for w in _WORD_RE.findall(text)]
-    out: list[str] = []
-    translated = foreign = False
+    """English customs gloss of a German/French/Italian BOM line, or None.
+
+    None when no word is translated or when nothing shows that the line is not English (only English homographs
+    such as "Motor" or "Ring" matched and no German/French/Italian function word occurs). Everything that is not
+    translated (part numbers, norms, unknown words, punctuation) is kept exactly as written.
+    """
+    text = _nfc(text)
+    tokens = list(_WORD_RE.finditer(text))
+    folded = [fold(t.group()) for t in tokens]
+    matches: list[_Match] = []
     i = 0
     while i < len(tokens):
-        for n in range(min(MAX_PHRASE, len(tokens) - i), 1, -1):
-            english = _PHRASES.get(" ".join(tokens[i : i + n]))
-            if english:
-                out.append(english)
-                translated = foreign = True
-                i += n
-                break
-        else:
-            key, english = _lookup(tokens[i])
-            if english is None:
-                english = _split_compound(tokens[i])
-                foreign |= english is not None
-            else:
-                foreign |= key not in ENGLISH_HOMOGRAPHS
-            translated |= english is not None
-            out.append(english or tokens[i])
-            i += 1
-    return " ".join(out) if translated and foreign else None
-
-
-def _lookup(word: str) -> tuple[str, str | None]:
-    """(matched key, English) for a word or one of its inflected forms; (word, None) if unknown."""
-    if word in _WORDS:
-        return word, _WORDS[word]
-    for suffix, replacement in _ENDINGS:
-        if word.endswith(suffix) and len(word) - len(suffix) >= MIN_MODIFIER:
-            stem = word[: len(word) - len(suffix)] + replacement
-            if stem in _WORDS:
-                return stem, _WORDS[stem]
-    return word, None
-
-
-def _split_compound(word: str) -> str | None:
-    """German compound: longest known head; the modifier is translated (recursively) or kept as written."""
-    for start in range(MIN_MODIFIER, len(word) - MIN_HEAD + 1):
-        _, head = _lookup(word[start:])
-        if head is None:
+        n, entry = _phrase(folded, i)
+        if entry is not None:
+            matches.append(_Match(tokens[i].start(), tokens[i + n - 1].end(), entry.english, True))
+            i += n
             continue
-        modifier = word[:start]
-        _, english = _lookup(modifier)
-        if english is None and modifier.endswith("s") and len(modifier) > MIN_MODIFIER:
-            _, english = _lookup(modifier[:-1])  # linking -s- ("Stellungsregler")
-        return f"{english or _split_compound(modifier) or modifier} {head}"
+        found = _word(tokens[i].group(), folded[i])
+        if found is not None:
+            matches.append(_Match(tokens[i].start(), tokens[i].end(), *found))
+        i += 1
+    foreign = any(m.strong for m in matches) or any(t.group().casefold() in FOREIGN_FUNCTION_WORDS for t in tokens)
+    if not matches or not foreign:
+        return None
+    out: list[str] = []
+    pos = 0
+    for m in matches:
+        out += [text[pos : m.start], m.english]
+        pos = m.end
+    out.append(text[pos:])
+    return " ".join("".join(out).split())
+
+
+def _phrase(folded: list[str], i: int) -> tuple[int, Entry | None]:
+    for n in range(min(MAX_PHRASE, len(folded) - i), 1, -1):
+        entry = PHRASES.get(" ".join(folded[i : i + n]))
+        if entry is not None:
+            return n, entry
+    return 0, None
+
+
+def _word(surface: str, folded: str) -> tuple[str, bool] | None:
+    """(English, strong) for one word: a key, an inflected key, or a German compound; None if unknown."""
+    entry = lookup(surface, folded, LANGS)
+    if entry is not None:
+        # A homograph written with an accent ("Pièces", "câble") is not the English word.
+        return entry.english, entry.key not in ENGLISH_HOMOGRAPHS or folded != surface.casefold()
+    if folded in ENGLISH_FORMS:
+        return None
+    return _compound(surface, folded)
+
+
+def lookup(surface: str, folded: str, langs: tuple[str, ...] = LANGS) -> Entry | None:
+    """Entry for a word or one of its inflected forms (endings of the entry's language), or None."""
+    cf = surface.casefold()
+    for lang in langs:
+        entry = WORDS[lang].get(folded)
+        if entry is not None and _accents_agree(cf, entry.source):
+            return entry
+    if folded in ENGLISH_FORMS:
+        return None
+    for lang in langs:
+        for suffix, replacement in ENDINGS[lang]:
+            if not folded.endswith(suffix) or len(folded) - len(suffix) < MIN_STEM:
+                continue
+            entry = WORDS[lang].get(folded[: -len(suffix)] + replacement)
+            stem = cf[: -len(suffix)] + replacement if cf.endswith(suffix) else None
+            if entry is not None and (stem is None or _accents_agree(stem, entry.source)):
+                return entry
     return None
+
+
+def _accents_agree(written: str, source: str) -> bool:
+    """False if `written` carries an accent where the glossary spelling has none ("fraisé" vs "fraise").
+
+    A missing accent is fine (BOMs are often typed without them); compared only when the letters align 1:1.
+    """
+    if len(written) != len(source):
+        return True
+    return not any(w != s and fold(w) == s for w, s in zip(written, source))
+
+
+def _compound(surface: str, folded: str) -> tuple[str, bool] | None:
+    """German compound split on its longest known head; the modifier is translated (recursively) or kept as written.
+
+    Strong evidence of German only if the head is not an English homograph or a modifier part was translated
+    ("Getriebemotor"); "Polyamidring" (unknown modifier + "Ring") is weak.
+    """
+    for start in range(MIN_MODIFIER, len(folded) - MIN_HEAD + 1):
+        head = lookup(surface[_cut(surface, start) :], folded[start:], ("de",))
+        if head is None or len(head.key) < MIN_HEAD:
+            continue
+        cut = _cut(surface, start)
+        modifier = lookup(surface[:cut], folded[:start], ("de",))
+        if modifier is not None:
+            english, strong = modifier.english, modifier.key not in ENGLISH_HOMOGRAPHS
+        else:
+            english, strong = _compound(surface[:cut], folded[:start]) or (surface[:cut], False)
+        return f"{english} {head.english}", strong or head.key not in ENGLISH_HOMOGRAPHS
+    return None
+
+
+def _cut(surface: str, folded_len: int) -> int:
+    """Index in `surface` whose folded prefix has `folded_len` characters ("Gehäuse" folds to "gehause")."""
+    for i in range(len(surface) + 1):
+        if len(fold(surface[:i])) >= folded_len:
+            return i
+    return len(surface)

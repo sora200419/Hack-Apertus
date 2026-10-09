@@ -21,7 +21,9 @@ from originpass.llm.cost import CostLog, UsageRecord  # noqa: E402
 from eval.e3_dossier import RATING_COLUMNS  # noqa: E402
 from eval.run_all import EvalConfig, run  # noqa: E402
 
-TINY = EvalConfig(e1_max_items=4, e2_random=14, e2_rules_per_chapter=1, e2_llm_n=3)
+TINY = EvalConfig(
+    e1_max_items=4, e2_random=14, e2_rules_per_chapter=1, e2_llm_n=3, e2_sweep_per_chapter=1, e2_sweep_rules_per_chapter=1
+)
 _CANDIDATE = re.compile(r"^1\. (\d{6}):", re.MULTILINE)
 
 

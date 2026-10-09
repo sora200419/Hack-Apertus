@@ -68,7 +68,7 @@ def _headline(s: dict) -> str:
             _status_or(base, f"{pct(base.get('accuracy'))} / {pct(base.get('false_pass_rate'))}"),
         ]
     )
-    rnd = e2["synthetic"]["random"]
+    rnd = e2["sweep"]["all"] if "sweep" in e2 else e2["synthetic"]["random"]
     rows.append(
         [
             "Ours: deterministic engine vs independent reference",
@@ -203,8 +203,11 @@ def _e2(e2: dict) -> str:
         f"cases for up to {cfg['rules_per_chapter']} rules per chapter.",
     ]
     rows: list[list[object]] = []
-    for name in ("random", "edge"):
-        a = syn[name]
+    sweep = e2.get("sweep")
+    blocks = [(name, syn[name]) for name in ("random", "edge")]
+    if sweep:
+        blocks.append((f"all-chapter sweep ({sweep['config']['chapters']} chapters)", sweep["all"]))
+    for name, a in blocks:
         rows.append(
             [
                 name,
@@ -237,6 +240,9 @@ def _e2(e2: dict) -> str:
         "Confusion matrix, random cases (rows: reference, columns: engine)\n\n"
         + md_table(["Reference \\ Engine", *conf], [[r, *conf[r].values()] for r in conf])
     )
+    sweep_disagreements = e2.get("sweep", {}).get("disagreements", [])
+    if sweep_disagreements:
+        out.append(f"All-chapter sweep: {len(sweep_disagreements)} disagreement(s); see summary.json.")
     if syn["disagreements"]:
         out.append(
             "Disagreements (first ones):\n\n"

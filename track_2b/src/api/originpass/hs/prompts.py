@@ -45,4 +45,7 @@ RERANK_USER = "Goods: {description}\n{rewrite_line}Candidates:\n{candidates}"
 
 RERANK_REWRITE_LINE = "English rewrite: {rewrite}\n"
 
+# Used only when there is no model rewrite: the static glossary's word-by-word gloss (glossary.gloss).
+RERANK_GLOSS_LINE = "Word-by-word glossary gloss (may be inaccurate): {gloss}\n"
+
 RERANK_CANDIDATE = "{n}. {hs6}: {path}"

@@ -1,16 +1,18 @@
 """Deterministic checks on generated text: required facts present, numbers grounded, terminology, no false claims.
 
 Number matching is tolerant to formatting only ('47.3%', '47,3 %', '47.30', "1'250.00", full-width digits),
-never to rounding: 47.32 does not match 47.3. Signs are ignored ('-5.2' matches '5.2 points over').
+never to rounding: 47.32 does not match 47.3. Signs are ignored ('-5.2' matches '5.2 points over'). A number
+is compared as a whole token, so 47.3 is not found in 147.3, 50 not in 500 and not in 50,000.
 """
 
 from __future__ import annotations
 
 import re
+import unicodedata
 from decimal import Decimal
 
 from ..models import FactCheck, Product, Verdict
-from .facts import fmt_num, hs6_digits, hs6_dotted
+from .facts import ORIGIN_CODES, fmt_num, hs6_digits, hs6_dotted
 from .glossary import REQUIRED_ZH
 
 HS_KEYS = frozenset({"hs6", "hs6_digits"})
@@ -19,21 +21,38 @@ _FULLWIDTH = str.maketrans("０１２３４５６７８９．％", "0123456789.%
 _NUMBER = re.compile(r"\d+(?:[.,'\u2019\u2009\u202f]\d+)*")
 _GROUP_SEPARATORS = re.compile(r"['\u2019\u2009\u202f]")
 _PLAIN_NUMBER = re.compile(r"-?\d+(?:\.\d+)?")
+# One separator followed by exactly three digits ("50,000", "1.250"): a thousands group, never a decimal
+# fraction, because the facts are written with at most two decimals (facts.fmt_num).
+_THOUSANDS_ONLY = re.compile(r"[1-9]\d{0,2}[.,]\d{3}")
 
-# Sentences mentioning preference or a proof of origin; in a no-preference letter each must be negative.
+# Clauses mentioning preference, a proof of origin or a duty advantage; in a no-preference letter each must be
+# negative. Checked per clause (split at sentence ends, commas, semicolons, colons and "but"), so a negation in
+# one clause does not cover a claim in the next ("没有问题，贵司可申请协定税率").
 _PREFERENCE_TERMS = {
-    "zh": re.compile("协定税率|优惠关税|关税优惠|优惠待遇|原产地证书|原产地声明|原产地证明"),
+    "zh": re.compile("协定税率|优惠|原产地证书|原产地声明|原产地证明|零关税|免税|免征|减免|减税|降税|关税减让"),
     "en": re.compile(
-        r"preferential|certificates? of origin|origin declarations?|proofs? of origin"
-        r"|\b(?:fta|conventional|agreement)\)?\s+(?:\(conventional\)\s+)?(?:tariff\s+|duty\s+)?rates?\b",
+        r"preferential|preference|certificates? of origin|origin declarations?|proofs? of origin"
+        r"|\b(?:fta|conventional|agreement)\)?\s+(?:\(conventional\)\s+)?(?:tariff\s+|duty\s+)?rates?\b"
+        r"|duty[- ]free|tariff[- ]free|zero[- ](?:duty|duties|tariffs?)"
+        r"|\b(?:reduced|lower)\s+(?:import\s+)?(?:duty|duties|tariffs?)\b"
+        r"|\b(?:duty|tariff)\s+(?:reductions?|exemptions?|concessions?|savings?|relief)\b",
         re.IGNORECASE,
     ),
 }
 _NEGATION = {
-    "zh": re.compile("不能|无法|不可|暂不|不得|尚不|不予|未能"),
+    "zh": re.compile("不(?!仅|但|超过|论|管|同)|无法|没有|未能|未获|无须|并非"),
     "en": re.compile(r"\b(?:not|cannot|can't|unable|no|neither|nor|without)\b", re.IGNORECASE),
 }
-_SENTENCE_SPLIT = {"zh": re.compile(r"[。！？!?\n]"), "en": re.compile(r"(?<=[.!?])\s+|\n")}
+_CLAUSE_SPLIT = {
+    "zh": re.compile(r"[。！？!?\n，,；;：:]|但是|但|然而|不过|却"),
+    "en": re.compile(r"(?<=[.!?])\s+|\n|[,;:]\s|\s(?:but|however|although|though|whereas)\b", re.IGNORECASE),
+}
+# The verdict word a text states first decides its verdict ("Verdict: PASS ... would FAIL without ..." is PASS).
+_STATUS_WORD = {
+    True: re.compile(r"(?<![A-Za-z0-9])(PASS|FAIL|UNSURE)(?![A-Za-z0-9])"),
+    False: re.compile(r"(?<![A-Za-z0-9])(PASS|FAIL|UNSURE)(?![A-Za-z0-9])", re.IGNORECASE),
+}
+_ORIGIN_CODE_RE = re.compile(r"(?<![A-Za-z0-9])(" + "|".join(ORIGIN_CODES) + r")(?![A-Za-z0-9])")
 
 
 def extract_facts(product: Product, verdict: Verdict) -> dict[str, str]:
@@ -60,7 +79,8 @@ def check_facts(text: str, facts: dict[str, str], required: list[str]) -> list[F
     norm = _normalise(text)
     numbers = {v for token in _NUMBER.findall(norm) for v in number_values(token)}
     return [
-        FactCheck(fact=key, expected=facts[key], found=_contains(norm, numbers, key, facts[key])) for key in required
+        FactCheck(fact=key, expected=facts[key], found=_contains(norm, numbers, key, _normalise(facts[key])))
+        for key in required
     ]
 
 
@@ -80,14 +100,22 @@ def grounding_check(text: str, source: str) -> FactCheck:
 
 
 def no_preference_check(text: str, lang: str) -> FactCheck:
-    """For FAIL/UNSURE letters: every sentence mentioning the FTA rate or a proof of origin must be negative."""
+    """For FAIL/UNSURE letters: every clause mentioning the FTA rate, a proof of origin or a duty advantage
+    must be negative."""
     claims = [
         s.strip()
-        for s in _SENTENCE_SPLIT[lang].split(_normalise(text))
-        if _PREFERENCE_TERMS[lang].search(s) and not _NEGATION[lang].search(s)
+        for s in _CLAUSE_SPLIT[lang].split(_normalise(text))
+        if s and _PREFERENCE_TERMS[lang].search(s) and not _NEGATION[lang].search(s)
     ]
     expected = "no claim of preferential treatment" + (f" (claimed in: {claims[0][:80]})" if claims else "")
     return FactCheck(fact="no_preference_claim", expected=expected, found=not claims)
+
+
+def origin_code_check(text: str, code: str) -> FactCheck:
+    """For PASS letters: no origin-criterion code other than `code` (WO / WP / PSR) may be stated."""
+    wrong = sorted({m for m in _ORIGIN_CODE_RE.findall(_normalise(text)) if m != code})
+    expected = f"origin criterion {code} only" + (f" (also states: {', '.join(wrong)})" if wrong else "")
+    return FactCheck(fact="origin_criterion_code", expected=expected, found=not wrong)
 
 
 def ungrounded_numbers(text: str, source: str) -> list[str]:
@@ -103,11 +131,14 @@ def ungrounded_numbers(text: str, source: str) -> list[str]:
 
 
 def number_values(token: str) -> set[Decimal]:
-    """Every plausible reading of a number token: '47,3' -> {47.3}; '1,250' -> {1250, 1.25}; "1'250.00" -> {1250}.
+    """Every plausible reading of a number token: '47,3' -> {47.3}; '1,250.5' -> {1250.5}; "1'250.00" -> {1250}.
 
-    The decimal separator is '.' or ',' (or absent); any other separator must split groups of 3 digits.
+    The decimal separator is '.' or ',' (or absent); any other separator must split groups of 3 digits. A single
+    separator before exactly three digits is a thousands group: '50,000' -> {50000}, never 50.
     """
     plain = _GROUP_SEPARATORS.sub("", token)
+    if _THOUSANDS_ONLY.fullmatch(plain):
+        return {Decimal(re.sub(r"[.,]", "", plain))}
     return {v for sep in (".", ",", None) if (v := _reading(plain, sep)) is not None}
 
 
@@ -117,7 +148,8 @@ def number_values(token: str) -> set[Decimal]:
 
 
 def _normalise(text: str) -> str:
-    return text.translate(_FULLWIDTH)
+    """NFC (a product name typed in decomposed form still matches) and ASCII digits for full-width ones."""
+    return unicodedata.normalize("NFC", text).translate(_FULLWIDTH)
 
 
 def _reading(token: str, decimal_sep: str | None) -> Decimal | None:
@@ -139,6 +171,10 @@ def _keys(token: str) -> set:
 
 
 def _contains(text: str, numbers: set[Decimal], key: str, value: str) -> bool:
+    if key == "status":
+        # The first verdict word, in capitals as instructed (else in any case), must be the verdict.
+        first = _STATUS_WORD[True].search(text) or _STATUS_WORD[False].search(text)
+        return first is not None and first.group(1).upper() == value.upper()
     if key in HS_KEYS:
         digits = re.sub(r"\D", "", value)
         return re.search(rf"(?<!\d){digits[:4]}[.\s]?{digits[4:]}(?!\d)", text) is not None

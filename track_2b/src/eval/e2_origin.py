@@ -71,6 +71,14 @@ def synthetic_cases(
     return cases
 
 
+def sweep_cases(pack: RulePack, data_dir: Path, seed: int, n_per_chapter: int, rules_per_chapter: int) -> list[SynthCase]:
+    """Random and boundary cases for every chapter that has rules (77 is reserved in the HS)."""
+    chapters = tuple(sorted({r.hs_scope[0][:2] for r in pack.rules if r.hs_scope} - {"77"}))
+    return generate(
+        pack, data_dir, n_per_chapter=n_per_chapter, seed=seed, chapters=chapters, rules_per_chapter=rules_per_chapter
+    )
+
+
 def compare(case: SynthCase, verdict: Verdict) -> dict[str, bool]:
     ref = case.expected
     general = tuple(c.passed for c in verdict.general_checks)
@@ -243,12 +251,16 @@ def run(
     seed: int = 2026,
     rules_per_chapter: int = 3,
     llm_n: int = 100,
+    sweep_per_chapter: int = 20,
+    sweep_rules_per_chapter: int = 4,
 ) -> tuple[dict, dict[str, TrackedLLM]]:
     """E2 results and the LLM-only baseline's call tracker (for E4), keyed 'e2.llm_only'."""
     cases = synthetic_cases(pack, data_dir, n_random, seed, rules_per_chapter)
     pairs = [(c, evaluate(c.product, pack)) for c in cases]
     random_pairs = [(c, v) for c, v in pairs if c.kind == "random"]
     edge_pairs = [(c, v) for c, v in pairs if c.kind != "random"]
+    sweep = sweep_cases(pack, data_dir, seed, sweep_per_chapter, sweep_rules_per_chapter)
+    sweep_pairs = [(c, evaluate(c.product, pack)) for c in sweep]
 
     demos = load_demos(data_dir)
     swaps = []
@@ -281,6 +293,16 @@ def run(
             "random": agreement(random_pairs),
             "edge": agreement(edge_pairs) | {"kinds": len({c.kind for c, _ in edge_pairs})},
             "disagreements": disagreements(pairs),
+        },
+        "sweep": {
+            "config": {
+                "seed": seed,
+                "chapters": len({c.product.hs6[:2] for c in sweep if c.product.hs6}),
+                "n_per_chapter": sweep_per_chapter,
+                "rules_per_chapter": sweep_rules_per_chapter,
+            },
+            "all": agreement(sweep_pairs),
+            "disagreements": disagreements(sweep_pairs),
         },
         "demos": {"table": demo_table(demos, pack), "swaps": swaps},
         "llm_baseline": baseline,

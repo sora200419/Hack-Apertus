@@ -74,6 +74,35 @@ def criteria_text(criteria: list[Criterion], lang: str) -> str:
     return _JOIN[lang].join(criterion_label(c, lang) for c in criteria)
 
 
+# Origin criterion code of the certificate of origin (notes to the CH-CN certificate): WO = wholly obtained,
+# WP = produced in a Party exclusively from originating materials, PSR = produced using non-originating materials
+# that satisfy the product-specific rule. code -> (English, Chinese)
+ORIGIN_CODES: dict[str, tuple[str, str]] = {
+    "WO": ("wholly obtained", "完全获得"),
+    "WP": ("produced exclusively from originating materials", "完全由原产材料生产"),
+    "PSR": (
+        "produced using non-originating materials that satisfy the product-specific rule of origin",
+        "使用非原产材料生产且符合产品特定原产地规则",
+    ),
+}
+
+
+def origin_criterion_code(verdict: Verdict) -> str | None:
+    """Certificate origin-criterion code of a PASS verdict (None otherwise).
+
+    PSR as soon as one material is non-originating (also when the tolerance covers it); with only originating
+    materials WO if the met alternative is "wholly obtained", else WP. A PASS with no materials listed claims
+    only what the engine checked: the product-specific rule (PSR), or WO if that was the rule.
+    """
+    if verdict.status is not VerdictStatus.PASS:
+        return None
+    if any(not line.originating for line in verdict.lines):
+        return "PSR"
+    if any(c.kind is CriterionKind.WO for c in met_criteria(verdict)):
+        return "WO"
+    return "WP" if verdict.lines else "PSR"
+
+
 # ---------------------------------------------------------------------------
 # What blocks the verdict
 # ---------------------------------------------------------------------------
@@ -162,6 +191,12 @@ def letter_facts(product: Product, verdict: Verdict) -> dict:
     if preference:
         facts["origin_criterion"] = criteria_text(criteria, "en")
         facts["origin_criterion_zh"] = criteria_text(criteria, "zh")
+        code = origin_criterion_code(verdict)
+        if code:
+            facts["origin_criterion_code"] = code
+            facts["origin_criterion_code_zh"] = ORIGIN_CODES[code][1]
+        # A PASS implies the direct transport check passed: shipped from the exporter's Party, no transit.
+        facts["direct_transport"] = f"{product.exporter_country} -> {product.shipment.destination}, no transit"
         if verdict.rule and verdict.rule.text_zh:
             facts["rule_text_zh"] = verdict.rule.text_zh
     else:

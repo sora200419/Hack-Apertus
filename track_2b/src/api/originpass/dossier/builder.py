@@ -26,8 +26,15 @@ from ..models import Dossier, DossierText, FactCheck, Product, Verdict, VerdictS
 from ..tariffs import estimate_duty
 from . import prompts, templates
 from .checklist import build_checklist
-from .facts import explanation_facts, facts_json, letter_facts
-from .validator import check_facts, extract_facts, glossary_check, grounding_check, no_preference_check
+from .facts import explanation_facts, facts_json, letter_facts, origin_criterion_code
+from .validator import (
+    check_facts,
+    extract_facts,
+    glossary_check,
+    grounding_check,
+    no_preference_check,
+    origin_code_check,
+)
 
 log = logging.getLogger(__name__)
 
@@ -46,6 +53,7 @@ def build_dossier(product: Product, verdict: Verdict, llm: LLMClient | None, tar
     explain_required = _present(facts, ["status", "hs6", "nom_pct", "threshold"])
     letter_required = _present(facts, ["product", "hs6"])
     preference = verdict.status is VerdictStatus.PASS
+    code = origin_criterion_code(verdict)
 
     def check_explanation(text: str) -> list[FactCheck]:
         return [*check_facts(text, facts, explain_required), grounding_check(text, explain_block)]
@@ -56,11 +64,15 @@ def build_dossier(product: Product, verdict: Verdict, llm: LLMClient | None, tar
             *glossary_check(text),
             grounding_check(text, letter_block),
         ]
-        return checks if preference else [*checks, no_preference_check(text, "zh")]
+        if preference:
+            return [*checks, origin_code_check(text, code)] if code else checks
+        return [*checks, no_preference_check(text, "zh")]
 
     def check_back(text: str, letter: str) -> list[FactCheck]:
         checks = [*check_facts(text, facts, letter_required), grounding_check(text, letter)]
-        return checks if preference else [*checks, no_preference_check(text, "en")]
+        if preference:
+            return [*checks, origin_code_check(text, code)] if code else checks
+        return [*checks, no_preference_check(text, "en")]
 
     explanation_en = _generate(
         llm,

@@ -22,6 +22,7 @@ GLOSSARY: list[tuple[str, str, str]] = [
     ("ex-works price", "Ab-Werk-Preis", "出厂价"),
     ("change in tariff classification", "Wechsel der Tarifeinreihung", "税则归类改变"),
     ("change of tariff heading", "Positionswechsel", "品目改变"),
+    ("origin criterion (WO / WP / PSR)", "Ursprungskriterium", "原产地标准"),
     ("certificate of origin", "Ursprungszeugnis", "原产地证书"),
     ("origin declaration", "Ursprungserklärung", "原产地声明"),
     ("approved exporter", "ermächtigter Ausführer", "经核准出口商"),

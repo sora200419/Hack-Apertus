@@ -39,6 +39,8 @@ class EvalConfig:
     e2_random: int = 300
     e2_rules_per_chapter: int = 3
     e2_llm_n: int = 100
+    e2_sweep_per_chapter: int = 20
+    e2_sweep_rules_per_chapter: int = 4
     seed: int = 2026
 
 
@@ -59,7 +61,15 @@ def run(config: EvalConfig, settings: Settings, client: LLMClient, out_dir: Path
 
     t0 = time.perf_counter()
     e2, t2 = e2_origin.run(
-        pack, data_dir, client, config.e2_random, config.seed, config.e2_rules_per_chapter, config.e2_llm_n
+        pack,
+        data_dir,
+        client,
+        config.e2_random,
+        config.seed,
+        config.e2_rules_per_chapter,
+        config.e2_llm_n,
+        config.e2_sweep_per_chapter,
+        config.e2_sweep_rules_per_chapter,
     )
     timings["e2"] = time.perf_counter() - t0
 

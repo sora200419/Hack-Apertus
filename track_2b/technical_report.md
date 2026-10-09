@@ -127,16 +127,19 @@ are in `data/eval/results/results.md`.
 - Metrics: top-1 and top-3 accuracy at HS6 and HS4, recall@10 (the reranker's ceiling), coverage and
   selective accuracy, and cross-lingual agreement.
 
-| Setup (BOM test set, n=126) | Top-1 HS6 | Top-1 HS4 | EN / DE / FR / IT top-1 |
-|---|---|---|---|
-| Baseline: BM25 | 14.3% | 19.8% | 29.6 / 2.4 / 5.6 / 0.0 |
-| Baseline: fused retrieval (RRF) | 15.9% | 22.2% | 29.6 / 2.4 / 16.7 / 0.0 |
-| Ours: Apertus 8B rewrite + 8B rerank | *pending live run* | | |
-| Ours: Apertus 8B rewrite + 70B rerank | *pending live run* | | |
+| Setup (BOM test set, n=126) | Top-1 HS6 | Top-3 HS6 | Recall@10 | EN / DE / FR / IT top-1 |
+|---|---|---|---|---|
+| Baseline: BM25 | 14.3% | 19.8% | 27.8% | 29.6 / 2.4 / 5.6 / 0.0 |
+| Baseline: fused retrieval (RRF) | 15.9% | 20.6% | 30.9% | 29.6 / 2.4 / 16.7 / 0.0 |
+| Ours, no model: + DE/FR/IT glossary, abstains unless all rankers agree | 0.8% (coverage 1.6%, selective 50%) | 36.5% | 51.6% | — |
+| Ours: Apertus 8B rewrite + 8B rerank | *pending live run* | | | |
+| Ours: Apertus 8B rewrite + 70B rerank | *pending live run* | | | |
 
-Without a model, recall@10 is only 31%, because German and Italian part names share no words with the
-English nomenclature: "Kugellager Edelstahl 6204" retrieves paintings (9701). The Apertus rewrite step is
-what lifts the candidate set; the reranker then chooses within it or abstains.
+On raw text, recall@10 is only 31%: German and Italian part names share no words with the English
+nomenclature, so "Kugellager Edelstahl 6204" retrieves paintings (9701). A static customs glossary
+(no model) lifts recall@10 to 52%, but word-by-word glosses are not reliable enough to commit to a code, so
+the no-model path abstains almost always. The Apertus rewrite and rerank are the step that turns a
+candidate list into a decision; their rows come from the recorded cache.
 
 **E2 — origin verdicts.**
 - (a) Differential test: the engine against an independent re-implementation (`eval/reference.py`, own rule
@@ -190,8 +193,8 @@ latency will be added from the live run.
 - **Hardware:** any x86-64 or ARM machine with Docker; no GPU (models are remote or self-hosted).
 - **Commands:**
   - `make run`: UI at http://localhost:8080, API docs at :8000/docs.
-  - `make test`: about 550 tests.
-  - `make eval`: replay mode, about 30 s, byte-identical `summary.json`.
+  - `make test`: about 670 tests.
+  - `make eval`: replay mode, about 1 min, byte-identical `summary.json`.
   - `make eval-live`: records new cache entries against `LLM_BASE_URL`.
 - **Seeds:** synthetic BOM seed 2026; dev/test splits are hash-frozen; temperature 0.
 - **Commit:** see `data/eval/results/results.md` (the commit hash is written by `run_all`).

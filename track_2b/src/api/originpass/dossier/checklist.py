@@ -8,7 +8,7 @@ from __future__ import annotations
 
 from ..engine.general import DIRECT_TRANSPORT
 from ..models import Product, Verdict, VerdictStatus
-from .facts import fmt_num, open_checks
+from .facts import ORIGIN_CODES, fmt_num, open_checks, origin_criterion_code
 
 _PROOF_OF_ORIGIN = (
     "Proof of origin: a certificate of origin (原产地证书) issued by the competent authority, or an origin "
@@ -26,7 +26,14 @@ def build_checklist(product: Product, verdict: Verdict) -> list[str]:
     status = verdict.status
     undecided = [c for c in open_checks(verdict) if c.passed is None]
     if status is VerdictStatus.PASS:
-        items += [_PROOF_OF_ORIGIN, _APPROVED_EXPORTER]
+        items.append(_PROOF_OF_ORIGIN)
+        code = origin_criterion_code(verdict)
+        if code:
+            items.append(
+                f'Certificate of origin: state the origin criterion "{code}" ({ORIGIN_CODES[code][0]}); it '
+                "follows from this calculation and must match the materials actually used."
+            )
+        items.append(_APPROVED_EXPORTER)
     elif status is VerdictStatus.FAIL:
         items.append(
             "Do not issue a certificate of origin or an origin declaration: the product does not qualify, so the "

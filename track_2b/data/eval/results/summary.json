@@ -4,15 +4,17 @@
     "llm_name": "swiss-ai/Apertus-v1.5-70B",
     "llm_name_small": "swiss-ai/Apertus-v1.5-8B",
     "rulepack": "ch-cn-2014",
-    "rulepack_sha256": "f38b6c6760addef224ccd9cdd27e1ac7b02085173d1371f4f742b6556f6da1fb",
+    "rulepack_sha256": "e3e59e3a6a2fdd33b9e1351978e27fc052a23fd78df88b3a154e840492267bcf",
     "gold_sha256": "163fb7a88a53e635d86d663aee66a1dac082dbb674aa564c460a4859c621f696",
     "replay_cache_entries": 0,
-    "commit": "cfebdf17451260356549f6a0858fae6f439b06ee",
+    "commit": "0363a15f75f73db55a93eb37012c1cbf0c8760a8",
     "config": {
       "e1_max_items": null,
       "e2_random": 300,
       "e2_rules_per_chapter": 3,
       "e2_llm_n": 100,
+      "e2_sweep_per_chapter": 20,
+      "e2_sweep_rules_per_chapter": 4,
       "seed": 2026
     }
   },
@@ -150,12 +152,12 @@
             0.0436
           ],
           "top1_hs4": 0.0079,
-          "top3_hs6": 0.2063,
-          "top3_hs4": 0.254,
-          "recall_at_10": 0.3095,
-          "coverage": 0.0238,
-          "selective_hs6": 0.3333,
-          "selective_hs4": 0.3333
+          "top3_hs6": 0.3651,
+          "top3_hs4": 0.4524,
+          "recall_at_10": 0.5159,
+          "coverage": 0.0159,
+          "selective_hs6": 0.5,
+          "selective_hs4": 0.5
         },
         "llm_small": {
           "n": 0,
@@ -322,12 +324,12 @@
             0.0616
           ],
           "top1_hs4": 0.0114,
-          "top3_hs6": 0.25,
-          "top3_hs4": 0.3523,
-          "recall_at_10": 0.3977,
-          "coverage": 0.0568,
-          "selective_hs6": 0.2,
-          "selective_hs4": 0.2
+          "top3_hs6": 0.375,
+          "top3_hs4": 0.5682,
+          "recall_at_10": 0.5795,
+          "coverage": 0.0114,
+          "selective_hs6": 1.0,
+          "selective_hs4": 1.0
         },
         "llm_small": {
           "n": 0,
@@ -452,8 +454,8 @@
             "n": 42,
             "top1_hs6": 0.0,
             "top1_hs4": 0.0,
-            "top3_hs6": 0.0476,
-            "coverage": 0.0238
+            "top3_hs6": 0.381,
+            "coverage": 0.0
           },
           "en": {
             "n": 54,
@@ -466,14 +468,14 @@
             "n": 18,
             "top1_hs6": 0.0,
             "top1_hs4": 0.0,
-            "top3_hs6": 0.1667,
+            "top3_hs6": 0.2222,
             "coverage": 0.0
           },
           "it": {
             "n": 12,
             "top1_hs6": 0.0,
             "top1_hs4": 0.0,
-            "top3_hs6": 0.0,
+            "top3_hs6": 0.4167,
             "coverage": 0.0
           }
         },
@@ -634,7 +636,7 @@
             "n": 22,
             "top1_hs6": 0.0455,
             "top1_hs4": 0.0455,
-            "top3_hs6": 0.0455,
+            "top3_hs6": 0.3182,
             "coverage": 0.0455
           },
           "en": {
@@ -648,15 +650,15 @@
             "n": 22,
             "top1_hs6": 0.0,
             "top1_hs4": 0.0,
-            "top3_hs6": 0.2273,
-            "coverage": 0.1364
+            "top3_hs6": 0.3182,
+            "coverage": 0.0
           },
           "it": {
             "n": 22,
             "top1_hs6": 0.0,
             "top1_hs4": 0.0,
-            "top3_hs6": 0.1364,
-            "coverage": 0.0455
+            "top3_hs6": 0.2727,
+            "coverage": 0.0
           }
         },
         "llm_small": {
@@ -904,25 +906,25 @@
         },
         "confusion_reference_x_engine": {
           "PASS": {
-            "PASS": 211,
+            "PASS": 213,
             "FAIL": 0,
             "UNSURE": 0
           },
           "FAIL": {
             "PASS": 0,
-            "FAIL": 52,
+            "FAIL": 53,
             "UNSURE": 0
           },
           "UNSURE": {
             "PASS": 0,
             "FAIL": 0,
-            "UNSURE": 37
+            "UNSURE": 34
           }
         },
         "reference_status_counts": {
-          "PASS": 211,
-          "UNSURE": 37,
-          "FAIL": 52
+          "PASS": 213,
+          "UNSURE": 34,
+          "FAIL": 53
         },
         "false_pass": 0,
         "false_pass_rate": 0.0,
@@ -959,7 +961,7 @@
         }
       },
       "edge": {
-        "n": 150,
+        "n": 173,
         "status_agreement": 1.0,
         "full_agreement": 1.0,
         "field_agreement": {
@@ -970,60 +972,491 @@
         },
         "confusion_reference_x_engine": {
           "PASS": {
-            "PASS": 96,
+            "PASS": 95,
             "FAIL": 0,
             "UNSURE": 0
           },
           "FAIL": {
             "PASS": 0,
-            "FAIL": 23,
+            "FAIL": 21,
             "UNSURE": 0
           },
           "UNSURE": {
             "PASS": 0,
             "FAIL": 0,
-            "UNSURE": 31
+            "UNSURE": 57
           }
         },
         "reference_status_counts": {
-          "PASS": 96,
-          "FAIL": 23,
-          "UNSURE": 31
+          "PASS": 95,
+          "FAIL": 21,
+          "UNSURE": 57
         },
         "false_pass": 0,
         "false_pass_rate": 0.0,
         "false_fail": 0,
         "by_chapter": {
           "73": {
-            "n": 20,
+            "n": 23,
             "status_agreement": 1.0
           },
           "83": {
-            "n": 20,
+            "n": 23,
             "status_agreement": 1.0
           },
           "84": {
-            "n": 15,
+            "n": 18,
             "status_agreement": 1.0
           },
           "85": {
-            "n": 45,
+            "n": 50,
             "status_agreement": 1.0
           },
           "90": {
-            "n": 15,
+            "n": 18,
             "status_agreement": 1.0
           },
           "91": {
-            "n": 15,
+            "n": 18,
             "status_agreement": 1.0
           },
           "94": {
-            "n": 20,
+            "n": 23,
             "status_agreement": 1.0
           }
         },
-        "kinds": 32
+        "kinds": 35
+      },
+      "disagreements": []
+    },
+    "sweep": {
+      "config": {
+        "seed": 2026,
+        "chapters": 96,
+        "n_per_chapter": 20,
+        "rules_per_chapter": 4
+      },
+      "all": {
+        "n": 5823,
+        "status_agreement": 1.0,
+        "full_agreement": 1.0,
+        "field_agreement": {
+          "rule": 1.0,
+          "nom_pct": 1.0,
+          "alternatives": 1.0,
+          "general": 1.0
+        },
+        "confusion_reference_x_engine": {
+          "PASS": {
+            "PASS": 2788,
+            "FAIL": 0,
+            "UNSURE": 0
+          },
+          "FAIL": {
+            "PASS": 0,
+            "FAIL": 1533,
+            "UNSURE": 0
+          },
+          "UNSURE": {
+            "PASS": 0,
+            "FAIL": 0,
+            "UNSURE": 1502
+          }
+        },
+        "reference_status_counts": {
+          "FAIL": 1533,
+          "PASS": 2788,
+          "UNSURE": 1502
+        },
+        "false_pass": 0,
+        "false_pass_rate": 0.0,
+        "false_fail": 0,
+        "by_chapter": {
+          "01": {
+            "n": 39,
+            "status_agreement": 1.0
+          },
+          "02": {
+            "n": 62,
+            "status_agreement": 1.0
+          },
+          "03": {
+            "n": 96,
+            "status_agreement": 1.0
+          },
+          "04": {
+            "n": 67,
+            "status_agreement": 1.0
+          },
+          "05": {
+            "n": 39,
+            "status_agreement": 1.0
+          },
+          "06": {
+            "n": 39,
+            "status_agreement": 1.0
+          },
+          "07": {
+            "n": 39,
+            "status_agreement": 1.0
+          },
+          "08": {
+            "n": 39,
+            "status_agreement": 1.0
+          },
+          "09": {
+            "n": 93,
+            "status_agreement": 1.0
+          },
+          "10": {
+            "n": 39,
+            "status_agreement": 1.0
+          },
+          "11": {
+            "n": 41,
+            "status_agreement": 1.0
+          },
+          "12": {
+            "n": 67,
+            "status_agreement": 1.0
+          },
+          "13": {
+            "n": 39,
+            "status_agreement": 1.0
+          },
+          "14": {
+            "n": 39,
+            "status_agreement": 1.0
+          },
+          "15": {
+            "n": 39,
+            "status_agreement": 1.0
+          },
+          "16": {
+            "n": 62,
+            "status_agreement": 1.0
+          },
+          "17": {
+            "n": 81,
+            "status_agreement": 1.0
+          },
+          "18": {
+            "n": 62,
+            "status_agreement": 1.0
+          },
+          "19": {
+            "n": 62,
+            "status_agreement": 1.0
+          },
+          "20": {
+            "n": 39,
+            "status_agreement": 1.0
+          },
+          "21": {
+            "n": 39,
+            "status_agreement": 1.0
+          },
+          "22": {
+            "n": 100,
+            "status_agreement": 1.0
+          },
+          "23": {
+            "n": 39,
+            "status_agreement": 1.0
+          },
+          "24": {
+            "n": 85,
+            "status_agreement": 1.0
+          },
+          "25": {
+            "n": 62,
+            "status_agreement": 1.0
+          },
+          "26": {
+            "n": 39,
+            "status_agreement": 1.0
+          },
+          "27": {
+            "n": 43,
+            "status_agreement": 1.0
+          },
+          "28": {
+            "n": 120,
+            "status_agreement": 1.0
+          },
+          "29": {
+            "n": 77,
+            "status_agreement": 1.0
+          },
+          "30": {
+            "n": 71,
+            "status_agreement": 1.0
+          },
+          "31": {
+            "n": 43,
+            "status_agreement": 1.0
+          },
+          "32": {
+            "n": 89,
+            "status_agreement": 1.0
+          },
+          "33": {
+            "n": 43,
+            "status_agreement": 1.0
+          },
+          "34": {
+            "n": 43,
+            "status_agreement": 1.0
+          },
+          "35": {
+            "n": 43,
+            "status_agreement": 1.0
+          },
+          "36": {
+            "n": 43,
+            "status_agreement": 1.0
+          },
+          "37": {
+            "n": 81,
+            "status_agreement": 1.0
+          },
+          "38": {
+            "n": 98,
+            "status_agreement": 1.0
+          },
+          "39": {
+            "n": 62,
+            "status_agreement": 1.0
+          },
+          "40": {
+            "n": 102,
+            "status_agreement": 1.0
+          },
+          "41": {
+            "n": 100,
+            "status_agreement": 1.0
+          },
+          "42": {
+            "n": 43,
+            "status_agreement": 1.0
+          },
+          "43": {
+            "n": 43,
+            "status_agreement": 1.0
+          },
+          "44": {
+            "n": 43,
+            "status_agreement": 1.0
+          },
+          "45": {
+            "n": 60,
+            "status_agreement": 1.0
+          },
+          "46": {
+            "n": 58,
+            "status_agreement": 1.0
+          },
+          "47": {
+            "n": 62,
+            "status_agreement": 1.0
+          },
+          "48": {
+            "n": 120,
+            "status_agreement": 1.0
+          },
+          "49": {
+            "n": 39,
+            "status_agreement": 1.0
+          },
+          "50": {
+            "n": 112,
+            "status_agreement": 1.0
+          },
+          "51": {
+            "n": 110,
+            "status_agreement": 1.0
+          },
+          "52": {
+            "n": 108,
+            "status_agreement": 1.0
+          },
+          "53": {
+            "n": 96,
+            "status_agreement": 1.0
+          },
+          "54": {
+            "n": 66,
+            "status_agreement": 1.0
+          },
+          "55": {
+            "n": 89,
+            "status_agreement": 1.0
+          },
+          "56": {
+            "n": 43,
+            "status_agreement": 1.0
+          },
+          "57": {
+            "n": 43,
+            "status_agreement": 1.0
+          },
+          "58": {
+            "n": 43,
+            "status_agreement": 1.0
+          },
+          "59": {
+            "n": 43,
+            "status_agreement": 1.0
+          },
+          "60": {
+            "n": 43,
+            "status_agreement": 1.0
+          },
+          "61": {
+            "n": 43,
+            "status_agreement": 1.0
+          },
+          "62": {
+            "n": 43,
+            "status_agreement": 1.0
+          },
+          "63": {
+            "n": 81,
+            "status_agreement": 1.0
+          },
+          "64": {
+            "n": 43,
+            "status_agreement": 1.0
+          },
+          "65": {
+            "n": 43,
+            "status_agreement": 1.0
+          },
+          "66": {
+            "n": 58,
+            "status_agreement": 1.0
+          },
+          "67": {
+            "n": 39,
+            "status_agreement": 1.0
+          },
+          "68": {
+            "n": 43,
+            "status_agreement": 1.0
+          },
+          "69": {
+            "n": 43,
+            "status_agreement": 1.0
+          },
+          "70": {
+            "n": 62,
+            "status_agreement": 1.0
+          },
+          "71": {
+            "n": 108,
+            "status_agreement": 1.0
+          },
+          "72": {
+            "n": 118,
+            "status_agreement": 1.0
+          },
+          "73": {
+            "n": 43,
+            "status_agreement": 1.0
+          },
+          "74": {
+            "n": 62,
+            "status_agreement": 1.0
+          },
+          "75": {
+            "n": 62,
+            "status_agreement": 1.0
+          },
+          "76": {
+            "n": 87,
+            "status_agreement": 1.0
+          },
+          "78": {
+            "n": 62,
+            "status_agreement": 1.0
+          },
+          "79": {
+            "n": 62,
+            "status_agreement": 1.0
+          },
+          "80": {
+            "n": 62,
+            "status_agreement": 1.0
+          },
+          "81": {
+            "n": 96,
+            "status_agreement": 1.0
+          },
+          "82": {
+            "n": 57,
+            "status_agreement": 1.0
+          },
+          "83": {
+            "n": 43,
+            "status_agreement": 1.0
+          },
+          "84": {
+            "n": 38,
+            "status_agreement": 1.0
+          },
+          "85": {
+            "n": 88,
+            "status_agreement": 1.0
+          },
+          "86": {
+            "n": 38,
+            "status_agreement": 1.0
+          },
+          "87": {
+            "n": 38,
+            "status_agreement": 1.0
+          },
+          "88": {
+            "n": 60,
+            "status_agreement": 1.0
+          },
+          "89": {
+            "n": 38,
+            "status_agreement": 1.0
+          },
+          "90": {
+            "n": 38,
+            "status_agreement": 1.0
+          },
+          "91": {
+            "n": 38,
+            "status_agreement": 1.0
+          },
+          "92": {
+            "n": 43,
+            "status_agreement": 1.0
+          },
+          "93": {
+            "n": 38,
+            "status_agreement": 1.0
+          },
+          "94": {
+            "n": 43,
+            "status_agreement": 1.0
+          },
+          "95": {
+            "n": 43,
+            "status_agreement": 1.0
+          },
+          "96": {
+            "n": 75,
+            "status_agreement": 1.0
+          },
+          "97": {
+            "n": 76,
+            "status_agreement": 1.0
+          }
+        }
       },
       "disagreements": []
     },
@@ -1214,21 +1647,21 @@
           "letter_zh": {
             "llm_source": "template",
             "attempts": 1,
-            "checks_passed": 6,
-            "checks_total": 6,
+            "checks_passed": 7,
+            "checks_total": 7,
             "failed_checks": []
           },
           "back_translation_en": {
             "llm_source": "template",
             "attempts": 1,
-            "checks_passed": 3,
-            "checks_total": 3,
+            "checks_passed": 4,
+            "checks_total": 4,
             "failed_checks": []
           }
         },
         "letter_glossary_ok": true,
         "letter_glossary_missing": [],
-        "checklist_items": 6,
+        "checklist_items": 7,
         "duty_estimate": true
       },
       {
@@ -1252,21 +1685,21 @@
           "letter_zh": {
             "llm_source": "template",
             "attempts": 1,
-            "checks_passed": 6,
-            "checks_total": 6,
+            "checks_passed": 7,
+            "checks_total": 7,
             "failed_checks": []
           },
           "back_translation_en": {
             "llm_source": "template",
             "attempts": 1,
-            "checks_passed": 3,
-            "checks_total": 3,
+            "checks_passed": 4,
+            "checks_total": 4,
             "failed_checks": []
           }
         },
         "letter_glossary_ok": true,
         "letter_glossary_missing": [],
-        "checklist_items": 6,
+        "checklist_items": 7,
         "duty_estimate": true
       },
       {
@@ -1290,21 +1723,21 @@
           "letter_zh": {
             "llm_source": "template",
             "attempts": 1,
-            "checks_passed": 6,
-            "checks_total": 6,
+            "checks_passed": 7,
+            "checks_total": 7,
             "failed_checks": []
           },
           "back_translation_en": {
             "llm_source": "template",
             "attempts": 1,
-            "checks_passed": 3,
-            "checks_total": 3,
+            "checks_passed": 4,
+            "checks_total": 4,
             "failed_checks": []
           }
         },
         "letter_glossary_ok": true,
         "letter_glossary_missing": [],
-        "checklist_items": 6,
+        "checklist_items": 7,
         "duty_estimate": true
       }
     ],
@@ -1423,12 +1856,12 @@
         },
         "dossier.letter": {
           "basis": "estimated from 5 attempted prompts; completion = max_tokens cap 700 (assumption)",
-          "prompt_tokens": 717,
+          "prompt_tokens": 817,
           "completion_tokens": 700
         },
         "dossier.back_translate": {
           "basis": "estimated from 5 rebuilt prompts; completion = max_tokens cap 700 (assumption)",
-          "prompt_tokens": 292,
+          "prompt_tokens": 331,
           "completion_tokens": 700
         }
       },
@@ -1438,9 +1871,9 @@
         "code_roles": 0.1475
       },
       "chf_per_1000_dossiers": {
-        "8b_only": 0.4102,
-        "70b_only": 5.2072,
-        "code_roles": 3.5158
+        "8b_only": 0.4214,
+        "70b_only": 5.2984,
+        "code_roles": 3.5845
       }
     }
   }

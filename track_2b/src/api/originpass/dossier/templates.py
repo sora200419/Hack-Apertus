@@ -8,6 +8,7 @@ from __future__ import annotations
 
 from ..models import Product, Verdict, VerdictStatus
 from .facts import (
+    ORIGIN_CODES,
     blocking_line_ids,
     criteria_text,
     fmt_chf,
@@ -16,6 +17,7 @@ from .facts import (
     hs6_dotted,
     met_criteria,
     open_checks,
+    origin_criterion_code,
 )
 
 _CH_THOUSANDS = "'"  # Swiss thousands separator: CHF 1'250.00
@@ -23,6 +25,26 @@ _DE_CHECK_NAMES = {
     "insufficient processing": "nicht ausreichende Be- oder Verarbeitung",
     "direct transport": "direkte Beförderung",
 }
+# Engine names of criterion checks ("CTH", "CTH except from 9114", "MAXNOM 50%", "SPECIFIC") in German.
+_DE_CRITERIA = {
+    "WO": "vollständig gewonnen oder hergestellt",
+    "CC": "Kapitelwechsel",
+    "CTH": "Positionswechsel",
+    "CTSH": "Unterpositionswechsel",
+    "SPECIFIC": "spezifische Be- oder Verarbeitung",
+}
+
+
+def _de_check_name(name: str) -> str:
+    if name in _DE_CHECK_NAMES:
+        return _DE_CHECK_NAMES[name]
+    kind, _, rest = name.partition(" ")
+    if kind == "MAXNOM":
+        limit = rest.rstrip("%").strip()
+        return f"Wertkriterium (höchstens {limit.replace('.', ',')} %)" if limit else "Wertkriterium"
+    if kind in _DE_CRITERIA:
+        return _DE_CRITERIA[kind] + (" (mit Ausnahmen)" if rest.startswith("except") else "")
+    return name
 
 
 def _sentence(text: str) -> str:
@@ -188,7 +210,7 @@ def _blockers_de(verdict: Verdict) -> list[str]:
     lines = blocking_line_ids(verdict)
     if lines:
         out.append(f"Massgebende Stücklistenpositionen: {', '.join(lines)}.")
-    undecided = [_DE_CHECK_NAMES.get(c.name, c.name) for c in open_checks(verdict) if c.passed is None]
+    undecided = [_de_check_name(c.name) for c in open_checks(verdict) if c.passed is None]
     if undecided:
         out.append(f"Offene Punkte: {', '.join(undecided)}.")
     if verdict.fixes:
@@ -200,6 +222,7 @@ def _blockers_de(verdict: Verdict) -> list[str]:
 # Letter to the Chinese importer, and its exact English counterpart
 # ---------------------------------------------------------------------------
 
+_PARTY_NAMES = {"CH": ("瑞士", "Switzerland"), "CN": ("中国", "China")}
 _ZH_AGREEMENT = "《中华人民共和国和瑞士联邦自由贸易协定》（以下简称“中瑞自贸协定”）"
 _EN_AGREEMENT = (
     "the Free Trade Agreement between the People's Republic of China and the Swiss Confederation "
@@ -212,14 +235,33 @@ _EN_CLOSING = (
 )
 
 
+def _party(code: str, lang: int) -> str:
+    return _PARTY_NAMES.get(code, (code, code))[lang]
+
+
+def _basis_zh(verdict: Verdict, code: str) -> str:
+    if code == "PSR":
+        return f"适用的产品特定原产地规则为：{criteria_text(met_criteria(verdict), 'zh')}"
+    return f"该产品为{ORIGIN_CODES[code][1]}的货物"
+
+
+def _basis_en(verdict: Verdict, code: str) -> str:
+    if code == "PSR":
+        return f"the applicable product-specific rule of origin is: {criteria_text(met_criteria(verdict), 'en')}"
+    return f"the product is {ORIGIN_CODES[code][0]}"
+
+
 def letter_zh(product: Product, verdict: Verdict) -> str:
     hs = _hs(product, verdict)
     item = f"产品“{product.name}”（HS编码：{hs or '待定'}）"
-    if verdict.status is VerdictStatus.PASS:
-        criterion = criteria_text(met_criteria(verdict), "zh")
+    code = origin_criterion_code(verdict)
+    if verdict.status is VerdictStatus.PASS and code:
         body = (
             f"您好！我司谨此告知：我司向贵司出口的{item}符合{_ZH_AGREEMENT}的原产地规则，"
-            f"适用的产品特定原产地规则为：{criterion}。\n\n"
+            f"{_basis_zh(verdict, code)}；原产地证书所列原产地标准为“{code}”"
+            f"（{ORIGIN_CODES[code][1]}）。\n\n"
+            f"本批货物将由{_party(product.exporter_country, 0)}"
+            f"直接运输至{_party(product.shipment.destination, 0)}，运输单证可应要求提供。"
             "本批货物将随附原产地证明，即主管机构签发的原产地证书，或由经核准出口商出具的原产地声明。"
             "贵司在办理进口申报时，可凭该原产地证明向海关申请适用中瑞自贸协定项下的协定税率。"
         )
@@ -243,11 +285,14 @@ def letter_zh(product: Product, verdict: Verdict) -> str:
 def letter_en(product: Product, verdict: Verdict) -> str:
     hs = _hs(product, verdict)
     item = f'the product "{product.name}" (HS code: {hs or "to be determined"})'
-    if verdict.status is VerdictStatus.PASS:
-        criterion = criteria_text(met_criteria(verdict), "en")
+    code = origin_criterion_code(verdict)
+    if verdict.status is VerdictStatus.PASS and code:
         body = (
             f"We hereby inform you that {item} that we export to your company meets the rules of origin of "
-            f"{_EN_AGREEMENT}; the applicable product-specific rule of origin is: {criterion}.\n\n"
+            f"{_EN_AGREEMENT}; {_basis_en(verdict, code)}; the origin criterion stated on the certificate of "
+            f'origin is "{code}" ({ORIGIN_CODES[code][0]}).\n\n'
+            f"The goods will be transported directly from {_party(product.exporter_country, 1)} to "
+            f"{_party(product.shipment.destination, 1)}; the transport documents are available on request. "
             "This shipment will be accompanied by a proof of origin, namely a certificate of origin issued by the "
             "competent authority, or an origin declaration made out by an approved exporter. When making the import "
             "declaration, your company may present this proof of origin to customs and apply for the FTA "
