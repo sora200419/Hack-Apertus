@@ -1,0 +1,97 @@
+{
+  "pack_id": "test-invalid",
+  "agreement": "Synthetic test agreement",
+  "version_note": "SYNTHETIC TEST FIXTURE - not legal text",
+  "general": {
+    "tolerance_pct": 10.0,
+    "tolerance_applies_to": [
+      "CTH",
+      "MAXNOM"
+    ],
+    "tolerance_text": "SYNTHETIC TEST FIXTURE - not legal text",
+    "insufficient_operations": [
+      "packing",
+      "repacking",
+      "labelling",
+      "affixing marks",
+      "simple assembly",
+      "washing",
+      "sorting"
+    ],
+    "insufficient_operations_text": "SYNTHETIC TEST FIXTURE - not legal text",
+    "cumulation_parties": [
+      "ch"
+    ],
+    "direct_transport_text": "SYNTHETIC TEST FIXTURE - not legal text",
+    "max_items_per_certificate": null,
+    "source": "tests/fixtures (synthetic)",
+    "verified": false
+  },
+  "rules": [
+    {
+      "rule_id": "TEST-BAD-1",
+      "hs_scope": [
+        "84.71"
+      ],
+      "alternatives": [
+        [
+          {
+            "kind": "MAXNOM"
+          }
+        ]
+      ],
+      "text": "SYNTHETIC TEST FIXTURE - not legal text: TEST-BAD-1",
+      "source": "tests/fixtures (synthetic)",
+      "verified": false
+    },
+    {
+      "rule_id": "TEST-BAD-1",
+      "hs_scope": [
+        "847"
+      ],
+      "alternatives": [
+        [
+          {
+            "kind": "MAXNOM",
+            "max_nom_pct": 50,
+            "except_from": [
+              "9114"
+            ]
+          }
+        ]
+      ],
+      "text": "SYNTHETIC TEST FIXTURE - not legal text: TEST-BAD-1",
+      "source": "tests/fixtures (synthetic)",
+      "verified": false
+    },
+    {
+      "rule_id": "TEST-BAD-3",
+      "hs_scope": [],
+      "alternatives": [],
+      "text": "SYNTHETIC TEST FIXTURE - not legal text: TEST-BAD-3",
+      "source": "tests/fixtures (synthetic)",
+      "verified": false
+    },
+    {
+      "rule_id": "TEST-BAD-4",
+      "hs_scope": [
+        "85"
+      ],
+      "alternatives": [
+        [],
+        [
+          {
+            "kind": "CTH",
+            "max_nom_pct": 10,
+            "except_from": [
+              "91x"
+            ]
+          }
+        ]
+      ],
+      "text": "SYNTHETIC TEST FIXTURE - not legal text: TEST-BAD-4",
+      "source": "tests/fixtures (synthetic)",
+      "verified": false
+    }
+  ]
+}

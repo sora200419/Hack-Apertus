@@ -1,0 +1,54 @@
+{
+  "source_note": "PRC import duty rates for goods of Swiss origin, per HS 2022 subheading, as used by OriginPass for the duty-saving estimate. NOTHING HERE IS VERIFIED (verified=false everywhere). MFN rates are filled only where a source states them, and only when every Chinese national tariff line found under the subheading carries the same MFN rate; they come from third-party mirrors (htshub.com, data stamped 2026-01-18, and treayo.com) of the 2026 Customs Import and Export Tariff of the PRC (2026 tariff adjustment plan of the State Council Tariff Commission, in force 1 January 2026), seen through web search results on 2026-10-08, not from the official schedule. A subheading can split into several Chinese 8/10-digit lines with different rates; when only some lines were found or their rates differ, mfn_rate_pct is null. Provisional (暂定) rates, VAT and consumption tax are not represented. No source stating the Switzerland conventional rate (协定税率) under the China-Switzerland FTA (2014 schedule) was found for any line, so every fta_rate_pct is null and no duty saving can be computed yet. The FTA upgrade concluded on 20 August 2026 is not reflected. Before relying on any figure, check it in the official PRC tariff (China Customs online tariff query, or the Ministry of Finance annex) for the exact 10-digit line and for Swiss origin.",
+  "entries": {
+    "841370": {
+      "description": "Pumps; centrifugal, n.e.c. in heading no. 8413, for liquids",
+      "mfn_rate_pct": null,
+      "fta_rate_pct": null,
+      "source": "MFN: htshub.com (third-party mirror, 2026-01-18) lists Chinese line 8413709990 at 8%; the other Chinese lines under 8413.70 were not checked, so no subheading rate is given. FTA: no source found.",
+      "verified": false
+    },
+    "848180": {
+      "description": "Taps, cocks, valves and similar appliances; for pipes, boiler shells, tanks, vats or the like, including thermostatically controlled valves",
+      "mfn_rate_pct": null,
+      "fta_rate_pct": null,
+      "source": "MFN: htshub.com (third-party mirror, 2026-01-18) lists Chinese line 8481804090 at 7% (provisional 5%); the other Chinese lines under 8481.80 were not checked, so no subheading rate is given. FTA: no source found.",
+      "verified": false
+    },
+    "850152": {
+      "description": "Electric motors; AC motors, multi-phase, of an output exceeding 750W but not exceeding 75kW",
+      "mfn_rate_pct": null,
+      "fta_rate_pct": null,
+      "source": "MFN: htshub.com (third-party mirror, 2026-01-18) lists Chinese line 8501520010 at 10%; the other Chinese lines under 8501.52 were not found, so no subheading rate is given. FTA: no source found.",
+      "verified": false
+    },
+    "901890": {
+      "description": "Medical, surgical or dental instruments and appliances; n.e.c. in heading no. 9018",
+      "mfn_rate_pct": null,
+      "fta_rate_pct": null,
+      "source": "MFN: no source found for the Chinese lines under 9018.90. FTA: no source found.",
+      "verified": false
+    },
+    "902610": {
+      "description": "Instruments and apparatus; for measuring or checking the flow or level of liquids",
+      "mfn_rate_pct": 0.0,
+      "fta_rate_pct": null,
+      "source": "MFN: treayo.com (third-party mirror, no effective date shown) lists Chinese line 90261000 at 0%. FTA: no source found.",
+      "verified": false
+    },
+    "910211": {
+      "description": "Wrist-watches; electrically operated, with or without a stop-watch, (other than those of heading no. 9101) with mechanical display only",
+      "mfn_rate_pct": 10.0,
+      "fta_rate_pct": null,
+      "source": "MFN: htshub.com (third-party mirror, 2026-01-18) lists Chinese line 9102110000 at 10%; treayo.com lists 91021100 at 10%. Consumption tax and VAT excluded. FTA: no source found.",
+      "verified": false
+    },
+    "910221": {
+      "description": "Wrist-watches; whether or not incorporating a stop-watch facility, with automatic winding",
+      "mfn_rate_pct": 11.0,
+      "fta_rate_pct": null,
+      "source": "MFN: htshub.com (third-party mirror, 2026-01-18) lists both Chinese lines 9102210010 and 9102210090 at 11%. Consumption tax and VAT excluded. FTA: no source found.",
+      "verified": false
+    }
+  }
+}

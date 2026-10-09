@@ -1,0 +1,139 @@
+{
+  "product_id": "leman-df25",
+  "name": "Electromagnetic flow meter DF-25",
+  "description": "Instruments Léman-Fictif SA (fictional demo company): electromagnetic flow meter DN25 with converter and graphic display. Synthetic BOM; the converter board comes from China (bilateral cumulation) and three unclassified lines sit inside the 10 % general tolerance.",
+  "hs6": "902610",
+  "ex_works_chf": 1980.0,
+  "exporter_country": "CH",
+  "processing": [
+    "Usinage et soudage du tube de mesure avec brides",
+    "Bobinage et montage des bobines d'excitation",
+    "Assemblage, étalonnage humide sur banc de mesure accrédité",
+    "Contrôle final, étiquetage et emballage"
+  ],
+  "bom": [
+    {
+      "line_id": "L01",
+      "description": "Tube de mesure inox 316L DN25 avec brides",
+      "hs6": null,
+      "origin_country": "DE",
+      "value_chf": 145.0,
+      "supplier": "Rohrwerk Breisgau-Fiktiv GmbH",
+      "originating_override": null
+    },
+    {
+      "line_id": "L02",
+      "description": "Revêtement PTFE (liner) DN25",
+      "hs6": "392690",
+      "origin_country": "DE",
+      "value_chf": 38.0,
+      "supplier": "Kunststofftechnik Allgäu-Fiktiv GmbH",
+      "originating_override": null
+    },
+    {
+      "line_id": "L03",
+      "description": "Électrodes Hastelloy C-22 (paire)",
+      "hs6": "750890",
+      "origin_country": "US",
+      "value_chf": 64.0,
+      "supplier": "Fictional Alloys Inc.",
+      "originating_override": null
+    },
+    {
+      "line_id": "L04",
+      "description": "Bobines d'excitation fil de cuivre émaillé (paire)",
+      "hs6": "850450",
+      "origin_country": "CH",
+      "value_chf": 52.0,
+      "supplier": "Bobinages du Gros-de-Vaud-Fictif SA",
+      "originating_override": null
+    },
+    {
+      "line_id": "L05",
+      "description": "Carte électronique du convertisseur, assemblée (PCBA)",
+      "hs6": "902690",
+      "origin_country": "CN",
+      "value_chf": 185.0,
+      "supplier": "Shenzhen Xugou Instruments Co.",
+      "originating_override": null
+    },
+    {
+      "line_id": "L06",
+      "description": "Afficheur LCD graphique 128x64 rétroéclairé",
+      "hs6": "852491",
+      "origin_country": "KR",
+      "value_chf": 42.0,
+      "supplier": "Busan Gagong Display Co.",
+      "originating_override": null
+    },
+    {
+      "line_id": "L07",
+      "description": "Boîtier aluminium moulé sous pression IP67",
+      "hs6": "761699",
+      "origin_country": "IT",
+      "value_chf": 58.0,
+      "supplier": "Pressofusioni Ossola-Fittizie S.r.l.",
+      "originating_override": null
+    },
+    {
+      "line_id": "L08",
+      "description": "Presse-étoupes M20 laiton nickelé (2 pces)",
+      "hs6": null,
+      "origin_country": "DE",
+      "value_chf": 9.6,
+      "supplier": "Kabeltechnik Schwarzwald-Fiktiv GmbH",
+      "originating_override": null
+    },
+    {
+      "line_id": "L09",
+      "description": "Joints toriques FKM",
+      "hs6": "401693",
+      "origin_country": "DE",
+      "value_chf": 3.2,
+      "supplier": "Dichtungstechnik Neckar-Fiktiv GmbH",
+      "originating_override": null
+    },
+    {
+      "line_id": "L10",
+      "description": "Module de communication HART / 4-20 mA",
+      "hs6": null,
+      "origin_country": "JP",
+      "value_chf": 34.0,
+      "supplier": "Osaka Kakuu Field Devices K.K.",
+      "originating_override": null
+    },
+    {
+      "line_id": "L11",
+      "description": "Visserie inox A2",
+      "hs6": "731815",
+      "origin_country": "CH",
+      "value_chf": 6.4,
+      "supplier": "Visserie du Léman-Fictive SA",
+      "originating_override": null
+    },
+    {
+      "line_id": "L12",
+      "description": "Étiquette signalétique et notice",
+      "hs6": "482110",
+      "origin_country": "CH",
+      "value_chf": 2.1,
+      "supplier": "Imprimerie Ajoie-Fictive SA",
+      "originating_override": null
+    },
+    {
+      "line_id": "L13",
+      "description": "Emballage carton avec calage mousse",
+      "hs6": "481910",
+      "origin_country": "CH",
+      "value_chf": 4.8,
+      "supplier": "Cartonnages Broye-Fictifs SA",
+      "originating_override": null
+    }
+  ],
+  "shipment": {
+    "destination": "CN",
+    "transit_countries": [],
+    "transshipment_or_storage_in_transit": false,
+    "order_quantity": 100
+  }
+}

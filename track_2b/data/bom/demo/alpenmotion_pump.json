@@ -1,0 +1,148 @@
+{
+  "product_id": "alpenmotion-ap80",
+  "name": "Centrifugal pump AP-80",
+  "description": "Alpenmotion AG (fictional demo company): close-coupled industrial centrifugal pump for cooling water, 5.5 kW, DN80. Synthetic BOM; the ex-works price is tuned so that the non-originating share sits just above the rule pack's MAXNOM limit and one supplier swap (motor L01) flips the verdict.",
+  "hs6": "841370",
+  "ex_works_chf": 7590.0,
+  "exporter_country": "CH",
+  "processing": [
+    "CNC-Bearbeitung von Spiralgehäuse und Motorlaterne (CNC machining of casing and bracket)",
+    "Auswuchten des Laufrads (dynamic balancing of the impeller)",
+    "Montage, Druckprüfung 16 bar und Kennlinienmessung auf dem Prüfstand",
+    "Lackierung und Verpackung"
+  ],
+  "bom": [
+    {
+      "line_id": "L01",
+      "description": "Drehstrommotor 5.5 kW IE3, 4-polig, B35",
+      "hs6": "850152",
+      "origin_country": "DE",
+      "value_chf": 1250.0,
+      "supplier": "Motorenwerk Rheintal-Fiktiv GmbH",
+      "originating_override": null
+    },
+    {
+      "line_id": "L02",
+      "description": "Laufrad Edelstahl 1.4408, Feinguss, Ø 210 mm",
+      "hs6": "841391",
+      "origin_country": "IT",
+      "value_chf": 620.0,
+      "supplier": "Fonderia Valcuvia-Fittizia S.r.l.",
+      "originating_override": null
+    },
+    {
+      "line_id": "L03",
+      "description": "Spiralgehäuse GJL-250, Rohguss DN80",
+      "hs6": "841391",
+      "origin_country": "IT",
+      "value_chf": 540.0,
+      "supplier": "Fonderia Valcuvia-Fittizia S.r.l.",
+      "originating_override": null
+    },
+    {
+      "line_id": "L04",
+      "description": "Gleitringdichtung 35 mm SiC/SiC/EPDM",
+      "hs6": "848420",
+      "origin_country": "DE",
+      "value_chf": 310.0,
+      "supplier": "Dichtungstechnik Neckar-Fiktiv GmbH",
+      "originating_override": null
+    },
+    {
+      "line_id": "L05",
+      "description": "Rillenkugellager 6309-2Z C3 (2 Stk.)",
+      "hs6": null,
+      "origin_country": "SE",
+      "value_chf": 68.0,
+      "supplier": "Fiktiv Lager AB",
+      "originating_override": null
+    },
+    {
+      "line_id": "L06",
+      "description": "Pumpenwelle 42CrMo4, geschliffen",
+      "hs6": "848310",
+      "origin_country": "CH",
+      "value_chf": 145.0,
+      "supplier": "Drehteile Tösstal-Fiktiv AG",
+      "originating_override": null
+    },
+    {
+      "line_id": "L07",
+      "description": "Frequenzumrichter 5.5 kW IP55",
+      "hs6": "850440",
+      "origin_country": "FI",
+      "value_chf": 980.0,
+      "supplier": "Fiktiivinen Drives Oy",
+      "originating_override": null
+    },
+    {
+      "line_id": "L08",
+      "description": "Grundrahmen Stahl geschweisst, feuerverzinkt",
+      "hs6": "732690",
+      "origin_country": "CH",
+      "value_chf": 210.0,
+      "supplier": "Metallbau Linth-Fiktiv AG",
+      "originating_override": null
+    },
+    {
+      "line_id": "L09",
+      "description": "O-Ring-Satz EPDM (Gehäusedichtung)",
+      "hs6": null,
+      "origin_country": "DE",
+      "value_chf": 18.5,
+      "supplier": "Dichtungstechnik Neckar-Fiktiv GmbH",
+      "originating_override": null
+    },
+    {
+      "line_id": "L10",
+      "description": "Schrauben- und Mutternsatz A4-70",
+      "hs6": "731815",
+      "origin_country": "DE",
+      "value_chf": 24.8,
+      "supplier": "Schraubenhandel Bodensee-Fiktiv GmbH",
+      "originating_override": null
+    },
+    {
+      "line_id": "L11",
+      "description": "Elastische Kupplung Grösse 38 (flexible coupling)",
+      "hs6": "848360",
+      "origin_country": "IT",
+      "value_chf": 96.0,
+      "supplier": "Trasmissioni Lario-Fittizie S.p.A.",
+      "originating_override": null
+    },
+    {
+      "line_id": "L12",
+      "description": "Klemmenkasten mit Kabelverschraubung M25",
+      "hs6": null,
+      "origin_country": "CN",
+      "value_chf": 42.0,
+      "supplier": "Ningbo Xugou Electric Fittings Co.",
+      "originating_override": null
+    },
+    {
+      "line_id": "L13",
+      "description": "Typenschild Alu, lasergraviert",
+      "hs6": "831000",
+      "origin_country": "CH",
+      "value_chf": 6.5,
+      "supplier": "Gravuratelier Thur-Fiktiv GmbH",
+      "originating_override": null
+    },
+    {
+      "line_id": "L14",
+      "description": "2K-Epoxy-Decklack RAL 5015",
+      "hs6": "320890",
+      "origin_country": "CH",
+      "value_chf": 35.0,
+      "supplier": "Farbwerk Glatt-Fiktiv AG",
+      "originating_override": null
+    }
+  ],
+  "shipment": {
+    "destination": "CN",
+    "transit_countries": [],
+    "transshipment_or_storage_in_transit": false,
+    "order_quantity": 20
+  }
+}
