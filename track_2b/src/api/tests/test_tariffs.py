@@ -47,8 +47,15 @@ def test_committed_tariff_file_schema():
         assert len(code) == 6 and code.isdigit()
         assert set(e) == {"description", "mfn_rate_pct", "fta_rate_pct", "source", "verified"}
         assert e["source"]
-        # Nothing has been checked against the official schedule yet: no entry may claim otherwise.
-        assert e["verified"] is False
+        # Only rates taken from the official GACC schedule may be marked verified.
+        assert not e["verified"] or e["source"].startswith("GACC Announcement 2014 No. 53")
+
+
+def test_committed_tariff_file_matches_official_extract():
+    from originpass.tariffs_build import build
+
+    path = get_settings().data_dir / "tariffs" / "cn_import_tariffs.json"
+    assert json.loads(path.read_text(encoding="utf-8")) == build(get_settings().data_dir)
 
 
 def test_load_tariffs_missing_and_malformed(tmp_path):
