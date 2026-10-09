@@ -16,13 +16,14 @@ from pathlib import Path
 import pytest
 from engine_builders import adhoc_pack, crit, line, pack, product
 
+from originpass.config import get_settings
 from originpass.engine import apply_changes, evaluate
 from originpass.models import CriterionKind, Product, RulePack, VerdictStatus
 from originpass.rulepack.build_ch_cn import build, read_correlation
 from originpass.rulepack.loader import find_rule
 
 PASS, FAIL, UNSURE = VerdictStatus.PASS, VerdictStatus.FAIL, VerdictStatus.UNSURE
-DATA_DIR = Path(__file__).resolve().parents[3] / "data"
+DATA_DIR = get_settings().data_dir
 RAW_ANNEX = DATA_DIR / "raw" / "annex2_psr_zh_gacc_2014_51.txt"
 CORRELATION = DATA_DIR / "raw" / "hs2022_hs2012_correlation_unsd.csv"
 needs_raw = pytest.mark.skipif(not RAW_ANNEX.exists() or not CORRELATION.exists(), reason="raw sources absent")

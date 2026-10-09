@@ -5,11 +5,12 @@ from pathlib import Path
 
 import pytest
 
+from originpass.config import get_settings
 from originpass.models import CriterionKind
 from originpass.rulepack.build_ch_cn import PACK_ID, build, cn_to_int, parse_code, parse_criterion
 from originpass.rulepack.loader import find_rule, validate_rulepack
 
-DATA_DIR = Path(__file__).resolve().parents[3] / "data"
+DATA_DIR = get_settings().data_dir
 needs_raw = pytest.mark.skipif(not (DATA_DIR / "raw" / "chapter3_provisions.json").exists(), reason="raw sources absent")
 
 

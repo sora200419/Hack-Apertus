@@ -7,7 +7,7 @@
     "rulepack_sha256": "e3e59e3a6a2fdd33b9e1351978e27fc052a23fd78df88b3a154e840492267bcf",
     "gold_sha256": "163fb7a88a53e635d86d663aee66a1dac082dbb674aa564c460a4859c621f696",
     "replay_cache_entries": 0,
-    "commit": "0363a15f75f73db55a93eb37012c1cbf0c8760a8",
+    "commit": "bfaa5fb64276b373aeb02a5a312e60d9b9642439",
     "config": {
       "e1_max_items": null,
       "e2_random": 300,
