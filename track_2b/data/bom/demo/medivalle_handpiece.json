@@ -3,7 +3,7 @@
   "name": "Surgical handpiece MV-3",
   "description": "Medivalle SA (fictional demo company, Ticino): motorised handpiece for microsurgery with sterilisable burr set and foot pedal. Synthetic BOM; the ex-works price is tuned so that the product passes just under the rule pack's MAXNOM limit, and moving the titanium body (L03) to a German supplier flips it to FAIL.",
   "hs6": "901890",
-  "ex_works_chf": 2630.0,
+  "ex_works_chf": 2380.0,
   "exporter_country": "CH",
   "processing": [
     "Tornitura e fresatura CNC delle parti di precisione (CNC turning and milling)",

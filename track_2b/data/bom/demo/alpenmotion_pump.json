@@ -3,7 +3,7 @@
   "name": "Centrifugal pump AP-80",
   "description": "Alpenmotion AG (fictional demo company): close-coupled industrial centrifugal pump for cooling water, 5.5 kW, DN80. Synthetic BOM; the ex-works price is tuned so that the non-originating share sits just above the rule pack's MAXNOM limit and one supplier swap (motor L01) flips the verdict.",
   "hs6": "841370",
-  "ex_works_chf": 7590.0,
+  "ex_works_chf": 7630.0,
   "exporter_country": "CH",
   "processing": [
     "CNC-Bearbeitung von Spiralgehäuse und Motorlaterne (CNC machining of casing and bracket)",

@@ -1,0 +1,40 @@
+{
+  "_note": "Verbatim quotes of the Switzerland-China FTA, Chapter 3 (Rules of Origin), used to build the general provisions of the rule pack. English from the MOFCOM English text as extracted in the ToTA corpus (chapter3_en_tota.txt; extraction-dropped spaces restored), German from fedlex SR 0.946.292.492 (consolidated 2021-09-01), Chinese from GACC Announcement 2014 No. 52, Annex 1.",
+  "de_minimis": {
+    "article": "Art. 3.5",
+    "en": "1. Notwithstanding paragraph 1 of Article 3.4, non-originating materials do not have to fulfil the conditions set out in Annex II provided that their total value does not exceed 10% of the ex-works price. 2. This Article does not apply to value criteria set out in Annex II.",
+    "de": "1. Ungeachtet von Artikel 3.4 Absatz 1 brauchen Nicht-Ursprungsvormaterialien die Bedingungen von Anhang II nicht zu erfüllen, sofern ihr Gesamtwert 10 % des Ab-Werk-Preises nicht überschreitet. 2. Dieser Artikel gilt nicht für die in Anhang II festgelegten Wertkriterien.",
+    "zh": "第3.5条 微小含量 一、尽管有本协定第3.4条的第一款，只要总价值不超过产品出厂价的10%，非原产材料无需满足协定附件二的规定。二、本条款不适用于协定附件二中规定的增值标准。"
+  },
+  "minimal_operations": {
+    "article": "Art. 3.6",
+    "en": "1. Notwithstanding Article 3.4, a product shall not be considered as originating, if it has only undergone one or more of the following operations or processes: (a) operations to ensure the preservation of products in good condition during transport and storage; (b) freezing or thawing; (c) packaging and repackaging; (d) washing, cleaning, removal of dust, oxide, oil, paint or other coverings; (e) ironing or pressing of textiles or textile products; (f) simple painting and polishing; (g) husking, partial or total bleaching, polishing, and glazing of cereals and rice; (h) operations to colour sugar or form sugar lumps; (i) peeling and removal of stones and shells from fruits, nuts and vegetables; (j) sharpening, simple grinding or simple cutting; (k) sifting, screening, sorting, classifying, grading, matching; (l) simple placing in bottles, cans, flasks, bags, cases, boxes, fixing on cards or boards and all other simple packaging operations; (m) affixing or printing marks, labels, logos and other like distinguishing signs on products or their packaging; (n) simple mixing of products, whether or not of different kinds; (o) simple assembly of parts of articles to constitute a complete article or disassembly of products into parts; (p) slaughter of animals. 2. For the purpose of paragraph 1, “simple” describes activities which need neither special skills nor machines, apparatus or equipment especially produced or installed to carry out the activity. 3. All operations in the production of a given product carried out in a Party shall be taken into account when determining whether the working or processing undergone by that product is considered as minimal operations or processes referred to in paragraph 1.",
+    "keywords_note": "Screening keywords derived from Art. 3.6(1)(a)-(p), with German and French equivalents for Swiss users. A keyword hit is a screening signal, not a legal assessment.",
+    "keywords": [
+      "preservation", "freezing", "thawing", "packaging", "repackaging", "packing", "washing", "cleaning",
+      "dust removal", "ironing", "pressing of textiles", "simple painting", "polishing", "husking", "bleaching",
+      "peeling", "sharpening", "simple grinding", "simple cutting", "sifting", "screening", "sorting",
+      "classifying", "grading", "matching", "bottling", "labelling", "labeling", "marking", "printing labels",
+      "simple mixing", "simple assembly", "disassembly", "slaughter",
+      "verpacken", "verpackung", "umpacken", "etikettieren", "beschriften", "reinigen", "waschen", "sortieren",
+      "einfache montage", "einfacher zusammenbau", "zerlegen", "einfrieren", "auftauen",
+      "emballage", "conditionnement", "étiquetage", "nettoyage", "lavage", "triage", "assemblage simple", "démontage"
+    ],
+    "zh": "第3.6条 微小加工或处理 一、尽管有本协定第3.4条的规定，如果产品仅经过了一项或多项下列操作，不应赋予原产资格：（一）为确保产品在运输或储存过程中完好无损地保存而进行的操作；（二）冷冻或解冻；（三）包装和再包装；（四）洗涤、清洁、除尘、除去氧化物、除油、去漆以及去除其他涂层；（五）纺织品或纺织产品的熨烫或压平；（六）简单的上漆及磨光；（七）谷物及大米的去壳、部分或完全的漂白、抛光及上光；（八）食糖上色或加工成糖块的工序；（九）水果、坚果及蔬菜的去皮、去核及去壳；（十）削尖、简单研磨或简单切割；（十一）过滤、筛选、挑选、分类、分级、匹配；（十二）简单的装瓶，装罐，装袋，装箱，装盒，固定于纸板或木板及其他简单的包装工序；（十三）在产品或其包装上粘贴或印刷标志、标签、标识及其他类似的用于区别的标记；（十四）对无论是否为不同种类的产品进行的简单混合；（十五）把零部件装配成完整产品或将产品拆成零部件的简单装配或拆卸；（十六）屠宰动物。二、就第一款而言，“简单”通常用来描述既不需要专门的技能也不需要专门生产或装配机械、仪器或装备的行为。三、在确定某项产品的生产或加工是否是第一款所述的微小加工或处理时，对该产品在缔约一方进行的所有操作都应被考虑在内。"
+  },
+  "accumulation": {
+    "article": "Art. 3.7",
+    "en": "1. Without prejudice to Article 3.2, a product originating in a Party, which is used as material in the production of a product in the other Party, shall be considered as originating in the Party where the last operations beyond those referred to in paragraph 1 of Article 3.6 have been carried out. 2. A product originating in a Party, which is exported from a Party to the other Party and does not undergo working or processing beyond those referred to in paragraph 1 of Article 3.6, shall retain its origin.",
+    "zh": "一、在不违背本协定第3.2条的情况下，如原产于缔约一方的产品在另一缔约方境内用作生产产品的材料，只要在该方进行的最后加工工序超出本协定第3.6条第一款的范畴，则应视为原产于该方。二、原产于缔约一方的产品出口到另一缔约方后，如果没有经过本协定第3.6条第一款所规定以外的生产或加工，其原产地应保持不变。"
+  },
+  "direct_transport": {
+    "article": "Art. 3.13 (para. 4 amended by Joint Committee decision of 14 Sept 2016, in force 1 Sept 2021, AS 2021 471)",
+    "en": "1. Preferential tariff treatment under this Agreement shall only be granted to originating products which are transported directly between the Parties. 2. Notwithstanding paragraph 1, originating products which are transported through the territories of non-parties may still be considered as being transported directly between the Parties, provided that: (a) they do not undergo operations other than unloading, reloading, or any operation confined to preserve them in good condition; and (b) they remain under customs control in those non-parties. Consignments of originating products may be split up in non-parties for further transport subject to the fulfilment of conditions listed in subparagraphs (a) and (b). 3. For the purpose of paragraph 1, an originating product may be transported by pipeline across territories of non-parties.",
+    "zh": "一、本协定项下的优惠关税待遇只能给予在缔约双方之间直接运输的原产产品。二、尽管有第一款的规定，只要满足下列条件，经过非缔约方运输的原产产品仍可视为直接运输：（一）未经过除装卸或任何保持产品良好状态的处理以外的操作；并且（二）在非缔约方处于海关的监管之下。在满足上述两项要求的前提下，一批原产产品可以在非缔约方进行物流分拆。三、就第一款而言，原产产品可以通过管道经非缔约方输送。"
+  },
+  "certificate_items": {
+    "source": "GACC Announcement 2021 No. 49 (in force 1 Sept 2021); Swiss EUR.1 notes for the CH-CN FTA",
+    "max_items": 50,
+    "en": "The number of items listed in box 8 should not exceed 50. For each product described therein, state the HS code (6-digit code) and the applicable origin criterion."
+  }
+}

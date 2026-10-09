@@ -1,0 +1,5060 @@
+{
+ "pack_id": "ch-cn-2014",
+ "agreement": "Free Trade Agreement between the Swiss Confederation and the People's Republic of China (signed 6 July 2013, in force 1 July 2014)",
+ "version_note": "Annex II as published in HS 2012 nomenclature; applied to HS 2022 codes by prefix. The upgraded FTA concluded on 20 Aug 2026 is not yet published; slot 'ch-cn-upgrade' is reserved.",
+ "general": {
+  "tolerance_pct": 10.0,
+  "tolerance_applies_to": [
+   "WO",
+   "CC",
+   "CTH",
+   "CTSH"
+  ],
+  "tolerance_text": "Art. 3.5: 1. Notwithstanding paragraph 1 of Article 3.4, non-originating materials do not have to fulfil the conditions set out in Annex II provided that their total value does not exceed 10% of the ex-works price. 2. This Article does not apply to value criteria set out in Annex II.",
+  "insufficient_operations": [
+   "preservation",
+   "freezing",
+   "thawing",
+   "packaging",
+   "repackaging",
+   "packing",
+   "washing",
+   "cleaning",
+   "dust removal",
+   "ironing",
+   "pressing of textiles",
+   "simple painting",
+   "polishing",
+   "husking",
+   "bleaching",
+   "peeling",
+   "sharpening",
+   "simple grinding",
+   "simple cutting",
+   "sifting",
+   "screening",
+   "sorting",
+   "classifying",
+   "grading",
+   "matching",
+   "bottling",
+   "labelling",
+   "labeling",
+   "marking",
+   "printing labels",
+   "simple mixing",
+   "simple assembly",
+   "disassembly",
+   "slaughter",
+   "verpacken",
+   "verpackung",
+   "umpacken",
+   "etikettieren",
+   "beschriften",
+   "reinigen",
+   "waschen",
+   "sortieren",
+   "einfache montage",
+   "einfacher zusammenbau",
+   "zerlegen",
+   "einfrieren",
+   "auftauen",
+   "emballage",
+   "conditionnement",
+   "étiquetage",
+   "nettoyage",
+   "lavage",
+   "triage",
+   "assemblage simple",
+   "démontage"
+  ],
+  "insufficient_operations_text": "Art. 3.6: 1. Notwithstanding Article 3.4, a product shall not be considered as originating, if it has only undergone one or more of the following operations or processes: (a) operations to ensure the preservation of products in good condition during transport and storage; (b) freezing or thawing; (c) packaging and repackaging; (d) washing, cleaning, removal of dust, oxide, oil, paint or other coverings; (e) ironing or pressing of textiles or textile products; (f) simple painting and polishing; (g) husking, partial or total bleaching, polishing, and glazing of cereals and rice; (h) operations to colour sugar or form sugar lumps; (i) peeling and removal of stones and shells from fruits, nuts and vegetables; (j) sharpening, simple grinding or simple cutting; (k) sifting, screening, sorting, classifying, grading, matching; (l) simple placing in bottles, cans, flasks, bags, cases, boxes, fixing on cards or boards and all other simple packaging operations; (m) affixing or printing marks, labels, logos and other like distinguishing signs on products or their packaging; (n) simple mixing of products, whether or not of different kinds; (o) simple assembly of parts of articles to constitute a complete article or disassembly of products into parts; (p) slaughter of animals. 2. For the purpose of paragraph 1, “simple” describes activities which need neither special skills nor machines, apparatus or equipment especially produced or installed to carry out the activity. 3. All operations in the production of a given product carried out in a Party shall be taken into account when determining whether the working or processing undergone by that product is considered as minimal operations or processes referred to in paragraph 1.",
+  "cumulation_parties": [
+   "CH",
+   "CN"
+  ],
+  "direct_transport_text": "Art. 3.13 (para. 4 amended by Joint Committee decision of 14 Sept 2016, in force 1 Sept 2021, AS 2021 471): 1. Preferential tariff treatment under this Agreement shall only be granted to originating products which are transported directly between the Parties. 2. Notwithstanding paragraph 1, originating products which are transported through the territories of non-parties may still be considered as being transported directly between the Parties, provided that: (a) they do not undergo operations other than unloading, reloading, or any operation confined to preserve them in good condition; and (b) they remain under customs control in those non-parties. Consignments of originating products may be split up in non-parties for further transport subject to the fulfilment of conditions listed in subparagraphs (a) and (b). 3. For the purpose of paragraph 1, an originating product may be transported by pipeline across territories of non-parties.",
+  "max_items_per_certificate": 50,
+  "source": "Switzerland-China FTA, Chapter 3 (MOFCOM English text via ToTA; fedlex SR 0.946.292.492; GACC Announcement 2014 No. 52); GACC Announcement 2021 No. 49 for the 50-item limit",
+  "verified": false
+ },
+ "rules": [
+  {
+   "rule_id": "CHCN-01",
+   "hs_scope": [
+    "01"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "WO",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "WO",
+   "text_zh": "第一章 活动物：完全获得",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '第一章'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-02",
+   "hs_scope": [
+    "02"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "WO",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "WO (ex entry: applies except to the headings listed separately)",
+   "text_zh": "ex 第二章 肉及食用杂碎；以下产品除外：完全获得",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry 'ex 第二章'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-021020",
+   "hs_scope": [
+    "021020"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTH",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     },
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 50.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CTH and VNM 50%",
+   "text_zh": "0210.20 干、熏、盐制的牛肉：品目改变且非原产材料价值50%",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '0210.20'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-03",
+   "hs_scope": [
+    "03"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CC",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CC (ex entry: applies except to the headings listed separately)",
+   "text_zh": "ex 第三章 鱼、甲壳动物、软体动物及其他水生无脊椎动物; 以下产品除外：：章改变",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry 'ex 第三章'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-0301",
+   "hs_scope": [
+    "0301"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "WO",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "WO",
+   "text_zh": "03.01 活鱼：完全获得",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '03.01'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-0302",
+   "hs_scope": [
+    "0302"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "WO",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "WO",
+   "text_zh": "03.02 鲜、冷鱼，但品目0304 的鱼片及其他鱼肉除外：完全获得",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '03.02'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-0303",
+   "hs_scope": [
+    "0303"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "WO",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "WO",
+   "text_zh": "03.03 冻鱼，但品目0304 的鱼片及其他鱼肉除外：完全获得",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '03.03'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-04",
+   "hs_scope": [
+    "04"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CC",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CC",
+   "text_zh": "第四章 乳品；蛋品；天然蜂蜜；其他食用动物产品：章改变",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '第四章'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-05",
+   "hs_scope": [
+    "05"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CC",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CC",
+   "text_zh": "第五章 其他动物产品：章改变",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '第五章'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-06",
+   "hs_scope": [
+    "06"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTH",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CTH",
+   "text_zh": "第六章 活树及其他活植物；鳞茎、根及类似品；插花及装饰用簇叶：品目改变",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '第六章'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-07",
+   "hs_scope": [
+    "07"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CC",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CC",
+   "text_zh": "第七章 食用蔬菜、根及块茎：章改变",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '第七章'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-08",
+   "hs_scope": [
+    "08"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CC",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CC",
+   "text_zh": "第八章 食用水果及坚果；柑桔属水果或甜瓜的果皮：章改变",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '第八章'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-09",
+   "hs_scope": [
+    "09"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "WO",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "WO (ex entry: applies except to the headings listed separately)",
+   "text_zh": "ex第九章 啡、茶、马黛茶及调味香料; 以下产品除外：：完全获得",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry 'ex第九章'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-090121",
+   "hs_scope": [
+    "090121"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 30.0,
+      "except_from": [],
+      "note": null
+     },
+     {
+      "kind": "SPECIFIC",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": "限从生咖啡豆制造，包括焙炒工序"
+     }
+    ]
+   ],
+   "text": "VNM 30% and specific processing condition (see Chinese text)",
+   "text_zh": "0901.21 未浸除咖啡碱的已焙炒咖啡：非原产材料价值30%，限从生咖啡豆制造，包括焙炒工序",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '0901.21'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-090122",
+   "hs_scope": [
+    "090122"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 30.0,
+      "except_from": [],
+      "note": null
+     },
+     {
+      "kind": "SPECIFIC",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": "限从生咖啡豆制造，包括焙炒工序"
+     }
+    ]
+   ],
+   "text": "VNM 30% and specific processing condition (see Chinese text)",
+   "text_zh": "0901.22 已浸除咖啡碱的已焙炒咖啡：非原产材料价值30%，限从生咖啡豆制造，包括焙炒工序",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '0901.22'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-090190",
+   "hs_scope": [
+    "090190"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 30.0,
+      "except_from": [],
+      "note": null
+     },
+     {
+      "kind": "SPECIFIC",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": "限从生咖啡豆制造，包括焙炒工序"
+     }
+    ]
+   ],
+   "text": "VNM 30% and specific processing condition (see Chinese text)",
+   "text_zh": "0901.90 咖啡豆荚及咖啡豆皮：非原产材料价值30%，限从生咖啡豆制造，包括焙炒工序",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '0901.90'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-0902",
+   "hs_scope": [
+    "0902"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 30.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "VNM 30%",
+   "text_zh": "09.02 茶，不论是否加香料：非原产材料价值30%",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '09.02'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-0910",
+   "hs_scope": [
+    "0910"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CC",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CC",
+   "text_zh": "09.10 姜、番红花、姜黄、麝香草、月桂叶、咖喱及其他调味香料：章改变",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '09.10'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-10",
+   "hs_scope": [
+    "10"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "WO",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "WO",
+   "text_zh": "第十章 谷物：完全获得",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '第十章'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-11",
+   "hs_scope": [
+    "11"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CC",
+      "max_nom_pct": null,
+      "except_from": [
+       "10"
+      ],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CC (except from chapter 10)",
+   "text_zh": "第十一章 制粉工业产品；麦芽；淀粉；菊粉；面筋：章改变，从第十章改变至此除外",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '第十一章'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-12",
+   "hs_scope": [
+    "12"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "WO",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "WO",
+   "text_zh": "第十二章 含油子仁及果实；杂项子仁及果实；工业用或药用植物；稻草、秸秆及饲料：完全获得",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '第十二章'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-13",
+   "hs_scope": [
+    "13"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CC",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CC",
+   "text_zh": "第十三章 虫胶；树胶、树脂及其他植物液、汁：章改变",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '第十三章'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-14",
+   "hs_scope": [
+    "14"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "WO",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "WO",
+   "text_zh": "第十四章 编结用植物材料；其他植物产品：完全获得",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '第十四章'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-15",
+   "hs_scope": [
+    "15"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "WO",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "WO",
+   "text_zh": "第十五章 动、植物油、脂及其分解产品；精制的食用油脂；动、植物蜡：完全获得",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '第十五章'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-16",
+   "hs_scope": [
+    "16"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CC",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CC (ex entry: applies except to the headings listed separately)",
+   "text_zh": "ex第十六章 肉、鱼、甲壳动物、软体动物及其他水生无脊椎动物的制品; 以下产品除外：章改变",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry 'ex第十六章'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-1604",
+   "hs_scope": [
+    "1604"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CC",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     },
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 60.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CC and VNM 60%",
+   "text_zh": "16.04 制作或保藏的鱼；鲟鱼子酱及鱼卵制的鲟鱼子酱代用品：章改变且非原产材料价值60%",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '16.04'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-17",
+   "hs_scope": [
+    "17"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CC",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CC (ex entry: applies except to the headings listed separately)",
+   "text_zh": "ex 第十七章 糖及糖食;以下产品除外：：章改变",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry 'ex 第十七章'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-1701",
+   "hs_scope": [
+    "1701"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "WO",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "WO",
+   "text_zh": "17.01 固体甘蔗糖、甜菜糖及化学纯蔗糖：完全获得",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '17.01'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-1704",
+   "hs_scope": [
+    "1704"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTH",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     },
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 50.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CTH and VNM 50%",
+   "text_zh": "17.04 不含可可的糖食（包括白巧克力）：品目改变且非原产材料价值50%",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '17.04'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-18",
+   "hs_scope": [
+    "18"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTH",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     },
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 50.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CTH and VNM 50% (ex entry: applies except to the headings listed separately)",
+   "text_zh": "ex第十八章 可可及可可制品; 以下产品除外：：品目改变且非原产材料价值50%",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry 'ex第十八章'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-1801",
+   "hs_scope": [
+    "1801"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "WO",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "WO",
+   "text_zh": "18.01 整颗或破碎的可可豆，生的或焙炒的：完全获得",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '18.01'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-19",
+   "hs_scope": [
+    "19"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CC",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CC (ex entry: applies except to the headings listed separately)",
+   "text_zh": "ex第十九章 谷物、粮食粉、淀粉或乳的制品；糕饼点心; 以下产品除外：章改变",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry 'ex第十九章'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-1901",
+   "hs_scope": [
+    "1901"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CC",
+      "max_nom_pct": null,
+      "except_from": [
+       "04",
+       "11"
+      ],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CC (except from chapter 04, 11)",
+   "text_zh": "19.01 麦精；细粉、粗粒、粗粉、淀粉或麦精制的其他品目未列名的食品，不含可可或按重量计全脱脂可可含量低于40%；品目0401 至0404 所列货品制的其他品目未列名的食品，不含可可或按重量计全脱脂可可含量低于5%：章改变，从第四章、第十一章改变至此除外",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '19.01'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-20",
+   "hs_scope": [
+    "20"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CC",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CC",
+   "text_zh": "第二十章 蔬菜、水果、坚果或植物其他部分的制品：章改变",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '第二十章'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-21",
+   "hs_scope": [
+    "21"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CC",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CC",
+   "text_zh": "第二十一章 杂项食品：章改变",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '第二十一章'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-22",
+   "hs_scope": [
+    "22"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTH",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CTH (ex entry: applies except to the headings listed separately)",
+   "text_zh": "ex 第二十二章 饮料、酒及醋;以下产品除外：：品目改变",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry 'ex 第二十二章'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-2201",
+   "hs_scope": [
+    "2201"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "WO",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "WO",
+   "text_zh": "22.01 未加糖或其他甜物质及未加味的水，包括天然或人造矿泉水及汽水；冰及雪：完全获得",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '22.01'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-2204",
+   "hs_scope": [
+    "2204"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CC",
+      "max_nom_pct": null,
+      "except_from": [
+       "08"
+      ],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CC (except from chapter 08)",
+   "text_zh": "22.04 鲜葡萄酿造的酒，包括加酒精的；品目20.09 以外的酿酒葡萄汁：章改变，从第八章改变至此除外",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '22.04'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-2206",
+   "hs_scope": [
+    "2206"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CC",
+      "max_nom_pct": null,
+      "except_from": [
+       "08"
+      ],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CC (except from chapter 08)",
+   "text_zh": "22.06 其他发酵饮料（例如，苹果酒、梨酒、蜂蜜酒）；其他品目未列名的发酵饮料的混合物及发酵饮料与无酒精饮料的混合物：章改变，从第八章改变至此除外",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '22.06'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-23",
+   "hs_scope": [
+    "23"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTH",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CTH",
+   "text_zh": "第二十三章 食品工业的残渣及废料；配制的动物饲料：品目改变",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '第二十三章'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-24",
+   "hs_scope": [
+    "24"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "WO",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "WO",
+   "text_zh": "第二十四章 烟草、烟草及烟草代用品的制品：完全获得",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '第二十四章'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-25",
+   "hs_scope": [
+    "25"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTH",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ],
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 60.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CTH; or VNM 60% (ex entry: applies except to the headings listed separately)",
+   "text_zh": "ex第二十五章 盐；硫磺；泥土及石料；石膏料、石灰及水泥;以下产品除外：：品目改变 或者 非原产材料价值60%",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry 'ex第二十五章'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-2530",
+   "hs_scope": [
+    "2530"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "WO",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "WO",
+   "text_zh": "25.30 云母碎料：完全获得",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '25.30'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-26",
+   "hs_scope": [
+    "26"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "WO",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "WO",
+   "text_zh": "第二十六章 矿砂、矿渣及矿灰：完全获得",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '第二十六章'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-27",
+   "hs_scope": [
+    "27"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTH",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ],
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 60.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CTH; or VNM 60%",
+   "text_zh": "第二十七章 矿物燃料、矿物油及其蒸馏产品；沥青物质；矿物蜡：品目改变 或者 非原产材料价值60%",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '第二十七章'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-28",
+   "hs_scope": [
+    "28"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTSH",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ],
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 60.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CTSH; or VNM 60% (ex entry: applies except to the headings listed separately)",
+   "text_zh": "ex第二十八章 无机化学品；贵金属、稀土金属、放射性元素及其同位素的有机及无机化合物，以下产品除外：：子目改变 或者 非原产材料价值60%",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry 'ex第二十八章'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-281511",
+   "hs_scope": [
+    "281511"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTSH",
+      "max_nom_pct": null,
+      "except_from": [
+       "281512"
+      ],
+      "note": null
+     }
+    ],
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 60.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CTSH (except from subheading 281512); or VNM 60%",
+   "text_zh": "2815.11 固体氢氧化钠（烧碱）：子目改变，从子目2815.12改变至此除外 或者 非原产材料价值60%",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '2815.11'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-281512",
+   "hs_scope": [
+    "281512"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTSH",
+      "max_nom_pct": null,
+      "except_from": [
+       "281511"
+      ],
+      "note": null
+     }
+    ],
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 60.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CTSH (except from subheading 281511); or VNM 60%",
+   "text_zh": "2815.12 水溶液（氢氧化钠浓溶液及液体烧碱）：子目改变，从子目2815.11改变至此除外 或者 非原产材料价值60%",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '2815.12'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-284011",
+   "hs_scope": [
+    "284011"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTSH",
+      "max_nom_pct": null,
+      "except_from": [
+       "284019"
+      ],
+      "note": null
+     }
+    ],
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 60.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CTSH (except from subheading 284019); or VNM 60%",
+   "text_zh": "2840.11 无水四硼酸钠：子目改变，从子目2840.19改变至此除外 或者 非原产材料价值60%",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '2840.11'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-284019",
+   "hs_scope": [
+    "284019"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTSH",
+      "max_nom_pct": null,
+      "except_from": [
+       "284011"
+      ],
+      "note": null
+     }
+    ],
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 60.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CTSH (except from subheading 284011); or VNM 60%",
+   "text_zh": "2840.19 其他：子目改变，从子目2840.11改变至此除外 或者 非原产材料价值60%",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '2840.19'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-2846",
+   "hs_scope": [
+    "2846"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTSH",
+      "max_nom_pct": null,
+      "except_from": [
+       "253090"
+      ],
+      "note": null
+     }
+    ],
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 60.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CTSH (except from subheading 253090); or VNM 60%",
+   "text_zh": "28.46 稀土金属、钇、钪及其混合物的无机或有机化合物：子目改变，从子目2530.90改变至此除外 或者 非原产材料价值60%",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '28.46'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-29",
+   "hs_scope": [
+    "29"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTSH",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CTSH (ex entry: applies except to the headings listed separately)",
+   "text_zh": "ex 第二十九章 有机化学品;以下产品除外：：子目改变",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry 'ex 第二十九章'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-2919",
+   "hs_scope": [
+    "2919"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTH",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CTH",
+   "text_zh": "29.19 磷酸脂及其盐，包括乳磷酸盐，以及它们的卤化、磺化、硝化或亚硝化衍生物：品目改变",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '29.19'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-2931",
+   "hs_scope": [
+    "2931"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTH",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CTH",
+   "text_zh": "29.31 其他有机—无机化合物：品目改变",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '29.31'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-30",
+   "hs_scope": [
+    "30"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 60.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "VNM 60% (ex entry: applies except to the headings listed separately)",
+   "text_zh": "ex 第三十章 药品;以下产品除外：：非原产材料价值60%",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry 'ex 第三十章'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-300692",
+   "hs_scope": [
+    "300692"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "WO",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "WO",
+   "text_zh": "3006.92 废药物：完全获得",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '3006.92'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-31",
+   "hs_scope": [
+    "31"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTH",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ],
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 60.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CTH; or VNM 60%",
+   "text_zh": "第三十一章 肥料：品目改变 或者 非原产材料价值60%",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '第三十一章'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-32",
+   "hs_scope": [
+    "32"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTSH",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ],
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 60.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CTSH; or VNM 60% (ex entry: applies except to the headings listed separately)",
+   "text_zh": "ex第三十二章 鞣料浸膏及染料浸膏；鞣酸及其衍生物；染料、颜料及其他着色料；油漆及清漆；油灰及其他胶粘剂；墨水、油墨;以下产品除外：：子目改变 或者 非原产材料价值60%",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry 'ex第三十二章'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-3213",
+   "hs_scope": [
+    "3213"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTH",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ],
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 60.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CTH; or VNM 60%",
+   "text_zh": "32.13 艺术家、学生和广告美工用的颜料、调色料、文娱颜料及类似品，片状、管装、罐装、瓶装、扁盒装以及类似形状或包装的：品目改变 或者 非原产材料价值60%",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '32.13'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-3214",
+   "hs_scope": [
+    "3214"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTH",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ],
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 60.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CTH; or VNM 60%",
+   "text_zh": "32.14 安装玻璃用油灰、接缝用油灰、树脂胶泥、嵌缝胶及其他类似胶粘剂；漆工用填料；非耐火涂面制剂，涂门面、内墙、地板、天花板等用：品目改变 或者 非原产材料价值60%",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '32.14'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-33",
+   "hs_scope": [
+    "33"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTH",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ],
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 60.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CTH; or VNM 60%",
+   "text_zh": "第三十三章 精油及香膏；芳香料制品及化妆盥洗品：品目改变 或者 非原产材料价值60%",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '第三十三章'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-34",
+   "hs_scope": [
+    "34"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTH",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ],
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 60.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CTH; or VNM 60%",
+   "text_zh": "第三十四章 肥皂、有机表面活性剂、洗涤剂、润滑剂、人造蜡、、调制蜡、光洁剂、蜡烛及类似品、塑型用膏、“牙科用蜡”及牙科用熟石膏制剂及牙科用熟石膏制剂：品目改变 或者 非原产材料价值60%",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '第三十四章'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-35",
+   "hs_scope": [
+    "35"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTH",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ],
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 60.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CTH; or VNM 60%",
+   "text_zh": "第三十五章 蛋白质物质；改性淀粉；胶；酶：品目改变 或者 非原产材料价值60%",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '第三十五章'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-36",
+   "hs_scope": [
+    "36"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTH",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ],
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 60.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CTH; or VNM 60%",
+   "text_zh": "第三十六章 炸药；烟火制品；火柴；引火合金；易燃材料制品：品目改变 或者 非原产材料价值60%",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '第三十六章'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-37",
+   "hs_scope": [
+    "37"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTH",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ],
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 60.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CTH; or VNM 60% (ex entry: applies except to the headings listed separately)",
+   "text_zh": "ex第三十七章 照相及电影用品; 以下产品除外:：品目改变 或者 非原产材料价值60%",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry 'ex第三十七章'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-3701",
+   "hs_scope": [
+    "3701"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTH",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     },
+     {
+      "kind": "SPECIFIC",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": "如果成品涂有感光乳剂或其他涂层溶剂，则该感光乳剂或其他涂层溶剂须在一方生产；如果需要干燥、涂层、剪切及包装工序，则上述工序也应在该方完成"
+     }
+    ]
+   ],
+   "text": "CTH and specific processing condition (see Chinese text)",
+   "text_zh": "37.01 未曝光的摄影感光硬片及平面软片，用纸、纸板及纺织物以外任何材料制成；未曝光的一次成像感光平片，不论是否分装：品目改变，如果成品涂有感光乳剂或其他涂层溶剂，则该感光乳剂或其他涂层溶剂须在一方生产；如果需要干燥、涂层、剪切及包装工序，则上述工序也应在该方完成。",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '37.01'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-3702",
+   "hs_scope": [
+    "3702"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTH",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     },
+     {
+      "kind": "SPECIFIC",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": "如果成品涂有感光乳剂或其他涂层溶剂，则该感光乳剂或其他涂层溶剂须在一方生产；如果需要干燥、涂层、剪切及包装工序，则上述工序也应在该方完成"
+     }
+    ]
+   ],
+   "text": "CTH and specific processing condition (see Chinese text)",
+   "text_zh": "37.02 成卷的未曝光摄影感光胶片，用纸、纸板及纺织物以外任何材料制成；未曝光的一次成像感光卷片：品目改变，如果成品涂有感光乳剂或其他涂层溶剂，则该感光乳剂或其他涂层溶剂须在一方生产；如果需要干燥、涂层、剪切及包装工序，则上述工序也应在该方完成。",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '37.02'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-38",
+   "hs_scope": [
+    "38"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTH",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ],
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 60.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CTH; or VNM 60% (ex entry: applies except to the headings listed separately)",
+   "text_zh": "ex 第三十八章 杂项化学产品，以下产品除外：：品目改变 或者 非原产材料价值60%",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry 'ex 第三十八章'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-3825",
+   "hs_scope": [
+    "3825"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "WO",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "WO",
+   "text_zh": "38.25 其他品目未列名的化学工业及其相关工业的副产品；城市垃圾；下水道淤泥；本章注释六所规定的其他废物：完全获得",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '38.25'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-39",
+   "hs_scope": [
+    "39"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTH",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ],
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 55.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CTH; or VNM 55% (ex entry: applies except to the headings listed separately)",
+   "text_zh": "ex第三十九章 塑料及其制品；以下产品除外：：品目改变 或者 非原产材料价值55%",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry 'ex第三十九章'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-3915",
+   "hs_scope": [
+    "3915"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "WO",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "WO",
+   "text_zh": "39.15 塑料的废碎料及下脚料：完全获得",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '39.15'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-40",
+   "hs_scope": [
+    "40"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTH",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ],
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 60.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CTH; or VNM 60% (ex entry: applies except to the headings listed separately)",
+   "text_zh": "ex 第四十章 橡胶及其制品；以下产品除外：：品目改变 或者 非原产材料价值60%",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry 'ex 第四十章'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-4001",
+   "hs_scope": [
+    "4001"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "WO",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "WO",
+   "text_zh": "40.01 天然橡胶、巴拉塔胶、古塔波胶、银胶菊胶、糖胶树胶及类似的天然树胶，初级形状或板、片、带：完全获得",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '40.01'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-4002",
+   "hs_scope": [
+    "4002"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "WO",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "WO",
+   "text_zh": "40.02 合成橡胶及从油类提取的油膏，初级形状或板、片、带；品目4001 所列产品与本品目所列产品的混合物，初级形状或板、片、带：完全获得",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '40.02'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-4012",
+   "hs_scope": [
+    "4012"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTH",
+      "max_nom_pct": null,
+      "except_from": [
+       "4011"
+      ],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CTH (except from heading 4011)",
+   "text_zh": "40.12 翻新的或旧的充气橡胶轮胎；实心或半实心橡胶轮胎、橡胶胎面及橡胶轮胎衬带：品目改变，从品目4011改变至此除外",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '40.12'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-41",
+   "hs_scope": [
+    "41"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTH",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ],
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 60.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CTH; or VNM 60% (ex entry: applies except to the headings listed separately)",
+   "text_zh": "ex第四十一章 生皮（毛皮除外）及皮革；以下产品除外：：品目改变 或者 非原产材料价值60%",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry 'ex第四十一章'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-4101",
+   "hs_scope": [
+    "4101"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CC",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CC",
+   "text_zh": "41.01 生牛皮（包括水牛皮）、生马皮（鲜的、盐腌的、干的、石灰浸渍的、浸酸的或以其他方法保藏，但未鞣制、未经羊皮纸化处理或进一步加工的），不论是否去毛或刨层：章改变",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '41.01'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-4102",
+   "hs_scope": [
+    "4102"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CC",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CC",
+   "text_zh": "41.02 绵羊或羔羊生皮（鲜的、盐渍的、干的、石灰浸渍的、浸酸的或经其他方法保藏，但未鞣制、未经羊皮纸化处理或进一步加工的），不论是否带毛或剖层，但本章注释一（三）所述不包括的生皮除外：章改变",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '41.02'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-4103",
+   "hs_scope": [
+    "4103"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CC",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CC",
+   "text_zh": "41.03 其他生皮（鲜的、盐渍的、干的、石灰浸渍的、浸酸的或以其他方法保藏，但未鞣制、未经羊皮纸化处理或进一步加工的），不论是否去毛或剖层，但本章注释一（二）或（三）所述不包括的生皮除外：章改变",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '41.03'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-411520",
+   "hs_scope": [
+    "411520"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CC",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CC",
+   "text_zh": "4115.20 皮革或再生皮革的边角废料，不适宜作皮革制品用；皮革粉末：章改变",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '4115.20'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-42",
+   "hs_scope": [
+    "42"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTH",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ],
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 60.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CTH; or VNM 60%",
+   "text_zh": "第四十二章 皮革制品；鞍具及挽具；旅行用品、手提包及类似容器；动物肠线（蚕胶丝除外）制品：品目改变 或者 非原产材料价值60%",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '第四十二章'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-43",
+   "hs_scope": [
+    "43"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTH",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ],
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 60.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CTH; or VNM 60%",
+   "text_zh": "第四十三章 毛皮、人造毛皮及其制品：品目改变 或者 非原产材料价值60%",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '第四十三章'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-44",
+   "hs_scope": [
+    "44"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTH",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ],
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 60.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CTH; or VNM 60%",
+   "text_zh": "第四十四章 木及木制品；木炭：品目改变 或者 非原产材料价值60%",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '第四十四章'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-45",
+   "hs_scope": [
+    "45"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTH",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CTH (ex entry: applies except to the headings listed separately)",
+   "text_zh": "ex第四十五章 软木及软木制品：品目改变",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry 'ex第四十五章'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-4502",
+   "hs_scope": [
+    "4502"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTH",
+      "max_nom_pct": null,
+      "except_from": [
+       "4501"
+      ],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CTH (except from heading 4501)",
+   "text_zh": "45.02 天然软木，除去表皮或粗切成方形，或成长方块、正方块、板、片或条状（包括作塞子用的方块坯料）：品目改变，从品目4501改变至此除外",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '45.02'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-46",
+   "hs_scope": [
+    "46"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CC",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CC (ex entry: applies except to the headings listed separately)",
+   "text_zh": "ex第四十六章 稻草、秸秆、针茅或其他编结材料制品；篮筐及枊条编结品；以下产品除外：：章改变",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry 'ex第四十六章'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-4602",
+   "hs_scope": [
+    "4602"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTH",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CTH",
+   "text_zh": "46.02 用编结材料直接编成或用品目4601 所列货品制成的篮筐、柳条编结品及其他制品；丝瓜络制品：品目改变",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '46.02'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-47",
+   "hs_scope": [
+    "47"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTH",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ],
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 60.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CTH; or VNM 60% (ex entry: applies except to the headings listed separately)",
+   "text_zh": "ex第四十七章 木浆及其他纤维状纤维素浆；纸及纸板的废碎品；以下产品除外：：品目改变 或者 非原产材料价值60％",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry 'ex第四十七章'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-4707",
+   "hs_scope": [
+    "4707"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "WO",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "WO",
+   "text_zh": "47.07 回收（废碎）纸或纸板：完全获得",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '47.07'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-48",
+   "hs_scope": [
+    "48"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTH",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ],
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 60.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CTH; or VNM 60% (ex entry: applies except to the headings listed separately)",
+   "text_zh": "ex 第四十八章 纸及纸板；纸浆、纸或纸板制品；以下产品除外：：品目改变 或者 非原产材料价值60％",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry 'ex 第四十八章'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-481620",
+   "hs_scope": [
+    "481620"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTH",
+      "max_nom_pct": null,
+      "except_from": [
+       "4809"
+      ],
+      "note": null
+     }
+    ],
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 60.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CTH (except from heading 4809); or VNM 60%",
+   "text_zh": "4816.20 自印复写纸：品目改变，从品目4809改变至此除外 或者 非原产材料价值60％",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '4816.20'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-481810",
+   "hs_scope": [
+    "481810"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTH",
+      "max_nom_pct": null,
+      "except_from": [
+       "4803"
+      ],
+      "note": null
+     }
+    ],
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 60.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CTH (except from heading 4803); or VNM 60%",
+   "text_zh": "4818.10 卫生纸：品目改变，从品目4803改变至此除外 或者 非原产材料价值60％",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '4818.10'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-481820",
+   "hs_scope": [
+    "481820"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTH",
+      "max_nom_pct": null,
+      "except_from": [
+       "4803"
+      ],
+      "note": null
+     }
+    ],
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 60.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CTH (except from heading 4803); or VNM 60%",
+   "text_zh": "4818.20 纸手帕及纸面巾：品目改变，从品目4803改变至此除外 或者 非原产材料价值60％",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '4818.20'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-481830",
+   "hs_scope": [
+    "481830"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTH",
+      "max_nom_pct": null,
+      "except_from": [
+       "4803"
+      ],
+      "note": null
+     }
+    ],
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 60.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CTH (except from heading 4803); or VNM 60%",
+   "text_zh": "4818.30 纸台布及纸餐巾：品目改变，从品目4803改变至此除外 或者 非原产材料价值60％",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '4818.30'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-49",
+   "hs_scope": [
+    "49"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTH",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CTH",
+   "text_zh": "第四十九章 书籍、报纸、印刷图画及其他印刷品；手稿、打字稿及设计图纸：品目改变",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '第四十九章'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-50",
+   "hs_scope": [
+    "50"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTH",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ],
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 60.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CTH; or VNM 60% (ex entry: applies except to the headings listed separately)",
+   "text_zh": "ex第五十章 蚕丝；以下产品除外：：品目改变 或者 非原产材料价值60％",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry 'ex第五十章'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-5001",
+   "hs_scope": [
+    "5001"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "WO",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "WO",
+   "text_zh": "50.01 适于缫丝的蚕茧：完全获得",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '50.01'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-5006",
+   "hs_scope": [
+    "5006"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTH",
+      "max_nom_pct": null,
+      "except_from": [
+       "5004",
+       "5005"
+      ],
+      "note": null
+     }
+    ],
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 60.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CTH (except from heading 5004, 5005); or VNM 60%",
+   "text_zh": "50.06 丝纱线及绢纺纱线，供零售用；蚕胶丝：品目改变，从品目5004或5005改变至此除外 或者 非原产材料价值60％",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '50.06'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-5007",
+   "hs_scope": [
+    "5007"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTSH",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ],
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 60.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CTSH; or VNM 60%",
+   "text_zh": "50.07 丝或绢丝机织物：子目改变 或者 非原产材料价值60％",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '50.07'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-51",
+   "hs_scope": [
+    "51"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTH",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ],
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 60.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CTH; or VNM 60% (ex entry: applies except to the headings listed separately)",
+   "text_zh": "ex 第五十一章 羊毛、动物细毛或粗毛；马毛纱线及其机织物；以下产品除外：：品目改变 或者 非原产材料价值60％",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry 'ex 第五十一章'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-5101",
+   "hs_scope": [
+    "5101"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "WO",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "WO",
+   "text_zh": "51.01 未梳的羊毛：完全获得",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '51.01'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-5102",
+   "hs_scope": [
+    "5102"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "WO",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "WO",
+   "text_zh": "51.02 未梳的动物细毛或粗毛：完全获得",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '51.02'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-5103",
+   "hs_scope": [
+    "5103"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "WO",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "WO",
+   "text_zh": "51.03 羊毛或动物细毛或粗毛的废料，包括废纱线，但不包括回收纤维：完全获得",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '51.03'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-5104",
+   "hs_scope": [
+    "5104"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "WO",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "WO",
+   "text_zh": "51.04 羊毛或动物细毛或粗毛的回收纤维：完全获得",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '51.04'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-5109",
+   "hs_scope": [
+    "5109"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTH",
+      "max_nom_pct": null,
+      "except_from": [
+       "5106",
+       "5107",
+       "5108"
+      ],
+      "note": null
+     }
+    ],
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 60.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CTH (except from heading 5106, 5107, 5108); or VNM 60%",
+   "text_zh": "51.09 羊毛或动物细毛的纱线，供零售用：品目改变，从品目5106、5107 或5108改变至此除外 或者 非原产材料价值60％",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '51.09'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-52",
+   "hs_scope": [
+    "52"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTH",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ],
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 60.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CTH; or VNM 60% (ex entry: applies except to the headings listed separately)",
+   "text_zh": "ex第五十二章 棉花，以下产品除外：：品目改变 或者 非原产材料价值60％",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry 'ex第五十二章'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-5201",
+   "hs_scope": [
+    "5201"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "WO",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "WO",
+   "text_zh": "52.01 未梳的棉花：完全获得",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '52.01'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-5202",
+   "hs_scope": [
+    "5202"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "WO",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "WO",
+   "text_zh": "52.02 废棉（包括废棉纱线及回收纤维）：完全获得",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '52.02'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-5207",
+   "hs_scope": [
+    "5207"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTH",
+      "max_nom_pct": null,
+      "except_from": [
+       "5205",
+       "5206"
+      ],
+      "note": null
+     }
+    ],
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 60.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CTH (except from heading 5205, 5206); or VNM 60%",
+   "text_zh": "52.07 棉纱线（缝纫线除外），供零售用：品目改变，从品目52.05 或5206改变至此除外 或者 非原产材料价值60％",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '52.07'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-53",
+   "hs_scope": [
+    "53"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTH",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ],
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 60.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CTH; or VNM 60% (ex entry: applies except to the headings listed separately)",
+   "text_zh": "ex 第五十三章 其他植物纺织纤维；纸纱线及其机织物，以下产品除外：：品目改变 或者 非原产材料价值60％",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry 'ex 第五十三章'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-5301",
+   "hs_scope": [
+    "5301"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CC",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CC",
+   "text_zh": "53.01 亚麻，生的或经加工但未纺制的；亚麻短纤及废麻（包括废麻纱线及回收纤维）：章改变",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '53.01'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-5302",
+   "hs_scope": [
+    "5302"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CC",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CC",
+   "text_zh": "53.02 大麻，生的或经加工但未纺制的；大麻短纤及废麻（包括废麻纱线及回收纤维）：章改变",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '53.02'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-5303",
+   "hs_scope": [
+    "5303"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CC",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CC",
+   "text_zh": "53.03 黄麻及其他纺织用韧皮纤维（不包括亚麻、大麻及苎麻），生的或经加工但未纺制的；上述纤维的短纤及废麻（包括废纱线及回收纤维）：章改变",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '53.03'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-5305",
+   "hs_scope": [
+    "5305"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CC",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CC",
+   "text_zh": "53.05 椰壳纤维、蕉麻（马尼拉麻）、苎麻及其他品目未列名的纺织用植物纤维，生的或经加工但未纺制的；上述纤维的短纤、落麻及废料（包括废纱线及回收纤维）：章改变",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '53.05'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-54",
+   "hs_scope": [
+    "54"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTH",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ],
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 60.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CTH; or VNM 60% (ex entry: applies except to the headings listed separately)",
+   "text_zh": "ex第五十四章 化学纤维长丝；化学纤维纺织材料制扁条及类似品；以下产品除外：：品目改变 或者 非原产材料价值60％",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry 'ex第五十四章'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-5406",
+   "hs_scope": [
+    "5406"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTH",
+      "max_nom_pct": null,
+      "except_from": [
+       "5402",
+       "5403"
+      ],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CTH (except from heading 5402, 5403)",
+   "text_zh": "54.06 化学纤维长丝纱线（缝纫线除外），供零售用：品目改变，从品目5402 或5403改变至此除外",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '54.06'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-55",
+   "hs_scope": [
+    "55"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTH",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ],
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 60.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CTH; or VNM 60% (ex entry: applies except to the headings listed separately)",
+   "text_zh": "ex 第五十五章 化学纤维短纤；以下产品除外：：品目改变 或者 非原产材料价值60％",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry 'ex 第五十五章'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-5505",
+   "hs_scope": [
+    "5505"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "WO",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "WO",
+   "text_zh": "55.05 化学纤维废料（包括落绵、废纱及回收纤维）：完全获得",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '55.05'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-5511",
+   "hs_scope": [
+    "5511"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTH",
+      "max_nom_pct": null,
+      "except_from": [
+       "5509",
+       "5510"
+      ],
+      "note": null
+     }
+    ],
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 60.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CTH (except from heading 5509, 5510); or VNM 60%",
+   "text_zh": "55.11 化学纤维短纤纺制的纱线（缝纫线除外），供零售用：品目改变，从品目5509 或5510改变至此除外 或者 非原产材料价值60％",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '55.11'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-56",
+   "hs_scope": [
+    "56"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTH",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ],
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 60.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CTH; or VNM 60%",
+   "text_zh": "第五十六章 絮胎、毡呢或无纺织物；特种纱线；绳、索、缆及其制品：品目改变 或者 非原产材料价值60%",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '第五十六章'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-57",
+   "hs_scope": [
+    "57"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTH",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ],
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 60.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CTH; or VNM 60%",
+   "text_zh": "第五十七章 地毯及纺织材料的其他制成品：品目改变 或者 非原产材料价值60%",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '第五十七章'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-58",
+   "hs_scope": [
+    "58"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTH",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ],
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 60.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CTH; or VNM 60%",
+   "text_zh": "第五十八章 特种机织物；簇绒织物；花边；装饰毯；装饰带；刺绣品：品目改变 或者 非原产材料价值60%",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '第五十八章'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-59",
+   "hs_scope": [
+    "59"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTH",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ],
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 60.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CTH; or VNM 60%",
+   "text_zh": "第五十九章 浸渍、涂布、包覆或层压的织物；工业用纺织制品：品目改变 或者 非原产材料价值60%",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '第五十九章'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-60",
+   "hs_scope": [
+    "60"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CC",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ],
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 60.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CC; or VNM 60%",
+   "text_zh": "第六十章 针织物及钩编织物：章改变 或者 非原产材料价值60%",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '第六十章'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-61",
+   "hs_scope": [
+    "61"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CC",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ],
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 60.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CC; or VNM 60%",
+   "text_zh": "第六十一章 针织或钩编的服装及衣着附件：章改变 或者 非原产材料价值60%",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '第六十一章'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-62",
+   "hs_scope": [
+    "62"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CC",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ],
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 60.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CC; or VNM 60%",
+   "text_zh": "第六十二章 非针织或非钩编的服装及衣着附件：章改变 或者 非原产材料价值60%",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '第六十二章'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-63",
+   "hs_scope": [
+    "63"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CC",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ],
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 60.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CC; or VNM 60% (ex entry: applies except to the headings listed separately)",
+   "text_zh": "ex第六十三章 其他纺织制成品；成套物品；旧衣着及旧纺织品；碎织物;以下产品除外：：章改变 或者 非原产材料价值60%",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry 'ex第六十三章'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-6309",
+   "hs_scope": [
+    "6309"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "WO",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "WO",
+   "text_zh": "63.09 旧衣物：完全获得",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '63.09'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-6310",
+   "hs_scope": [
+    "6310"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "WO",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "WO",
+   "text_zh": "63.10 纺织材料的新的或旧的碎织物及废线、绳、索、缆及其制品：完全获得",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '63.10'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-64",
+   "hs_scope": [
+    "64"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTH",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ],
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 60.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CTH; or VNM 60%",
+   "text_zh": "第六十四章 鞋靴、护腿和类似品及其零件：品目改变 或者 非原产材料价值60%",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '第六十四章'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-65",
+   "hs_scope": [
+    "65"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTH",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ],
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 60.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CTH; or VNM 60%",
+   "text_zh": "第六十五章 帽类及其零件：品目改变 或者 非原产材料价值60%",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '第六十五章'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-66",
+   "hs_scope": [
+    "66"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTH",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CTH (ex entry: applies except to the headings listed separately)",
+   "text_zh": "ex第六十六章 雨伞、阳伞、手杖、鞭子、马鞭及其零件 ，以下产品除外：：品目改变",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry 'ex第六十六章'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-6603",
+   "hs_scope": [
+    "6603"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CC",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CC",
+   "text_zh": "66.03 品目6601 或6602 所列物品的零件及装饰品：章改变",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '66.03'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-67",
+   "hs_scope": [
+    "67"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTH",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CTH",
+   "text_zh": "第六十七章 已加工羽毛、羽绒及其制品；人造花；人发制品：品目改变",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '第六十七章'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-68",
+   "hs_scope": [
+    "68"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTH",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ],
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 60.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CTH; or VNM 60%",
+   "text_zh": "第六十八章 石料、石膏、水泥、石棉、云母及类似材料的制品：品目改变 或者 非原产材料价值60%",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '第六十八章'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-69",
+   "hs_scope": [
+    "69"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTH",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ],
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 60.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CTH; or VNM 60%",
+   "text_zh": "第六十九章 陶瓷产品：品目改变 或者 非原产材料价值60%",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '第六十九章'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-70",
+   "hs_scope": [
+    "70"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTH",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ],
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 60.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CTH; or VNM 60% (ex entry: applies except to the headings listed separately)",
+   "text_zh": "ex第七十章 玻璃及其制品；以下产品除外：品目改变 或者 非原产材料价值60%",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry 'ex第七十章'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-7001",
+   "hs_scope": [
+    "7001"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CC",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CC",
+   "text_zh": "70.01 碎玻璃及废玻璃；玻璃块料：章改变",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '70.01'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-71",
+   "hs_scope": [
+    "71"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTH",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ],
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 60.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CTH; or VNM 60% (ex entry: applies except to the headings listed separately)",
+   "text_zh": "ex第七十一章 天然或养殖珍珠、宝石或半宝石、贵金属、包贵金属及其制品；仿首饰；硬币；以下产品除外：：品目改变 或者 非原产材料价值60%",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry 'ex第七十一章'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-7106",
+   "hs_scope": [
+    "7106"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTH",
+      "max_nom_pct": null,
+      "except_from": [
+       "7108",
+       "7110"
+      ],
+      "note": null
+     }
+    ],
+    [
+     {
+      "kind": "SPECIFIC",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": "从品目7106、7108或7110的贵金属电解、加热、化学分解或熔接而来"
+     }
+    ],
+    [
+     {
+      "kind": "SPECIFIC",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": "从品目7106、7108或7110的贵金属合铸或与贱金属的合铸而来"
+     }
+    ]
+   ],
+   "text": "CTH (except from heading 7108, 7110); or specific requirement (see Chinese text); or specific requirement (see Chinese text)",
+   "text_zh": "71.06 银（包括镀金、镀铂的银），未锻造、半制成或粉末状：品目改变，从品目7108或7110改变至此除外 或者 从品目7106、7108或7110的贵金属电解、加热、化学分解或熔接而来 或者 从品目7106、7108或7110的贵金属合铸或与贱金属的合铸而来",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '71.06'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-7108",
+   "hs_scope": [
+    "7108"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTH",
+      "max_nom_pct": null,
+      "except_from": [
+       "7106",
+       "7110"
+      ],
+      "note": null
+     }
+    ],
+    [
+     {
+      "kind": "SPECIFIC",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": "从品目7106、7108或7110的贵金属电解、加热、化学分解或熔接而来"
+     }
+    ],
+    [
+     {
+      "kind": "SPECIFIC",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": "从品目7106、7108或7110的贵金属合铸或与贱金属的合铸而来"
+     }
+    ]
+   ],
+   "text": "CTH (except from heading 7106, 7110); or specific requirement (see Chinese text); or specific requirement (see Chinese text)",
+   "text_zh": "71.08 金（包括镀铂的金），未锻造、半制成或粉末状：品目改变，从品目7106或7110改变至此除外 或者 从品目7106、7108或7110的贵金属电解、加热、化学分解或熔接而来 或者 从品目7106、7108或7110的贵金属合铸或与贱金属的合铸而来",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '71.08'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-7110",
+   "hs_scope": [
+    "7110"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTH",
+      "max_nom_pct": null,
+      "except_from": [
+       "7106",
+       "7108"
+      ],
+      "note": null
+     }
+    ],
+    [
+     {
+      "kind": "SPECIFIC",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": "从品目7106、7108或7110的贵金属电解、加热、化学分解或熔接而来"
+     }
+    ],
+    [
+     {
+      "kind": "SPECIFIC",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": "从品目7106、7108或7110的贵金属合铸或与贱金属的合铸而来"
+     }
+    ]
+   ],
+   "text": "CTH (except from heading 7106, 7108); or specific requirement (see Chinese text); or specific requirement (see Chinese text)",
+   "text_zh": "71.10 铂，未锻造、半制成或粉末状：品目改变，从品目7106或7108改变至此除外 或者 从品目7106、7108或7110的贵金属电解、加热、化学分解或熔接而来 或者 从品目7106、7108或7110的贵金属合铸或与贱金属的合铸而来",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '71.10'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-7112",
+   "hs_scope": [
+    "7112"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "WO",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "WO",
+   "text_zh": "71.12 贵金属或包贵金属的废碎料；含有贵金属或贵金属化合物的其他废碎料，主要用于回收贵金属：完全获得",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '71.12'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-72",
+   "hs_scope": [
+    "72"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTH",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ],
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 60.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CTH; or VNM 60% (ex entry: applies except to the headings listed separately)",
+   "text_zh": "ex 第七十二章 钢铁; 以下产品除外：：品目改变 或者 非原产材料价值60％",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry 'ex 第七十二章'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-7204",
+   "hs_scope": [
+    "7204"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "WO",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "WO",
+   "text_zh": "72.04 钢铁废碎料；供再熔的碎料钢铁锭：完全获得",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '72.04'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-7207",
+   "hs_scope": [
+    "7207"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTH",
+      "max_nom_pct": null,
+      "except_from": [
+       "7206"
+      ],
+      "note": null
+     }
+    ],
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 60.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CTH (except from heading 7206); or VNM 60%",
+   "text_zh": "72.07 铁及非合金钢的半制成品：品目改变，从品目7206改变至此除外 或者 非原产材料价值60％",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '72.07'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-7209",
+   "hs_scope": [
+    "7209"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTH",
+      "max_nom_pct": null,
+      "except_from": [
+       "7208"
+      ],
+      "note": null
+     }
+    ],
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 60.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CTH (except from heading 7208); or VNM 60%",
+   "text_zh": "72.09 宽度在600毫米及以上的铁或非合金钢平板轧材，经冷轧，但未经包覆、镀层或涂层：品目改变，从品目7208改变至此除外 或者 非原产材料价值60％",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '72.09'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-7211",
+   "hs_scope": [
+    "7211"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTH",
+      "max_nom_pct": null,
+      "except_from": [
+       "7208",
+       "7209"
+      ],
+      "note": null
+     }
+    ],
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 60.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CTH (except from heading 7208, 7209); or VNM 60%",
+   "text_zh": "72.11 宽度小于600 毫米的铁或非合金钢平板轧材，但未经包覆、镀层或涂层：品目改变，从品目7208或7209改变至此除外 或者 非原产材料价值60％",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '72.11'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-7212",
+   "hs_scope": [
+    "7212"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTH",
+      "max_nom_pct": null,
+      "except_from": [
+       "7210"
+      ],
+      "note": null
+     }
+    ],
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 60.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CTH (except from heading 7210); or VNM 60%",
+   "text_zh": "72.12 宽度小于600 毫米的铁或非合金钢平板轧材，经包覆、镀层或涂层：品目改变，从品目7210改变至此除外 或者 非原产材料价值60％",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '72.12'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-7214",
+   "hs_scope": [
+    "7214"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTH",
+      "max_nom_pct": null,
+      "except_from": [
+       "7213"
+      ],
+      "note": null
+     }
+    ],
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 60.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CTH (except from heading 7213); or VNM 60%",
+   "text_zh": "72.14 铁或非合金钢的其他条、杆，除锻造、热轧、热拉拔或热挤压外未经进一步加工，包括轧制后扭曲的：品目改变，从品目7213改变至此除外 或者 非原产材料价值60％",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '72.14'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-7215",
+   "hs_scope": [
+    "7215"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTH",
+      "max_nom_pct": null,
+      "except_from": [
+       "7213"
+      ],
+      "note": null
+     }
+    ],
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 60.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CTH (except from heading 7213); or VNM 60%",
+   "text_zh": "72.15 铁及非合金钢的其他条、杆：品目改变，从品目7213改变至此除外 或者 非原产材料价值60％",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '72.15'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-7220",
+   "hs_scope": [
+    "7220"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTH",
+      "max_nom_pct": null,
+      "except_from": [
+       "7219"
+      ],
+      "note": null
+     }
+    ],
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 60.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CTH (except from heading 7219); or VNM 60%",
+   "text_zh": "72.20 不锈钢平板轧材，宽度小于600 毫米：品目改变，从品目7219改变至此除外 或者 非原产材料价值60％",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '72.20'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-7221",
+   "hs_scope": [
+    "7221"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTH",
+      "max_nom_pct": null,
+      "except_from": [
+       "7222"
+      ],
+      "note": null
+     }
+    ],
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 60.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CTH (except from heading 7222); or VNM 60%",
+   "text_zh": "72.21 不规则盘卷的不锈钢热轧条、杆：品目改变，从品目7222改变至此除外 或者 非原产材料价值60％",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '72.21'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-7222",
+   "hs_scope": [
+    "7222"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTH",
+      "max_nom_pct": null,
+      "except_from": [
+       "7221"
+      ],
+      "note": null
+     }
+    ],
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 60.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CTH (except from heading 7221); or VNM 60%",
+   "text_zh": "72.22 不锈钢其他条、杆；不锈钢角材、型材及异型材：品目改变，从品目7221改变至此除外 或者 非原产材料价值60％",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '72.22'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-7226",
+   "hs_scope": [
+    "7226"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTH",
+      "max_nom_pct": null,
+      "except_from": [
+       "7225"
+      ],
+      "note": null
+     }
+    ],
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 60.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CTH (except from heading 7225); or VNM 60%",
+   "text_zh": "72.26 其他合金钢平板轧材，宽度小于600毫米：品目改变，从品目7225改变至此除外 或者 非原产材料价值60％",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '72.26'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-7227",
+   "hs_scope": [
+    "7227"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTH",
+      "max_nom_pct": null,
+      "except_from": [
+       "7228"
+      ],
+      "note": null
+     }
+    ],
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 60.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CTH (except from heading 7228); or VNM 60%",
+   "text_zh": "72.27 不规则盘卷的其他合金钢热轧条、杆：品目改变，从品目7228改变至此除外 或者 非原产材料价值60％",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '72.27'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-7228",
+   "hs_scope": [
+    "7228"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTH",
+      "max_nom_pct": null,
+      "except_from": [
+       "7227"
+      ],
+      "note": null
+     }
+    ],
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 60.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CTH (except from heading 7227); or VNM 60%",
+   "text_zh": "72.28 其他合金钢条、杆；其他合金钢角材、型材及异型材；合金钢或非合金钢制的空心钻钢：品目改变，从品目7227改变至此除外 或者 非原产材料价值60％",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '72.28'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-73",
+   "hs_scope": [
+    "73"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTH",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ],
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 60.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CTH; or VNM 60%",
+   "text_zh": "第七十三章 钢铁制品：品目改变 或者 非原产材料价值60％",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '第七十三章'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-74",
+   "hs_scope": [
+    "74"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTH",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ],
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 60.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CTH; or VNM 60% (ex entry: applies except to the headings listed separately)",
+   "text_zh": "ex第七十四章 铜及其制品；以下产品除外：：品目改变 或者 非原产材料价值60％",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry 'ex第七十四章'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-7404",
+   "hs_scope": [
+    "7404"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "WO",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "WO",
+   "text_zh": "74.04 铜废碎料：完全获得",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '74.04'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-75",
+   "hs_scope": [
+    "75"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTH",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ],
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 60.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CTH; or VNM 60% (ex entry: applies except to the headings listed separately)",
+   "text_zh": "ex 第七十五章 镍及其制品；以下产品除外：：品目改变 或者 非原产材料价值60％",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry 'ex 第七十五章'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-7503",
+   "hs_scope": [
+    "7503"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "WO",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "WO",
+   "text_zh": "75.03 镍废碎料：完全获得",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '75.03'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-76",
+   "hs_scope": [
+    "76"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTH",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ],
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 60.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CTH; or VNM 60% (ex entry: applies except to the headings listed separately)",
+   "text_zh": "ex第七十六章 铝及其制品;以下产品除外：：品目改变 或者 非原产材料价值60％",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry 'ex第七十六章'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-7602",
+   "hs_scope": [
+    "7602"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "WO",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "WO",
+   "text_zh": "76.02 铝废碎料：完全获得",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '76.02'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-7607",
+   "hs_scope": [
+    "7607"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTH",
+      "max_nom_pct": null,
+      "except_from": [
+       "7606"
+      ],
+      "note": null
+     }
+    ],
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 60.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CTH (except from heading 7606); or VNM 60%",
+   "text_zh": "76.07 铝箔（不论是否印花或用纸、纸板、塑料或类似材料衬背），厚度（衬背除外）不超过0.2 毫米：品目改变，从品目7606改变至此除外 或者 非原产材料价值60％",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '76.07'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-77",
+   "hs_scope": [
+    "77"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "SPECIFIC",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": "no criterion in the list"
+     }
+    ]
+   ],
+   "text": "no rule listed",
+   "text_zh": "第七十七章 保留本章用作HS未来可能的使用：",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '第七十七章'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-78",
+   "hs_scope": [
+    "78"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTH",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ],
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 60.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CTH; or VNM 60% (ex entry: applies except to the headings listed separately)",
+   "text_zh": "ex第七十八章 铅及其制品;以下产品除外：：品目改变 或者 非原产材料价值60％",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry 'ex第七十八章'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-7802",
+   "hs_scope": [
+    "7802"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "WO",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "WO",
+   "text_zh": "78.02 铅废碎料：完全获得",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '78.02'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-79",
+   "hs_scope": [
+    "79"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTH",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ],
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 60.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CTH; or VNM 60% (ex entry: applies except to the headings listed separately)",
+   "text_zh": "ex第七十九章 锌及其制品;以下产品除外：：品目改变 或者 非原产材料价值60％",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry 'ex第七十九章'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-7902",
+   "hs_scope": [
+    "7902"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "WO",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "WO",
+   "text_zh": "79.02 锌废碎料：完全获得",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '79.02'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-80",
+   "hs_scope": [
+    "80"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTH",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ],
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 60.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CTH; or VNM 60% (ex entry: applies except to the headings listed separately)",
+   "text_zh": "ex第八十章 锡及其制品;以下产品除外：：品目改变 或者 非原产材料价值60％",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry 'ex第八十章'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-8002",
+   "hs_scope": [
+    "8002"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "WO",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "WO",
+   "text_zh": "80.02 锡废碎料：完全获得",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '80.02'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-81",
+   "hs_scope": [
+    "81"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTH",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ],
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 60.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CTH; or VNM 60% (ex entry: applies except to the headings listed separately)",
+   "text_zh": "ex 第八十一章 其他贱金属、金属陶瓷及其制品;以下产品除外：：品目改变 或者 非原产材料价值60％",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry 'ex 第八十一章'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-810197",
+   "hs_scope": [
+    "810197"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "WO",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "WO",
+   "text_zh": "8101.97 钨废碎料：完全获得",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '8101.97'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-810297",
+   "hs_scope": [
+    "810297"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "WO",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "WO",
+   "text_zh": "8102.97 钼废碎料：完全获得",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '8102.97'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-810330",
+   "hs_scope": [
+    "810330"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "WO",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "WO",
+   "text_zh": "8103.30 钽废碎料：完全获得",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '8103.30'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-810420",
+   "hs_scope": [
+    "810420"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "WO",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "WO",
+   "text_zh": "8104.20 镁废碎料：完全获得",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '8104.20'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-810530",
+   "hs_scope": [
+    "810530"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "WO",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "WO",
+   "text_zh": "8105.30 钴废碎料：完全获得",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '8105.30'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-810730",
+   "hs_scope": [
+    "810730"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "WO",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "WO",
+   "text_zh": "8107.30 镉废碎料：完全获得",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '8107.30'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-810830",
+   "hs_scope": [
+    "810830"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "WO",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "WO",
+   "text_zh": "8108.30 钛废碎料：完全获得",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '8108.30'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-810930",
+   "hs_scope": [
+    "810930"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "WO",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "WO",
+   "text_zh": "8109.30 锆废碎料：完全获得",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '8109.30'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-811020",
+   "hs_scope": [
+    "811020"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "WO",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "WO",
+   "text_zh": "8110.20 锑废碎料：完全获得",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '8110.20'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-811100",
+   "hs_scope": [
+    "811100"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "WO",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "WO",
+   "text_zh": "8111.00 锰及其制品，包括废碎料：完全获得",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '8111.00'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-811213",
+   "hs_scope": [
+    "811213"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "WO",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "WO",
+   "text_zh": "8112.13 铍废碎料：完全获得",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '8112.13'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-811222",
+   "hs_scope": [
+    "811222"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "WO",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "WO",
+   "text_zh": "8112.22 铬废碎料：完全获得",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '8112.22'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-811252",
+   "hs_scope": [
+    "811252"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "WO",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "WO",
+   "text_zh": "8112.52 铊废碎料：完全获得",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '8112.52'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-82",
+   "hs_scope": [
+    "82"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTH",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ],
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 60.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CTH; or VNM 60% (ex entry: applies except to the headings listed separately)",
+   "text_zh": "ex第八十二章 贱金属工具、器具、利口器、餐匙、餐叉及其零件；以下产品除外：：品目改变 或者 非原产材料价值60％",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry 'ex第八十二章'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-8206",
+   "hs_scope": [
+    "8206"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "SPECIFIC",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": "成套货品里的每项产品都必须满足它不作为成套货品时所适用的规则"
+     }
+    ]
+   ],
+   "text": "specific requirement (see Chinese text)",
+   "text_zh": "82.06 由品目8202 至8205 中两个或多个品目所列工具组成的零售包装成套货品：成套货品里的每项产品都必须满足它不作为成套货品时所适用的规则",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '82.06'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-83",
+   "hs_scope": [
+    "83"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTH",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ],
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 60.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CTH; or VNM 60%",
+   "text_zh": "第八十三章 贱金属杂项制品：品目改变 或者 非原产材料价值60％",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '第八十三章'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-84",
+   "hs_scope": [
+    "84"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 50.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "VNM 50%",
+   "text_zh": "第八十四章 核反应堆、锅炉、机器、机械器具及其零件：非原产材料价值50％",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '第八十四章'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-85",
+   "hs_scope": [
+    "85"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 50.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "VNM 50%",
+   "text_zh": "第八十五章 电机、电气设备及其零件；声音的录制和重放设备及其零件、附件：非原产材料价值50％",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '第八十五章'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-86",
+   "hs_scope": [
+    "86"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 60.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "VNM 60%",
+   "text_zh": "第八十六章 铁道及电车道机车、车辆及其零件；铁道及电车道轨道固定装置及其零件、附件；各种机械（包括电动机械）交通信号设备：非原产材料价值60％",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '第八十六章'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-87",
+   "hs_scope": [
+    "87"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 60.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "VNM 60%",
+   "text_zh": "第八十七章 车辆及其零件、附件，但铁道及电车道车辆除外：非原产材料价值60％",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '第八十七章'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-88",
+   "hs_scope": [
+    "88"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 60.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "VNM 60%",
+   "text_zh": "第八十八章 航空器、航天器及其零件：非原产材料价值60％",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '第八十八章'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-89",
+   "hs_scope": [
+    "89"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 60.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "VNM 60%",
+   "text_zh": "第八十九章 船舶及浮动结构体：非原产材料价值60％",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '第八十九章'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-90",
+   "hs_scope": [
+    "90"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 55.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "VNM 55%",
+   "text_zh": "第九十章 光学、照相、电影、计量、检验、医疗或外科用仪器及设备、精密仪器及设备；上述物品的零件、附件：非原产材料价值55％",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '第九十章'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-91",
+   "hs_scope": [
+    "91"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 40.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "VNM 40%",
+   "text_zh": "第九十一章 钟表及其零件：非原产材料价值40％",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '第九十一章'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-92",
+   "hs_scope": [
+    "92"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTH",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ],
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 60.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CTH; or VNM 60%",
+   "text_zh": "第九十二章 乐器及其零件、附件：品目改变 或者 非原产材料价值60％",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '第九十二章'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-93",
+   "hs_scope": [
+    "93"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 60.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "VNM 60%",
+   "text_zh": "第九十三章 武器、弹药及其零件、附件：非原产材料价值60％",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '第九十三章'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-94",
+   "hs_scope": [
+    "94"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTH",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ],
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 60.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CTH; or VNM 60%",
+   "text_zh": "第九十四章 家具；寝具、褥垫、弹簧床垫、软座垫及类似的填充制品；未列名灯具及照明装置；发光标志、发光铭牌及类似品；活动房屋：品目改变 或者 非原产材料价值60％",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '第九十四章'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-95",
+   "hs_scope": [
+    "95"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTH",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ],
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 60.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CTH; or VNM 60%",
+   "text_zh": "第九十五章 玩具、游戏品、运动用品及其零件、附件：品目改变 或者 非原产材料价值60％",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '第九十五章'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-96",
+   "hs_scope": [
+    "96"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTH",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ],
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 60.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CTH; or VNM 60% (ex entry: applies except to the headings listed separately)",
+   "text_zh": "ex 第九十六章 杂项制品；以下产品除外：：品目改变 或者 非原产材料价值60％",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry 'ex 第九十六章'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-9605",
+   "hs_scope": [
+    "9605"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "SPECIFIC",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": "成套货品里的每项产品都必须满足它不作为成套货品时所适用的规则"
+     }
+    ]
+   ],
+   "text": "specific requirement (see Chinese text)",
+   "text_zh": "96.05 个人梳妆、缝纫或清洁鞋靴、衣服用的成套旅行用具：成套货品里的每项产品都必须满足它不作为成套货品时所适用的规则",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '96.05'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-97",
+   "hs_scope": [
+    "97"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CTH",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ],
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 60.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CTH; or VNM 60% (ex entry: applies except to the headings listed separately)",
+   "text_zh": "ex第九十七章 艺术品、收藏品及古物；以下产品除外：：品目改变 或者 非原产材料价值60％",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry 'ex第九十七章'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-9705",
+   "hs_scope": [
+    "9705"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "SPECIFIC",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": "产品应在一方发现"
+     }
+    ]
+   ],
+   "text": "specific requirement (see Chinese text)",
+   "text_zh": "97.05 具有动物学、植物学、矿物学、解剖学、历史学、考古学、古生物学、人种学或钱币学意义的收集品及珍藏品：产品应在一方发现",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '97.05'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-9706",
+   "hs_scope": [
+    "9706"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "CC",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "CC",
+   "text_zh": "97.06 超过一百年的古物：章改变",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '97.06'",
+   "verified": false
+  }
+ ]
+}
