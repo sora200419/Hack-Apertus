@@ -18,6 +18,7 @@ from .materials import (
     Context,
     Material,
     chf,
+    chf_up,
     dec,
     describe_lines,
     limit_str,
@@ -108,7 +109,7 @@ def evaluate_criterion(c: Criterion, ctx: Context) -> Outcome:
         return _maxnom(c, ctx)
     if c.kind is CriterionKind.WO:
         return _wo(c, ctx)
-    detail = f"specific processing requirement needs human judgement: {c.note or 'see the rule text'}"
+    detail = f"specific requirement, needs human judgement: {c.note or 'see the rule text'}"
     return Outcome(CheckResult(name=criterion_label(c), passed=None, detail=detail))
 
 
@@ -195,7 +196,7 @@ def _maxnom(c: Criterion, ctx: Context) -> Outcome:
     detail = (
         f"non-originating materials {chf(nom)} = {pct_str(pct_of(nom, ctx.ex_works))} of the ex-works price "
         f"{chf(ctx.ex_works)}; limit {limit_str(c.max_nom_pct)} ({chf(limit)}); "
-        + ("within the limit" if ok else f"over the limit by {chf(nom - limit)}")
+        + ("within the limit" if ok else f"over the limit by {chf_up(nom - limit)}")
         + "; the general tolerance never applies to MAXNOM"
     )
     return Outcome(CheckResult(name=name, passed=ok, detail=detail, line_ids=_ids(ctx.non_originating)))

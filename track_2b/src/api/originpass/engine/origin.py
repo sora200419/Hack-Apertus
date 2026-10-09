@@ -19,10 +19,15 @@ Semantics (no LLM involved; same input always gives the same JSON):
    being met among those that have one; margin_pct = threshold - nom_pct.
 7. Fixes (engine.fixes) are given only when no alternative is met; if the
    processing is insufficient, the only fix says that re-sourcing cannot help.
+8. A non-finite amount raises ValueError. A line_id used by several lines is
+   counted normally but flagged in the reasons: fixes and what-if changes
+   address lines by id, so they cannot tell such lines apart.
 """
 
 from __future__ import annotations
 
+import math
+from collections import Counter
 from decimal import ROUND_HALF_UP, Decimal
 
 from ..models import (
@@ -50,6 +55,7 @@ _CHANGE_KEYS = frozenset({"line_id", "origin_country", "value_chf", "hs6", "orig
 
 def evaluate(product: Product, pack: RulePack) -> Verdict:
     """Compute the origin verdict of `product` under `pack` (see module docstring)."""
+    _check_amounts(product)
     parties = [p.strip().upper() for p in pack.general.cumulation_parties]
     materials = tuple(assess_material(line, parties) for line in product.bom)
     ex_works = dec(product.ex_works_chf)
@@ -78,7 +84,7 @@ def evaluate(product: Product, pack: RulePack) -> Verdict:
             if hs6 is None
             else f"no product-specific rule encoded for HS {hs6}"
         )
-        reasons = [f"Status UNSURE: {problem}.", summary, *_general_reasons(general)]
+        reasons = [f"Status UNSURE: {problem}.", summary, *_duplicate_ids_reason(product), *_general_reasons(general)]
         return Verdict(
             **base,
             status=VerdictStatus.UNSURE,
@@ -100,6 +106,7 @@ def evaluate(product: Product, pack: RulePack) -> Verdict:
         f"Rule {rule.rule_id} applies to HS {hs6} (most specific encoded scope {matching_prefix(rule, hs6)}); "
         f"source: {rule.source}.",
         summary,
+        *_duplicate_ids_reason(product),
         *_alternative_reasons(alts),
         *_general_reasons(general),
     ]
@@ -130,7 +137,7 @@ def evaluate(product: Product, pack: RulePack) -> Verdict:
         ],
         lines=[_line(m, reference, hs6) for m in materials],
         threshold_pct=threshold,
-        margin_pct=None if threshold is None else float((dec(threshold) - nom_pct).quantize(CENT, ROUND_HALF_UP)),
+        margin_pct=None if threshold is None else _margin(threshold, nom_pct),
         tolerance_used=bool(best and best.tolerance_used),
         reasons=reasons,
         fixes=fixes,
@@ -154,6 +161,28 @@ def apply_changes(product: Product, changes: list[dict]) -> Product:
             raise ValueError(f"line_id {change['line_id']!r} matches {len(targets)} BOM lines, expected 1")
         targets[0].update({k: v for k, v in change.items() if k != "line_id"})
     return Product.model_validate(data)
+
+
+def _check_amounts(product: Product) -> None:
+    if not all(map(math.isfinite, [product.ex_works_chf, *(line.value_chf for line in product.bom)])):
+        raise ValueError("ex_works_chf and every value_chf must be finite numbers")
+
+
+def _duplicate_ids_reason(product: Product) -> list[str]:
+    repeated = sorted(i for i, n in Counter(line.line_id for line in product.bom).items() if n > 1)
+    if not repeated:
+        return []
+    return [
+        f"BOM line id(s) {', '.join(repeated)} are used by more than one line: all lines are counted, but "
+        "line-level results, fixes and what-if changes cannot tell them apart; give every line a unique id."
+    ]
+
+
+def _margin(threshold: float, nom_pct: Decimal) -> float:
+    """threshold - nom_pct to 2 dp; a share above the threshold never shows as 0.00 (it fails the limit)."""
+    exact = dec(threshold) - nom_pct
+    shown = exact.quantize(CENT, ROUND_HALF_UP)
+    return float(-CENT if exact < 0 <= shown else shown)
 
 
 def _closeness(alt: AlternativeEval, nom_pct: Decimal) -> tuple:

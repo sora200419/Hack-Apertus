@@ -19,6 +19,7 @@ from dataclasses import asdict, dataclass
 from fractions import Fraction
 from pathlib import Path
 
+from originpass.engine.origin import evaluate
 from originpass.models import BomLine, CriterionKind, Product, RulePack
 
 from .reference import lookup_rule, money, reference_verdict
@@ -71,7 +72,12 @@ def retune(product: Product, spec: dict, pack: RulePack) -> tuple[Product, TuneR
     pid = product.product_id
     rule = lookup_rule(pack, product.hs6 or "")
     limits = sorted(
-        {c.max_nom_pct for alt in (rule.alternatives if rule else []) for c in alt if c.kind is CriterionKind.MAXNOM},
+        {
+            c.max_nom_pct
+            for alt in (rule.alternatives if rule else [])
+            for c in alt
+            if c.kind is CriterionKind.MAXNOM and c.max_nom_pct is not None
+        },
         reverse=True,
     )
     if rule is None or not limits:
@@ -126,11 +132,7 @@ def _originating(line: BomLine, parties: set[str]) -> bool:
 
 
 def _engine_agrees(before: Product, after: Product, pack: RulePack, expected: tuple[str, str]) -> str | None:
-    """None if the engine gives the same two statuses (or is not importable yet), else a note."""
-    try:
-        from originpass.engine.origin import evaluate
-    except ImportError:
-        return None
+    """None if the engine gives the same two statuses, else a note."""
     got = (evaluate(before, pack).status.value, evaluate(after, pack).status.value)
     return None if got == expected else f"engine gives {got}, reference {expected}: investigate"
 
@@ -152,15 +154,11 @@ def product_json(product: Product) -> str:
 
 
 def demo_table(products: dict[str, Product], pack: RulePack) -> list[dict]:
-    """One row per demo: engine status (if importable) and reference status, NOM share, rule."""
-    try:
-        from originpass.engine.origin import evaluate
-    except ImportError:
-        evaluate = None
+    """One row per demo: engine and reference status, NOM share, rule."""
     rows = []
     for pid, p in products.items():
         ref = reference_verdict(p, pack)
-        engine = evaluate(p, pack) if evaluate else None
+        engine = evaluate(p, pack)
         rows.append(
             {
                 "product_id": pid,
@@ -170,8 +168,8 @@ def demo_table(products: dict[str, Product], pack: RulePack) -> list[dict]:
                 "lines_without_hs6": sum(1 for ln in p.bom if not ln.hs6),
                 "nom_pct": ref.nom_pct,
                 "reference_status": ref.status,
-                "engine_status": engine.status.value if engine else None,
-                "threshold_pct": engine.threshold_pct if engine else None,
+                "engine_status": engine.status.value,
+                "threshold_pct": engine.threshold_pct,
             }
         )
     return rows

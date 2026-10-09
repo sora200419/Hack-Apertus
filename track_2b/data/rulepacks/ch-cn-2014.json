@@ -1,7 +1,7 @@
 {
  "pack_id": "ch-cn-2014",
  "agreement": "Free Trade Agreement between the Swiss Confederation and the People's Republic of China (signed 6 July 2013, in force 1 July 2014)",
- "version_note": "Annex II as published in HS 2012 nomenclature; applied to HS 2022 codes by prefix. The upgraded FTA concluded on 20 Aug 2026 is not yet published; slot 'ch-cn-upgrade' is reserved.",
+ "version_note": "Annex II as published in HS 2012 nomenclature; applied to HS 2022 codes by prefix, except HS 2022 subheadings that did not exist in HS 2012 and whose predecessors (UNSD correlation) fall under another entry (added to that entry's scope) or need the HS 2012 classification (rules CHCN-HS2022-*). The upgraded FTA concluded on 20 Aug 2026 is not yet published; slot 'ch-cn-upgrade' is reserved.",
  "general": {
   "tolerance_pct": 10.0,
   "tolerance_applies_to": [
@@ -1039,9 +1039,17 @@
       "except_from": [],
       "note": null
      }
+    ],
+    [
+     {
+      "kind": "SPECIFIC",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": "Annex II Section II (notes for chapters 27-40): products obtained by fermentation (in chapter 30 also by cell culture) are wholly obtained, and where the change in tariff classification cannot be applied, chemical reaction, mixing, purification, change of particle size, standard materials or isomer separation confer origin (in that order, each for the chapters its note lists)"
+     }
     ]
    ],
-   "text": "CTH; or VNM 60%",
+   "text": "CTH; or VNM 60%; or a Section II route (fermentation, chemical reaction, purification, ...)",
    "text_zh": "第二十七章 矿物燃料、矿物油及其蒸馏产品；沥青物质；矿物蜡：品目改变 或者 非原产材料价值60%",
    "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '第二十七章'",
    "verified": false
@@ -1067,9 +1075,17 @@
       "except_from": [],
       "note": null
      }
+    ],
+    [
+     {
+      "kind": "SPECIFIC",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": "Annex II Section II (notes for chapters 27-40): products obtained by fermentation (in chapter 30 also by cell culture) are wholly obtained, and where the change in tariff classification cannot be applied, chemical reaction, mixing, purification, change of particle size, standard materials or isomer separation confer origin (in that order, each for the chapters its note lists)"
+     }
     ]
    ],
-   "text": "CTSH; or VNM 60% (ex entry: applies except to the headings listed separately)",
+   "text": "CTSH; or VNM 60%; or a Section II route (fermentation, chemical reaction, purification, ...) (ex entry: applies except to the headings listed separately)",
    "text_zh": "ex第二十八章 无机化学品；贵金属、稀土金属、放射性元素及其同位素的有机及无机化合物，以下产品除外：：子目改变 或者 非原产材料价值60%",
    "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry 'ex第二十八章'",
    "verified": false
@@ -1097,9 +1113,17 @@
       "except_from": [],
       "note": null
      }
+    ],
+    [
+     {
+      "kind": "SPECIFIC",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": "Annex II Section II (notes for chapters 27-40): products obtained by fermentation (in chapter 30 also by cell culture) are wholly obtained, and where the change in tariff classification cannot be applied, chemical reaction, mixing, purification, change of particle size, standard materials or isomer separation confer origin (in that order, each for the chapters its note lists)"
+     }
     ]
    ],
-   "text": "CTSH (except from subheading 281512); or VNM 60%",
+   "text": "CTSH (except from subheading 281512); or VNM 60%; or a Section II route (fermentation, chemical reaction, purification, ...)",
    "text_zh": "2815.11 固体氢氧化钠（烧碱）：子目改变，从子目2815.12改变至此除外 或者 非原产材料价值60%",
    "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '2815.11'",
    "verified": false
@@ -1127,9 +1151,17 @@
       "except_from": [],
       "note": null
      }
+    ],
+    [
+     {
+      "kind": "SPECIFIC",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": "Annex II Section II (notes for chapters 27-40): products obtained by fermentation (in chapter 30 also by cell culture) are wholly obtained, and where the change in tariff classification cannot be applied, chemical reaction, mixing, purification, change of particle size, standard materials or isomer separation confer origin (in that order, each for the chapters its note lists)"
+     }
     ]
    ],
-   "text": "CTSH (except from subheading 281511); or VNM 60%",
+   "text": "CTSH (except from subheading 281511); or VNM 60%; or a Section II route (fermentation, chemical reaction, purification, ...)",
    "text_zh": "2815.12 水溶液（氢氧化钠浓溶液及液体烧碱）：子目改变，从子目2815.11改变至此除外 或者 非原产材料价值60%",
    "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '2815.12'",
    "verified": false
@@ -1157,9 +1189,17 @@
       "except_from": [],
       "note": null
      }
+    ],
+    [
+     {
+      "kind": "SPECIFIC",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": "Annex II Section II (notes for chapters 27-40): products obtained by fermentation (in chapter 30 also by cell culture) are wholly obtained, and where the change in tariff classification cannot be applied, chemical reaction, mixing, purification, change of particle size, standard materials or isomer separation confer origin (in that order, each for the chapters its note lists)"
+     }
     ]
    ],
-   "text": "CTSH (except from subheading 284019); or VNM 60%",
+   "text": "CTSH (except from subheading 284019); or VNM 60%; or a Section II route (fermentation, chemical reaction, purification, ...)",
    "text_zh": "2840.11 无水四硼酸钠：子目改变，从子目2840.19改变至此除外 或者 非原产材料价值60%",
    "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '2840.11'",
    "verified": false
@@ -1187,9 +1227,17 @@
       "except_from": [],
       "note": null
      }
+    ],
+    [
+     {
+      "kind": "SPECIFIC",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": "Annex II Section II (notes for chapters 27-40): products obtained by fermentation (in chapter 30 also by cell culture) are wholly obtained, and where the change in tariff classification cannot be applied, chemical reaction, mixing, purification, change of particle size, standard materials or isomer separation confer origin (in that order, each for the chapters its note lists)"
+     }
     ]
    ],
-   "text": "CTSH (except from subheading 284011); or VNM 60%",
+   "text": "CTSH (except from subheading 284011); or VNM 60%; or a Section II route (fermentation, chemical reaction, purification, ...)",
    "text_zh": "2840.19 其他：子目改变，从子目2840.11改变至此除外 或者 非原产材料价值60%",
    "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '2840.19'",
    "verified": false
@@ -1217,9 +1265,17 @@
       "except_from": [],
       "note": null
      }
+    ],
+    [
+     {
+      "kind": "SPECIFIC",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": "Annex II Section II (notes for chapters 27-40): products obtained by fermentation (in chapter 30 also by cell culture) are wholly obtained, and where the change in tariff classification cannot be applied, chemical reaction, mixing, purification, change of particle size, standard materials or isomer separation confer origin (in that order, each for the chapters its note lists)"
+     }
     ]
    ],
-   "text": "CTSH (except from subheading 253090); or VNM 60%",
+   "text": "CTSH (except from subheading 253090); or VNM 60%; or a Section II route (fermentation, chemical reaction, purification, ...)",
    "text_zh": "28.46 稀土金属、钇、钪及其混合物的无机或有机化合物：子目改变，从子目2530.90改变至此除外 或者 非原产材料价值60%",
    "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '28.46'",
    "verified": false
@@ -1237,9 +1293,17 @@
       "except_from": [],
       "note": null
      }
+    ],
+    [
+     {
+      "kind": "SPECIFIC",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": "Annex II Section II (notes for chapters 27-40): products obtained by fermentation (in chapter 30 also by cell culture) are wholly obtained, and where the change in tariff classification cannot be applied, chemical reaction, mixing, purification, change of particle size, standard materials or isomer separation confer origin (in that order, each for the chapters its note lists)"
+     }
     ]
    ],
-   "text": "CTSH (ex entry: applies except to the headings listed separately)",
+   "text": "CTSH; or a Section II route (fermentation, chemical reaction, purification, ...) (ex entry: applies except to the headings listed separately)",
    "text_zh": "ex 第二十九章 有机化学品;以下产品除外：：子目改变",
    "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry 'ex 第二十九章'",
    "verified": false
@@ -1257,9 +1321,17 @@
       "except_from": [],
       "note": null
      }
+    ],
+    [
+     {
+      "kind": "SPECIFIC",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": "Annex II Section II (notes for chapters 27-40): products obtained by fermentation (in chapter 30 also by cell culture) are wholly obtained, and where the change in tariff classification cannot be applied, chemical reaction, mixing, purification, change of particle size, standard materials or isomer separation confer origin (in that order, each for the chapters its note lists)"
+     }
     ]
    ],
-   "text": "CTH",
+   "text": "CTH; or a Section II route (fermentation, chemical reaction, purification, ...)",
    "text_zh": "29.19 磷酸脂及其盐，包括乳磷酸盐，以及它们的卤化、磺化、硝化或亚硝化衍生物：品目改变",
    "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '29.19'",
    "verified": false
@@ -1277,9 +1349,17 @@
       "except_from": [],
       "note": null
      }
+    ],
+    [
+     {
+      "kind": "SPECIFIC",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": "Annex II Section II (notes for chapters 27-40): products obtained by fermentation (in chapter 30 also by cell culture) are wholly obtained, and where the change in tariff classification cannot be applied, chemical reaction, mixing, purification, change of particle size, standard materials or isomer separation confer origin (in that order, each for the chapters its note lists)"
+     }
     ]
    ],
-   "text": "CTH",
+   "text": "CTH; or a Section II route (fermentation, chemical reaction, purification, ...)",
    "text_zh": "29.31 其他有机—无机化合物：品目改变",
    "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '29.31'",
    "verified": false
@@ -1287,7 +1367,9 @@
   {
    "rule_id": "CHCN-30",
    "hs_scope": [
-    "30"
+    "30",
+    "382211",
+    "382213"
    ],
    "alternatives": [
     [
@@ -1297,11 +1379,19 @@
       "except_from": [],
       "note": null
      }
+    ],
+    [
+     {
+      "kind": "SPECIFIC",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": "Annex II Section II (notes for chapters 27-40): products obtained by fermentation (in chapter 30 also by cell culture) are wholly obtained, and where the change in tariff classification cannot be applied, chemical reaction, mixing, purification, change of particle size, standard materials or isomer separation confer origin (in that order, each for the chapters its note lists)"
+     }
     ]
    ],
-   "text": "VNM 60% (ex entry: applies except to the headings listed separately)",
+   "text": "VNM 60%; or a Section II route (fermentation, chemical reaction, purification, ...) (ex entry: applies except to the headings listed separately)",
    "text_zh": "ex 第三十章 药品;以下产品除外：：非原产材料价值60%",
-   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry 'ex 第三十章'",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry 'ex 第三十章'; HS 2022 subheading(s) 382211, 382213 added via the UNSD HS 2022-HS 2012 correlation table",
    "verified": false
   },
   {
@@ -1317,9 +1407,17 @@
       "except_from": [],
       "note": null
      }
+    ],
+    [
+     {
+      "kind": "SPECIFIC",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": "Annex II Section II (notes for chapters 27-40): products obtained by fermentation (in chapter 30 also by cell culture) are wholly obtained, and where the change in tariff classification cannot be applied, chemical reaction, mixing, purification, change of particle size, standard materials or isomer separation confer origin (in that order, each for the chapters its note lists)"
+     }
     ]
    ],
-   "text": "WO",
+   "text": "WO; or a Section II route (fermentation, chemical reaction, purification, ...)",
    "text_zh": "3006.92 废药物：完全获得",
    "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '3006.92'",
    "verified": false
@@ -1345,9 +1443,17 @@
       "except_from": [],
       "note": null
      }
+    ],
+    [
+     {
+      "kind": "SPECIFIC",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": "Annex II Section II (notes for chapters 27-40): products obtained by fermentation (in chapter 30 also by cell culture) are wholly obtained, and where the change in tariff classification cannot be applied, chemical reaction, mixing, purification, change of particle size, standard materials or isomer separation confer origin (in that order, each for the chapters its note lists)"
+     }
     ]
    ],
-   "text": "CTH; or VNM 60%",
+   "text": "CTH; or VNM 60%; or a Section II route (fermentation, chemical reaction, purification, ...)",
    "text_zh": "第三十一章 肥料：品目改变 或者 非原产材料价值60%",
    "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '第三十一章'",
    "verified": false
@@ -1373,9 +1479,17 @@
       "except_from": [],
       "note": null
      }
+    ],
+    [
+     {
+      "kind": "SPECIFIC",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": "Annex II Section II (notes for chapters 27-40): products obtained by fermentation (in chapter 30 also by cell culture) are wholly obtained, and where the change in tariff classification cannot be applied, chemical reaction, mixing, purification, change of particle size, standard materials or isomer separation confer origin (in that order, each for the chapters its note lists)"
+     }
     ]
    ],
-   "text": "CTSH; or VNM 60% (ex entry: applies except to the headings listed separately)",
+   "text": "CTSH; or VNM 60%; or a Section II route (fermentation, chemical reaction, purification, ...) (ex entry: applies except to the headings listed separately)",
    "text_zh": "ex第三十二章 鞣料浸膏及染料浸膏；鞣酸及其衍生物；染料、颜料及其他着色料；油漆及清漆；油灰及其他胶粘剂；墨水、油墨;以下产品除外：：子目改变 或者 非原产材料价值60%",
    "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry 'ex第三十二章'",
    "verified": false
@@ -1401,9 +1515,17 @@
       "except_from": [],
       "note": null
      }
+    ],
+    [
+     {
+      "kind": "SPECIFIC",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": "Annex II Section II (notes for chapters 27-40): products obtained by fermentation (in chapter 30 also by cell culture) are wholly obtained, and where the change in tariff classification cannot be applied, chemical reaction, mixing, purification, change of particle size, standard materials or isomer separation confer origin (in that order, each for the chapters its note lists)"
+     }
     ]
    ],
-   "text": "CTH; or VNM 60%",
+   "text": "CTH; or VNM 60%; or a Section II route (fermentation, chemical reaction, purification, ...)",
    "text_zh": "32.13 艺术家、学生和广告美工用的颜料、调色料、文娱颜料及类似品，片状、管装、罐装、瓶装、扁盒装以及类似形状或包装的：品目改变 或者 非原产材料价值60%",
    "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '32.13'",
    "verified": false
@@ -1429,9 +1551,17 @@
       "except_from": [],
       "note": null
      }
+    ],
+    [
+     {
+      "kind": "SPECIFIC",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": "Annex II Section II (notes for chapters 27-40): products obtained by fermentation (in chapter 30 also by cell culture) are wholly obtained, and where the change in tariff classification cannot be applied, chemical reaction, mixing, purification, change of particle size, standard materials or isomer separation confer origin (in that order, each for the chapters its note lists)"
+     }
     ]
    ],
-   "text": "CTH; or VNM 60%",
+   "text": "CTH; or VNM 60%; or a Section II route (fermentation, chemical reaction, purification, ...)",
    "text_zh": "32.14 安装玻璃用油灰、接缝用油灰、树脂胶泥、嵌缝胶及其他类似胶粘剂；漆工用填料；非耐火涂面制剂，涂门面、内墙、地板、天花板等用：品目改变 或者 非原产材料价值60%",
    "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '32.14'",
    "verified": false
@@ -1457,9 +1587,17 @@
       "except_from": [],
       "note": null
      }
+    ],
+    [
+     {
+      "kind": "SPECIFIC",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": "Annex II Section II (notes for chapters 27-40): products obtained by fermentation (in chapter 30 also by cell culture) are wholly obtained, and where the change in tariff classification cannot be applied, chemical reaction, mixing, purification, change of particle size, standard materials or isomer separation confer origin (in that order, each for the chapters its note lists)"
+     }
     ]
    ],
-   "text": "CTH; or VNM 60%",
+   "text": "CTH; or VNM 60%; or a Section II route (fermentation, chemical reaction, purification, ...)",
    "text_zh": "第三十三章 精油及香膏；芳香料制品及化妆盥洗品：品目改变 或者 非原产材料价值60%",
    "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '第三十三章'",
    "verified": false
@@ -1485,9 +1623,17 @@
       "except_from": [],
       "note": null
      }
+    ],
+    [
+     {
+      "kind": "SPECIFIC",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": "Annex II Section II (notes for chapters 27-40): products obtained by fermentation (in chapter 30 also by cell culture) are wholly obtained, and where the change in tariff classification cannot be applied, chemical reaction, mixing, purification, change of particle size, standard materials or isomer separation confer origin (in that order, each for the chapters its note lists)"
+     }
     ]
    ],
-   "text": "CTH; or VNM 60%",
+   "text": "CTH; or VNM 60%; or a Section II route (fermentation, chemical reaction, purification, ...)",
    "text_zh": "第三十四章 肥皂、有机表面活性剂、洗涤剂、润滑剂、人造蜡、、调制蜡、光洁剂、蜡烛及类似品、塑型用膏、“牙科用蜡”及牙科用熟石膏制剂及牙科用熟石膏制剂：品目改变 或者 非原产材料价值60%",
    "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '第三十四章'",
    "verified": false
@@ -1513,9 +1659,17 @@
       "except_from": [],
       "note": null
      }
+    ],
+    [
+     {
+      "kind": "SPECIFIC",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": "Annex II Section II (notes for chapters 27-40): products obtained by fermentation (in chapter 30 also by cell culture) are wholly obtained, and where the change in tariff classification cannot be applied, chemical reaction, mixing, purification, change of particle size, standard materials or isomer separation confer origin (in that order, each for the chapters its note lists)"
+     }
     ]
    ],
-   "text": "CTH; or VNM 60%",
+   "text": "CTH; or VNM 60%; or a Section II route (fermentation, chemical reaction, purification, ...)",
    "text_zh": "第三十五章 蛋白质物质；改性淀粉；胶；酶：品目改变 或者 非原产材料价值60%",
    "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '第三十五章'",
    "verified": false
@@ -1541,9 +1695,17 @@
       "except_from": [],
       "note": null
      }
+    ],
+    [
+     {
+      "kind": "SPECIFIC",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": "Annex II Section II (notes for chapters 27-40): products obtained by fermentation (in chapter 30 also by cell culture) are wholly obtained, and where the change in tariff classification cannot be applied, chemical reaction, mixing, purification, change of particle size, standard materials or isomer separation confer origin (in that order, each for the chapters its note lists)"
+     }
     ]
    ],
-   "text": "CTH; or VNM 60%",
+   "text": "CTH; or VNM 60%; or a Section II route (fermentation, chemical reaction, purification, ...)",
    "text_zh": "第三十六章 炸药；烟火制品；火柴；引火合金；易燃材料制品：品目改变 或者 非原产材料价值60%",
    "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '第三十六章'",
    "verified": false
@@ -1569,9 +1731,17 @@
       "except_from": [],
       "note": null
      }
+    ],
+    [
+     {
+      "kind": "SPECIFIC",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": "Annex II Section II (notes for chapters 27-40): products obtained by fermentation (in chapter 30 also by cell culture) are wholly obtained, and where the change in tariff classification cannot be applied, chemical reaction, mixing, purification, change of particle size, standard materials or isomer separation confer origin (in that order, each for the chapters its note lists)"
+     }
     ]
    ],
-   "text": "CTH; or VNM 60% (ex entry: applies except to the headings listed separately)",
+   "text": "CTH; or VNM 60%; or a Section II route (fermentation, chemical reaction, purification, ...) (ex entry: applies except to the headings listed separately)",
    "text_zh": "ex第三十七章 照相及电影用品; 以下产品除外:：品目改变 或者 非原产材料价值60%",
    "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry 'ex第三十七章'",
    "verified": false
@@ -1595,9 +1765,17 @@
       "except_from": [],
       "note": "如果成品涂有感光乳剂或其他涂层溶剂，则该感光乳剂或其他涂层溶剂须在一方生产；如果需要干燥、涂层、剪切及包装工序，则上述工序也应在该方完成"
      }
+    ],
+    [
+     {
+      "kind": "SPECIFIC",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": "Annex II Section II (notes for chapters 27-40): products obtained by fermentation (in chapter 30 also by cell culture) are wholly obtained, and where the change in tariff classification cannot be applied, chemical reaction, mixing, purification, change of particle size, standard materials or isomer separation confer origin (in that order, each for the chapters its note lists)"
+     }
     ]
    ],
-   "text": "CTH and specific processing condition (see Chinese text)",
+   "text": "CTH and specific processing condition (see Chinese text); or a Section II route (fermentation, chemical reaction, purification, ...)",
    "text_zh": "37.01 未曝光的摄影感光硬片及平面软片，用纸、纸板及纺织物以外任何材料制成；未曝光的一次成像感光平片，不论是否分装：品目改变，如果成品涂有感光乳剂或其他涂层溶剂，则该感光乳剂或其他涂层溶剂须在一方生产；如果需要干燥、涂层、剪切及包装工序，则上述工序也应在该方完成。",
    "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '37.01'",
    "verified": false
@@ -1621,9 +1799,17 @@
       "except_from": [],
       "note": "如果成品涂有感光乳剂或其他涂层溶剂，则该感光乳剂或其他涂层溶剂须在一方生产；如果需要干燥、涂层、剪切及包装工序，则上述工序也应在该方完成"
      }
+    ],
+    [
+     {
+      "kind": "SPECIFIC",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": "Annex II Section II (notes for chapters 27-40): products obtained by fermentation (in chapter 30 also by cell culture) are wholly obtained, and where the change in tariff classification cannot be applied, chemical reaction, mixing, purification, change of particle size, standard materials or isomer separation confer origin (in that order, each for the chapters its note lists)"
+     }
     ]
    ],
-   "text": "CTH and specific processing condition (see Chinese text)",
+   "text": "CTH and specific processing condition (see Chinese text); or a Section II route (fermentation, chemical reaction, purification, ...)",
    "text_zh": "37.02 成卷的未曝光摄影感光胶片，用纸、纸板及纺织物以外任何材料制成；未曝光的一次成像感光卷片：品目改变，如果成品涂有感光乳剂或其他涂层溶剂，则该感光乳剂或其他涂层溶剂须在一方生产；如果需要干燥、涂层、剪切及包装工序，则上述工序也应在该方完成。",
    "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '37.02'",
    "verified": false
@@ -1649,9 +1835,17 @@
       "except_from": [],
       "note": null
      }
+    ],
+    [
+     {
+      "kind": "SPECIFIC",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": "Annex II Section II (notes for chapters 27-40): products obtained by fermentation (in chapter 30 also by cell culture) are wholly obtained, and where the change in tariff classification cannot be applied, chemical reaction, mixing, purification, change of particle size, standard materials or isomer separation confer origin (in that order, each for the chapters its note lists)"
+     }
     ]
    ],
-   "text": "CTH; or VNM 60% (ex entry: applies except to the headings listed separately)",
+   "text": "CTH; or VNM 60%; or a Section II route (fermentation, chemical reaction, purification, ...) (ex entry: applies except to the headings listed separately)",
    "text_zh": "ex 第三十八章 杂项化学产品，以下产品除外：：品目改变 或者 非原产材料价值60%",
    "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry 'ex 第三十八章'",
    "verified": false
@@ -1669,9 +1863,17 @@
       "except_from": [],
       "note": null
      }
+    ],
+    [
+     {
+      "kind": "SPECIFIC",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": "Annex II Section II (notes for chapters 27-40): products obtained by fermentation (in chapter 30 also by cell culture) are wholly obtained, and where the change in tariff classification cannot be applied, chemical reaction, mixing, purification, change of particle size, standard materials or isomer separation confer origin (in that order, each for the chapters its note lists)"
+     }
     ]
    ],
-   "text": "WO",
+   "text": "WO; or a Section II route (fermentation, chemical reaction, purification, ...)",
    "text_zh": "38.25 其他品目未列名的化学工业及其相关工业的副产品；城市垃圾；下水道淤泥；本章注释六所规定的其他废物：完全获得",
    "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '38.25'",
    "verified": false
@@ -1697,9 +1899,17 @@
       "except_from": [],
       "note": null
      }
+    ],
+    [
+     {
+      "kind": "SPECIFIC",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": "Annex II Section II (notes for chapters 27-40): products obtained by fermentation (in chapter 30 also by cell culture) are wholly obtained, and where the change in tariff classification cannot be applied, chemical reaction, mixing, purification, change of particle size, standard materials or isomer separation confer origin (in that order, each for the chapters its note lists)"
+     }
     ]
    ],
-   "text": "CTH; or VNM 55% (ex entry: applies except to the headings listed separately)",
+   "text": "CTH; or VNM 55%; or a Section II route (fermentation, chemical reaction, purification, ...) (ex entry: applies except to the headings listed separately)",
    "text_zh": "ex第三十九章 塑料及其制品；以下产品除外：：品目改变 或者 非原产材料价值55%",
    "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry 'ex第三十九章'",
    "verified": false
@@ -1717,9 +1927,17 @@
       "except_from": [],
       "note": null
      }
+    ],
+    [
+     {
+      "kind": "SPECIFIC",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": "Annex II Section II (notes for chapters 27-40): products obtained by fermentation (in chapter 30 also by cell culture) are wholly obtained, and where the change in tariff classification cannot be applied, chemical reaction, mixing, purification, change of particle size, standard materials or isomer separation confer origin (in that order, each for the chapters its note lists)"
+     }
     ]
    ],
-   "text": "WO",
+   "text": "WO; or a Section II route (fermentation, chemical reaction, purification, ...)",
    "text_zh": "39.15 塑料的废碎料及下脚料：完全获得",
    "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '39.15'",
    "verified": false
@@ -1745,9 +1963,17 @@
       "except_from": [],
       "note": null
      }
+    ],
+    [
+     {
+      "kind": "SPECIFIC",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": "Annex II Section II (notes for chapters 27-40): products obtained by fermentation (in chapter 30 also by cell culture) are wholly obtained, and where the change in tariff classification cannot be applied, chemical reaction, mixing, purification, change of particle size, standard materials or isomer separation confer origin (in that order, each for the chapters its note lists)"
+     }
     ]
    ],
-   "text": "CTH; or VNM 60% (ex entry: applies except to the headings listed separately)",
+   "text": "CTH; or VNM 60%; or a Section II route (fermentation, chemical reaction, purification, ...) (ex entry: applies except to the headings listed separately)",
    "text_zh": "ex 第四十章 橡胶及其制品；以下产品除外：：品目改变 或者 非原产材料价值60%",
    "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry 'ex 第四十章'",
    "verified": false
@@ -1765,9 +1991,17 @@
       "except_from": [],
       "note": null
      }
+    ],
+    [
+     {
+      "kind": "SPECIFIC",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": "Annex II Section II (notes for chapters 27-40): products obtained by fermentation (in chapter 30 also by cell culture) are wholly obtained, and where the change in tariff classification cannot be applied, chemical reaction, mixing, purification, change of particle size, standard materials or isomer separation confer origin (in that order, each for the chapters its note lists)"
+     }
     ]
    ],
-   "text": "WO",
+   "text": "WO; or a Section II route (fermentation, chemical reaction, purification, ...)",
    "text_zh": "40.01 天然橡胶、巴拉塔胶、古塔波胶、银胶菊胶、糖胶树胶及类似的天然树胶，初级形状或板、片、带：完全获得",
    "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '40.01'",
    "verified": false
@@ -1785,9 +2019,17 @@
       "except_from": [],
       "note": null
      }
+    ],
+    [
+     {
+      "kind": "SPECIFIC",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": "Annex II Section II (notes for chapters 27-40): products obtained by fermentation (in chapter 30 also by cell culture) are wholly obtained, and where the change in tariff classification cannot be applied, chemical reaction, mixing, purification, change of particle size, standard materials or isomer separation confer origin (in that order, each for the chapters its note lists)"
+     }
     ]
    ],
-   "text": "WO",
+   "text": "WO; or a Section II route (fermentation, chemical reaction, purification, ...)",
    "text_zh": "40.02 合成橡胶及从油类提取的油膏，初级形状或板、片、带；品目4001 所列产品与本品目所列产品的混合物，初级形状或板、片、带：完全获得",
    "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '40.02'",
    "verified": false
@@ -1807,9 +2049,17 @@
       ],
       "note": null
      }
+    ],
+    [
+     {
+      "kind": "SPECIFIC",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": "Annex II Section II (notes for chapters 27-40): products obtained by fermentation (in chapter 30 also by cell culture) are wholly obtained, and where the change in tariff classification cannot be applied, chemical reaction, mixing, purification, change of particle size, standard materials or isomer separation confer origin (in that order, each for the chapters its note lists)"
+     }
     ]
    ],
-   "text": "CTH (except from heading 4011)",
+   "text": "CTH (except from heading 4011); or a Section II route (fermentation, chemical reaction, purification, ...)",
    "text_zh": "40.12 翻新的或旧的充气橡胶轮胎；实心或半实心橡胶轮胎、橡胶胎面及橡胶轮胎衬带：品目改变，从品目4011改变至此除外",
    "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '40.12'",
    "verified": false
@@ -4443,7 +4693,8 @@
   {
    "rule_id": "CHCN-810730",
    "hs_scope": [
-    "810730"
+    "810730",
+    "811261"
    ],
    "alternatives": [
     [
@@ -4457,7 +4708,7 @@
    ],
    "text": "WO",
    "text_zh": "8107.30 镉废碎料：完全获得",
-   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '8107.30'",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '8107.30'; HS 2022 subheading(s) 811261 added via the UNSD HS 2022-HS 2012 correlation table",
    "verified": false
   },
   {
@@ -4483,7 +4734,9 @@
   {
    "rule_id": "CHCN-810930",
    "hs_scope": [
-    "810930"
+    "810930",
+    "810931",
+    "810939"
    ],
    "alternatives": [
     [
@@ -4497,7 +4750,7 @@
    ],
    "text": "WO",
    "text_zh": "8109.30 锆废碎料：完全获得",
-   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '8109.30'",
+   "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '8109.30'; HS 2022 subheading(s) 810931, 810939 added via the UNSD HS 2022-HS 2012 correlation table",
    "verified": false
   },
   {
@@ -5054,6 +5307,399 @@
    "text": "CC",
    "text_zh": "97.06 超过一百年的古物：章改变",
    "source": "GACC Announcement 2014 No. 51, Annex II product-specific rules (official Chinese text), entry '97.06'",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-HS2022-040320",
+   "hs_scope": [
+    "040320"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "SPECIFIC",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": "the product's HS 2012 subheading decides which Annex II entry applies (CHCN-04 (CC), CHCN-1901 (CC (except from chapter 04, 11)))"
+     }
+    ]
+   ],
+   "text": "no single Annex II entry: the entry of the product's HS 2012 subheading, one of CHCN-04 (CC), CHCN-1901 (CC (except from chapter 04, 11))",
+   "text_zh": "第四章 乳品；蛋品；天然蜂蜜；其他食用动物产品：章改变；19.01 麦精；细粉、粗粒、粗粉、淀粉或麦精制的其他品目未列名的食品，不含可可或按重量计全脱脂可可含量低于40%；品目0401 至0404 所列货品制的其他品目未列名的食品，不含可可或按重量计全脱脂可可含量低于5%：章改变，从第四章、第十一章改变至此除外",
+   "source": "UNSD HS 2022-HS 2012 correlation table (HS 2012 predecessors 040310, 190190); not an Annex II entry",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-HS2022-041010",
+   "hs_scope": [
+    "041010"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "SPECIFIC",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": "the product's HS 2012 subheading decides which Annex II entry applies (CHCN-02 (WO), CHCN-04 (CC))"
+     }
+    ]
+   ],
+   "text": "no single Annex II entry: the entry of the product's HS 2012 subheading, one of CHCN-02 (WO), CHCN-04 (CC)",
+   "text_zh": "ex 第二章 肉及食用杂碎；以下产品除外：完全获得；第四章 乳品；蛋品；天然蜂蜜；其他食用动物产品：章改变",
+   "source": "UNSD HS 2022-HS 2012 correlation table (HS 2012 predecessors 020890, 021099, 041000); not an Annex II entry",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-HS2022-121150",
+   "hs_scope": [
+    "121150"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "SPECIFIC",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": "the product's HS 2012 subheading decides which Annex II entry applies (CHCN-12 (WO), CHCN-14 (WO))"
+     }
+    ]
+   ],
+   "text": "no single Annex II entry: the entry of the product's HS 2012 subheading, one of CHCN-12 (WO), CHCN-14 (WO)",
+   "text_zh": "第十二章 含油子仁及果实；杂项子仁及果实；工业用或药用植物；稻草、秸秆及饲料：完全获得；第十四章 编结用植物材料；其他植物产品：完全获得",
+   "source": "UNSD HS 2022-HS 2012 correlation table (HS 2012 predecessors 121190, 140490); not an Annex II entry",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-HS2022-121160",
+   "hs_scope": [
+    "121160"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "SPECIFIC",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": "the product's HS 2012 subheading decides which Annex II entry applies (CHCN-12 (WO), CHCN-14 (WO), CHCN-20 (CC))"
+     }
+    ]
+   ],
+   "text": "no single Annex II entry: the entry of the product's HS 2012 subheading, one of CHCN-12 (WO), CHCN-14 (WO), CHCN-20 (CC)",
+   "text_zh": "第十二章 含油子仁及果实；杂项子仁及果实；工业用或药用植物；稻草、秸秆及饲料：完全获得；第十四章 编结用植物材料；其他植物产品：完全获得；第二十章 蔬菜、水果、坚果或植物其他部分的制品：章改变",
+   "source": "UNSD HS 2022-HS 2012 correlation table (HS 2012 predecessors 121190, 140490, 200899); not an Annex II entry",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-HS2022-240412",
+   "hs_scope": [
+    "240412",
+    "240492",
+    "240499"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "SPECIFIC",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": "CTH of entry CHCN-38, to be judged on the HS 2012 codes (product: 382490)"
+     }
+    ],
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 60.0,
+      "except_from": [],
+      "note": null
+     }
+    ],
+    [
+     {
+      "kind": "SPECIFIC",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": "Annex II Section II (notes for chapters 27-40): products obtained by fermentation (in chapter 30 also by cell culture) are wholly obtained, and where the change in tariff classification cannot be applied, chemical reaction, mixing, purification, change of particle size, standard materials or isomer separation confer origin (in that order, each for the chapters its note lists)"
+     }
+    ]
+   ],
+   "text": "CTH; or VNM 60%; or a Section II route (fermentation, chemical reaction, purification, ...), as entry CHCN-38 of the HS 2012 predecessors",
+   "text_zh": "ex 第三十八章 杂项化学产品，以下产品除外：：品目改变 或者 非原产材料价值60%",
+   "source": "UNSD HS 2022-HS 2012 correlation table (HS 2012 predecessors 382490); not an Annex II entry",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-HS2022-240419",
+   "hs_scope": [
+    "240419"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "SPECIFIC",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": "the product's HS 2012 subheading decides which Annex II entry applies (CHCN-24 (WO), CHCN-38 (CTH; or VNM 60%; or a Section II route (fermentation, chemical reaction, purification, ...)))"
+     }
+    ]
+   ],
+   "text": "no single Annex II entry: the entry of the product's HS 2012 subheading, one of CHCN-24 (WO), CHCN-38 (CTH; or VNM 60%; or a Section II route (fermentation, chemical reaction, purification, ...))",
+   "text_zh": "第二十四章 烟草、烟草及烟草代用品的制品：完全获得；ex 第三十八章 杂项化学产品，以下产品除外：：品目改变 或者 非原产材料价值60%",
+   "source": "UNSD HS 2022-HS 2012 correlation table (HS 2012 predecessors 240399, 382490); not an Annex II entry",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-HS2022-240491",
+   "hs_scope": [
+    "240491"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "SPECIFIC",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": "CC of entry CHCN-21, to be judged on the HS 2012 codes (product: 210690)"
+     }
+    ]
+   ],
+   "text": "CC, as entry CHCN-21 of the HS 2012 predecessors",
+   "text_zh": "第二十一章 杂项食品：章改变",
+   "source": "UNSD HS 2022-HS 2012 correlation table (HS 2012 predecessors 210690); not an Annex II entry",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-HS2022-300693",
+   "hs_scope": [
+    "300693"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "SPECIFIC",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": "the product's HS 2012 subheading decides which Annex II entry applies (CHCN-1704 (CTH and VNM 50%), CHCN-21 (CC), CHCN-22 (CTH), CHCN-30 (VNM 60%; or a Section II route (fermentation, chemical reaction, purification, ...)), CHCN-38 (CTH; or VNM 60%; or a Section II route (fermentation, chemical reaction, purification, ...)))"
+     }
+    ]
+   ],
+   "text": "no single Annex II entry: the entry of the product's HS 2012 subheading, one of CHCN-1704 (CTH and VNM 50%), CHCN-21 (CC), CHCN-22 (CTH), CHCN-30 (VNM 60%; or a Section II route (fermentation, chemical reaction, purification, ...)), CHCN-38 (CTH; or VNM 60%; or a Section II route (fermentation, chemical reaction, purification, ...))",
+   "text_zh": "17.04 不含可可的糖食（包括白巧克力）：品目改变且非原产材料价值50%；第二十一章 杂项食品：章改变；ex 第二十二章 饮料、酒及醋;以下产品除外：：品目改变；ex 第三十章 药品;以下产品除外：：非原产材料价值60%；ex 第三十八章 杂项化学产品，以下产品除外：：品目改变 或者 非原产材料价值60%",
+   "source": "UNSD HS 2022-HS 2012 correlation table (HS 2012 predecessors 170490, 210690, 220290, 300410, 300420, 300431, 300432, 300439 and 4 more); not an Annex II entry",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-HS2022-382212",
+   "hs_scope": [
+    "382212",
+    "382219"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 60.0,
+      "except_from": [],
+      "note": null
+     }
+    ],
+    [
+     {
+      "kind": "SPECIFIC",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": "the product's HS 2012 subheading decides which Annex II entry applies (CHCN-30 (VNM 60%; or a Section II route (fermentation, chemical reaction, purification, ...)), CHCN-38 (CTH; or VNM 60%; or a Section II route (fermentation, chemical reaction, purification, ...)))"
+     }
+    ]
+   ],
+   "text": "VNM 60% (meets every candidate entry); or the entry of the product's HS 2012 subheading, one of CHCN-30 (VNM 60%; or a Section II route (fermentation, chemical reaction, purification, ...)), CHCN-38 (CTH; or VNM 60%; or a Section II route (fermentation, chemical reaction, purification, ...))",
+   "text_zh": "ex 第三十章 药品;以下产品除外：：非原产材料价值60%；ex 第三十八章 杂项化学产品，以下产品除外：：品目改变 或者 非原产材料价值60%",
+   "source": "UNSD HS 2022-HS 2012 correlation table (HS 2012 predecessors 300210, 382200); not an Annex II entry",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-HS2022-852411",
+   "hs_scope": [
+    "852411",
+    "852412",
+    "852419",
+    "852491",
+    "852492",
+    "852499"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 50.0,
+      "except_from": [],
+      "note": null
+     }
+    ],
+    [
+     {
+      "kind": "SPECIFIC",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": "the product's HS 2012 subheading decides which Annex II entry applies (CHCN-84 (VNM 50%), CHCN-85 (VNM 50%), CHCN-86 (VNM 60%), CHCN-87 (VNM 60%), CHCN-88 (VNM 60%), CHCN-90 (VNM 55%), CHCN-95 (CTH; or VNM 60%))"
+     }
+    ]
+   ],
+   "text": "VNM 50% (meets every candidate entry); or the entry of the product's HS 2012 subheading, one of CHCN-84 (VNM 50%), CHCN-85 (VNM 50%), CHCN-86 (VNM 60%), CHCN-87 (VNM 60%), CHCN-88 (VNM 60%), CHCN-90 (VNM 55%), CHCN-95 (CTH; or VNM 60%)",
+   "text_zh": "第八十四章 核反应堆、锅炉、机器、机械器具及其零件：非原产材料价值50％；第八十五章 电机、电气设备及其零件；声音的录制和重放设备及其零件、附件：非原产材料价值50％；第八十六章 铁道及电车道机车、车辆及其零件；铁道及电车道轨道固定装置及其零件、附件；各种机械（包括电动机械）交通信号设备：非原产材料价值60％；第八十七章 车辆及其零件、附件，但铁道及电车道车辆除外：非原产材料价值60％；第八十八章 航空器、航天器及其零件：非原产材料价值60％；第九十章 光学、照相、电影、计量、检验、医疗或外科用仪器及设备、精密仪器及设备；上述物品的零件、附件：非原产材料价值55％；第九十五章 玩具、游戏品、运动用品及其零件、附件：品目改变 或者 非原产材料价值60％",
+   "source": "UNSD HS 2022-HS 2012 correlation table (HS 2012 predecessors 841311, 841319, 841320, 841330, 841340, 841350, 841360, 841370 and 475 more); not an Annex II entry",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-HS2022-853951",
+   "hs_scope": [
+    "853951"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 50.0,
+      "except_from": [],
+      "note": null
+     }
+    ],
+    [
+     {
+      "kind": "SPECIFIC",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": "the product's HS 2012 subheading decides which Annex II entry applies (CHCN-85 (VNM 50%), CHCN-94 (CTH; or VNM 60%))"
+     }
+    ]
+   ],
+   "text": "VNM 50% (meets every candidate entry); or the entry of the product's HS 2012 subheading, one of CHCN-85 (VNM 50%), CHCN-94 (CTH; or VNM 60%)",
+   "text_zh": "第八十五章 电机、电气设备及其零件；声音的录制和重放设备及其零件、附件：非原产材料价值50％；第九十四章 家具；寝具、褥垫、弹簧床垫、软座垫及类似的填充制品；未列名灯具及照明装置；发光标志、发光铭牌及类似品；活动房屋：品目改变 或者 非原产材料价值60％",
+   "source": "UNSD HS 2022-HS 2012 correlation table (HS 2012 predecessors 853990, 854370, 940510, 940520, 940530, 940540); not an Annex II entry",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-HS2022-854151",
+   "hs_scope": [
+    "854151",
+    "854159"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 50.0,
+      "except_from": [],
+      "note": null
+     }
+    ],
+    [
+     {
+      "kind": "SPECIFIC",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": "the product's HS 2012 subheading decides which Annex II entry applies (CHCN-84 (VNM 50%), CHCN-85 (VNM 50%), CHCN-90 (VNM 55%), CHCN-93 (VNM 60%), CHCN-95 (CTH; or VNM 60%))"
+     }
+    ]
+   ],
+   "text": "VNM 50% (meets every candidate entry); or the entry of the product's HS 2012 subheading, one of CHCN-84 (VNM 50%), CHCN-85 (VNM 50%), CHCN-90 (VNM 55%), CHCN-93 (VNM 60%), CHCN-95 (CTH; or VNM 60%)",
+   "text_zh": "第八十四章 核反应堆、锅炉、机器、机械器具及其零件：非原产材料价值50％；第八十五章 电机、电气设备及其零件；声音的录制和重放设备及其零件、附件：非原产材料价值50％；第九十章 光学、照相、电影、计量、检验、医疗或外科用仪器及设备、精密仪器及设备；上述物品的零件、附件：非原产材料价值55％；第九十三章 武器、弹药及其零件、附件：非原产材料价值60％；第九十五章 玩具、游戏品、运动用品及其零件、附件：品目改变 或者 非原产材料价值60％",
+   "source": "UNSD HS 2022-HS 2012 correlation table (HS 2012 predecessors 842211, 842219, 842220, 842230, 842240, 842290, 843110, 843120 and 150 more); not an Annex II entry",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-HS2022-854921",
+   "hs_scope": [
+    "854921",
+    "854929",
+    "854931",
+    "854939",
+    "854991",
+    "854999"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "SPECIFIC",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": "the product's HS 2012 subheading decides which Annex II entry applies (CHCN-3825 (WO; or a Section II route (fermentation, chemical reaction, purification, ...)), CHCN-7001 (CC), CHCN-7112 (WO), CHCN-84 (VNM 50%), CHCN-85 (VNM 50%), CHCN-90 (VNM 55%), CHCN-91 (VNM 40%), CHCN-93 (VNM 60%), CHCN-95 (CTH; or VNM 60%))"
+     }
+    ]
+   ],
+   "text": "no single Annex II entry: the entry of the product's HS 2012 subheading, one of CHCN-3825 (WO; or a Section II route (fermentation, chemical reaction, purification, ...)), CHCN-7001 (CC), CHCN-7112 (WO), CHCN-84 (VNM 50%), CHCN-85 (VNM 50%), CHCN-90 (VNM 55%), CHCN-91 (VNM 40%), CHCN-93 (VNM 60%), CHCN-95 (CTH; or VNM 60%)",
+   "text_zh": "38.25 其他品目未列名的化学工业及其相关工业的副产品；城市垃圾；下水道淤泥；本章注释六所规定的其他废物：完全获得；70.01 碎玻璃及废玻璃；玻璃块料：章改变；71.12 贵金属或包贵金属的废碎料；含有贵金属或贵金属化合物的其他废碎料，主要用于回收贵金属：完全获得；第八十四章 核反应堆、锅炉、机器、机械器具及其零件：非原产材料价值50％；第八十五章 电机、电气设备及其零件；声音的录制和重放设备及其零件、附件：非原产材料价值50％；第九十章 光学、照相、电影、计量、检验、医疗或外科用仪器及设备、精密仪器及设备；上述物品的零件、附件：非原产材料价值55％；第九十一章 钟表及其零件：非原产材料价值40％；第九十三章 武器、弹药及其零件、附件：非原产材料价值60％；第九十五章 玩具、游戏品、运动用品及其零件、附件：品目改变 或者 非原产材料价值60％",
+   "source": "UNSD HS 2022-HS 2012 correlation table (HS 2012 predecessors 382510, 382520, 382530, 382541, 382549, 382550, 382561, 382569 and 1010 more); not an Annex II entry",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-HS2022-880621",
+   "hs_scope": [
+    "880621",
+    "880622",
+    "880623",
+    "880624",
+    "880629",
+    "880691",
+    "880692",
+    "880693",
+    "880694",
+    "880699"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 50.0,
+      "except_from": [],
+      "note": null
+     }
+    ],
+    [
+     {
+      "kind": "SPECIFIC",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": "the product's HS 2012 subheading decides which Annex II entry applies (CHCN-85 (VNM 50%), CHCN-88 (VNM 60%))"
+     },
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 60.0,
+      "except_from": [],
+      "note": null
+     }
+    ]
+   ],
+   "text": "VNM 50% (meets every candidate entry); or the entry of the product's HS 2012 subheading, one of CHCN-85 (VNM 50%), CHCN-88 (VNM 60%)",
+   "text_zh": "第八十五章 电机、电气设备及其零件；声音的录制和重放设备及其零件、附件：非原产材料价值50％；第八十八章 航空器、航天器及其零件：非原产材料价值60％",
+   "source": "UNSD HS 2022-HS 2012 correlation table (HS 2012 predecessors 852580, 880211, 880212, 880220, 880230, 880240); not an Annex II entry",
+   "verified": false
+  },
+  {
+   "rule_id": "CHCN-HS2022-962000",
+   "hs_scope": [
+    "962000"
+   ],
+   "alternatives": [
+    [
+     {
+      "kind": "MAXNOM",
+      "max_nom_pct": 50.0,
+      "except_from": [],
+      "note": null
+     }
+    ],
+    [
+     {
+      "kind": "SPECIFIC",
+      "max_nom_pct": null,
+      "except_from": [],
+      "note": "the product's HS 2012 subheading decides which Annex II entry applies (CHCN-39 (CTH; or VNM 55%; or a Section II route (fermentation, chemical reaction, purification, ...)), CHCN-44 (CTH; or VNM 60%), CHCN-68 (CTH; or VNM 60%), CHCN-73 (CTH; or VNM 60%), CHCN-76 (CTH; or VNM 60%), CHCN-84 (VNM 50%), CHCN-85 (VNM 50%), CHCN-90 (VNM 55%), CHCN-92 (CTH; or VNM 60%))"
+     }
+    ]
+   ],
+   "text": "VNM 50% (meets every candidate entry); or the entry of the product's HS 2012 subheading, one of CHCN-39 (CTH; or VNM 55%; or a Section II route (fermentation, chemical reaction, purification, ...)), CHCN-44 (CTH; or VNM 60%), CHCN-68 (CTH; or VNM 60%), CHCN-73 (CTH; or VNM 60%), CHCN-76 (CTH; or VNM 60%), CHCN-84 (VNM 50%), CHCN-85 (VNM 50%), CHCN-90 (VNM 55%), CHCN-92 (CTH; or VNM 60%)",
+   "text_zh": "ex第三十九章 塑料及其制品；以下产品除外：：品目改变 或者 非原产材料价值55%；第四十四章 木及木制品；木炭：品目改变 或者 非原产材料价值60%；第六十八章 石料、石膏、水泥、石棉、云母及类似材料的制品：品目改变 或者 非原产材料价值60%；第七十三章 钢铁制品：品目改变 或者 非原产材料价值60％；ex第七十六章 铝及其制品;以下产品除外：：品目改变 或者 非原产材料价值60％；第八十四章 核反应堆、锅炉、机器、机械器具及其零件：非原产材料价值50％；第八十五章 电机、电气设备及其零件；声音的录制和重放设备及其零件、附件：非原产材料价值50％；第九十章 光学、照相、电影、计量、检验、医疗或外科用仪器及设备、精密仪器及设备；上述物品的零件、附件：非原产材料价值55％；第九十二章 乐器及其零件、附件：品目改变 或者 非原产材料价值60％",
+   "source": "UNSD HS 2022-HS 2012 correlation table (HS 2012 predecessors 392690, 442190, 681510, 732690, 761699, 843139, 847330, 848790 and 8 more); not an Annex II entry",
    "verified": false
   }
  ]

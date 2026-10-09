@@ -1,0 +1,1447 @@
+{
+  "generated_with": {
+    "mode": "replay",
+    "llm_name": "swiss-ai/Apertus-v1.5-70B",
+    "llm_name_small": "swiss-ai/Apertus-v1.5-8B",
+    "rulepack": "ch-cn-2014",
+    "rulepack_sha256": "f38b6c6760addef224ccd9cdd27e1ac7b02085173d1371f4f742b6556f6da1fb",
+    "gold_sha256": "163fb7a88a53e635d86d663aee66a1dac082dbb674aa564c460a4859c621f696",
+    "replay_cache_entries": 0,
+    "commit": "cfebdf17451260356549f6a0858fae6f439b06ee",
+    "config": {
+      "e1_max_items": null,
+      "e2_random": 300,
+      "e2_rules_per_chapter": 3,
+      "e2_llm_n": 100,
+      "seed": 2026
+    }
+  },
+  "e1": {
+    "gold": {
+      "file": "data/eval/hs_gold.jsonl",
+      "rows": 510,
+      "counts": {
+        "hscodecomp/dev": {
+          "en": 63
+        },
+        "hscodecomp/test": {
+          "en": 148
+        },
+        "main/dev": {
+          "de": 11,
+          "en": 29,
+          "fr": 8,
+          "it": 5
+        },
+        "main/test": {
+          "de": 42,
+          "en": 54,
+          "fr": 18,
+          "it": 12
+        },
+        "parallel/dev": {
+          "de": 8,
+          "en": 8,
+          "fr": 8,
+          "it": 8
+        },
+        "parallel/test": {
+          "de": 22,
+          "en": 22,
+          "fr": 22,
+          "it": 22
+        }
+      },
+      "sources": [
+        "HSCodeComp (AIDC-AI, github.com/AIDC-AI/Marco-Search-Agent, commit 2be90e4)",
+        "hand-labelled from HS 2022 nomenclature"
+      ]
+    },
+    "systems": {
+      "bm25": {
+        "status": "run",
+        "items": 362
+      },
+      "tfidf": {
+        "status": "run",
+        "items": 362
+      },
+      "fused": {
+        "status": "run",
+        "items": 362
+      },
+      "retrieval_only": {
+        "status": "run",
+        "items": 362
+      },
+      "llm_small": {
+        "items": 362,
+        "items_answered": 0,
+        "missing_cache_entries": 362,
+        "missing_by_tag": {
+          "hs_rewrite": 362
+        },
+        "status": "not run",
+        "note": "no endpoint/cache: 362/362 items without a model answer"
+      },
+      "llm_large": {
+        "items": 362,
+        "items_answered": 0,
+        "missing_cache_entries": 362,
+        "missing_by_tag": {
+          "hs_rewrite": 362
+        },
+        "status": "not run",
+        "note": "no endpoint/cache: 362/362 items without a model answer"
+      }
+    },
+    "subsets": {
+      "main": {
+        "bm25": {
+          "n": 126,
+          "top1_hs6": 0.1429,
+          "top1_hs6_ci95": [
+            0.0923,
+            0.2145
+          ],
+          "top1_hs4": 0.1984,
+          "top3_hs6": 0.1984,
+          "top3_hs4": 0.2381,
+          "recall_at_10": 0.2778,
+          "coverage": 0.6429,
+          "selective_hs6": 0.2222,
+          "selective_hs4": 0.3086
+        },
+        "tfidf": {
+          "n": 126,
+          "top1_hs6": 0.1111,
+          "top1_hs6_ci95": [
+            0.0673,
+            0.1779
+          ],
+          "top1_hs4": 0.1667,
+          "top3_hs6": 0.1984,
+          "top3_hs4": 0.2302,
+          "recall_at_10": 0.3016,
+          "coverage": 1.0,
+          "selective_hs6": 0.1111,
+          "selective_hs4": 0.1667
+        },
+        "fused": {
+          "n": 126,
+          "top1_hs6": 0.1587,
+          "top1_hs6_ci95": [
+            0.1052,
+            0.2325
+          ],
+          "top1_hs4": 0.2222,
+          "top3_hs6": 0.2063,
+          "top3_hs4": 0.254,
+          "recall_at_10": 0.3095,
+          "coverage": 1.0,
+          "selective_hs6": 0.1587,
+          "selective_hs4": 0.2222
+        },
+        "retrieval_only": {
+          "n": 126,
+          "top1_hs6": 0.0079,
+          "top1_hs6_ci95": [
+            0.0014,
+            0.0436
+          ],
+          "top1_hs4": 0.0079,
+          "top3_hs6": 0.2063,
+          "top3_hs4": 0.254,
+          "recall_at_10": 0.3095,
+          "coverage": 0.0238,
+          "selective_hs6": 0.3333,
+          "selective_hs4": 0.3333
+        },
+        "llm_small": {
+          "n": 0,
+          "top1_hs6": null,
+          "top1_hs6_ci95": null,
+          "top1_hs4": null,
+          "top3_hs6": null,
+          "top3_hs4": null,
+          "recall_at_10": null,
+          "coverage": null,
+          "selective_hs6": null,
+          "selective_hs4": null
+        },
+        "llm_large": {
+          "n": 0,
+          "top1_hs6": null,
+          "top1_hs6_ci95": null,
+          "top1_hs4": null,
+          "top3_hs6": null,
+          "top3_hs4": null,
+          "recall_at_10": null,
+          "coverage": null,
+          "selective_hs6": null,
+          "selective_hs4": null
+        }
+      },
+      "hscodecomp": {
+        "bm25": {
+          "n": 148,
+          "top1_hs6": 0.1149,
+          "top1_hs6_ci95": [
+            0.073,
+            0.1763
+          ],
+          "top1_hs4": 0.2162,
+          "top3_hs6": 0.1892,
+          "top3_hs4": 0.2635,
+          "recall_at_10": 0.2568,
+          "coverage": 0.9932,
+          "selective_hs6": 0.1156,
+          "selective_hs4": 0.2177
+        },
+        "tfidf": {
+          "n": 148,
+          "top1_hs6": 0.0811,
+          "top1_hs6_ci95": [
+            0.047,
+            0.1364
+          ],
+          "top1_hs4": 0.1959,
+          "top3_hs6": 0.2027,
+          "top3_hs4": 0.2568,
+          "recall_at_10": 0.3108,
+          "coverage": 1.0,
+          "selective_hs6": 0.0811,
+          "selective_hs4": 0.1959
+        },
+        "fused": {
+          "n": 148,
+          "top1_hs6": 0.1014,
+          "top1_hs6_ci95": [
+            0.0624,
+            0.1605
+          ],
+          "top1_hs4": 0.2162,
+          "top3_hs6": 0.2297,
+          "top3_hs4": 0.2838,
+          "recall_at_10": 0.2973,
+          "coverage": 1.0,
+          "selective_hs6": 0.1014,
+          "selective_hs4": 0.2162
+        },
+        "retrieval_only": {
+          "n": 148,
+          "top1_hs6": 0.0068,
+          "top1_hs6_ci95": [
+            0.0012,
+            0.0373
+          ],
+          "top1_hs4": 0.0068,
+          "top3_hs6": 0.2297,
+          "top3_hs4": 0.2838,
+          "recall_at_10": 0.2973,
+          "coverage": 0.0541,
+          "selective_hs6": 0.125,
+          "selective_hs4": 0.125
+        },
+        "llm_small": {
+          "n": 0,
+          "top1_hs6": null,
+          "top1_hs6_ci95": null,
+          "top1_hs4": null,
+          "top3_hs6": null,
+          "top3_hs4": null,
+          "recall_at_10": null,
+          "coverage": null,
+          "selective_hs6": null,
+          "selective_hs4": null
+        },
+        "llm_large": {
+          "n": 0,
+          "top1_hs6": null,
+          "top1_hs6_ci95": null,
+          "top1_hs4": null,
+          "top3_hs6": null,
+          "top3_hs4": null,
+          "recall_at_10": null,
+          "coverage": null,
+          "selective_hs6": null,
+          "selective_hs4": null
+        }
+      },
+      "parallel": {
+        "bm25": {
+          "n": 88,
+          "top1_hs6": 0.0795,
+          "top1_hs6_ci95": [
+            0.0391,
+            0.1552
+          ],
+          "top1_hs4": 0.2273,
+          "top3_hs6": 0.2159,
+          "top3_hs4": 0.2841,
+          "recall_at_10": 0.3182,
+          "coverage": 0.7273,
+          "selective_hs6": 0.1094,
+          "selective_hs4": 0.3125
+        },
+        "tfidf": {
+          "n": 88,
+          "top1_hs6": 0.125,
+          "top1_hs6_ci95": [
+            0.0713,
+            0.2101
+          ],
+          "top1_hs4": 0.3295,
+          "top3_hs6": 0.2727,
+          "top3_hs4": 0.3636,
+          "recall_at_10": 0.4545,
+          "coverage": 1.0,
+          "selective_hs6": 0.125,
+          "selective_hs4": 0.3295
+        },
+        "fused": {
+          "n": 88,
+          "top1_hs6": 0.0909,
+          "top1_hs6_ci95": [
+            0.0468,
+            0.1693
+          ],
+          "top1_hs4": 0.2841,
+          "top3_hs6": 0.25,
+          "top3_hs4": 0.3523,
+          "recall_at_10": 0.3977,
+          "coverage": 1.0,
+          "selective_hs6": 0.0909,
+          "selective_hs4": 0.2841
+        },
+        "retrieval_only": {
+          "n": 88,
+          "top1_hs6": 0.0114,
+          "top1_hs6_ci95": [
+            0.002,
+            0.0616
+          ],
+          "top1_hs4": 0.0114,
+          "top3_hs6": 0.25,
+          "top3_hs4": 0.3523,
+          "recall_at_10": 0.3977,
+          "coverage": 0.0568,
+          "selective_hs6": 0.2,
+          "selective_hs4": 0.2
+        },
+        "llm_small": {
+          "n": 0,
+          "top1_hs6": null,
+          "top1_hs6_ci95": null,
+          "top1_hs4": null,
+          "top3_hs6": null,
+          "top3_hs4": null,
+          "recall_at_10": null,
+          "coverage": null,
+          "selective_hs6": null,
+          "selective_hs4": null
+        },
+        "llm_large": {
+          "n": 0,
+          "top1_hs6": null,
+          "top1_hs6_ci95": null,
+          "top1_hs4": null,
+          "top3_hs6": null,
+          "top3_hs4": null,
+          "recall_at_10": null,
+          "coverage": null,
+          "selective_hs6": null,
+          "selective_hs4": null
+        }
+      }
+    },
+    "per_language": {
+      "main": {
+        "bm25": {
+          "de": {
+            "n": 42,
+            "top1_hs6": 0.0238,
+            "top1_hs4": 0.0238,
+            "top3_hs6": 0.0238,
+            "coverage": 0.4048
+          },
+          "en": {
+            "n": 54,
+            "top1_hs6": 0.2963,
+            "top1_hs4": 0.4259,
+            "top3_hs6": 0.4074,
+            "coverage": 0.9444
+          },
+          "fr": {
+            "n": 18,
+            "top1_hs6": 0.0556,
+            "top1_hs4": 0.0556,
+            "top3_hs6": 0.1111,
+            "coverage": 0.6667
+          },
+          "it": {
+            "n": 12,
+            "top1_hs6": 0.0,
+            "top1_hs4": 0.0,
+            "top3_hs6": 0.0,
+            "coverage": 0.0833
+          }
+        },
+        "tfidf": {
+          "de": {
+            "n": 42,
+            "top1_hs6": 0.0238,
+            "top1_hs4": 0.0238,
+            "top3_hs6": 0.0476,
+            "coverage": 1.0
+          },
+          "en": {
+            "n": 54,
+            "top1_hs6": 0.1852,
+            "top1_hs4": 0.2963,
+            "top3_hs6": 0.3704,
+            "coverage": 1.0
+          },
+          "fr": {
+            "n": 18,
+            "top1_hs6": 0.1667,
+            "top1_hs4": 0.1667,
+            "top3_hs6": 0.1667,
+            "coverage": 1.0
+          },
+          "it": {
+            "n": 12,
+            "top1_hs6": 0.0,
+            "top1_hs4": 0.0833,
+            "top3_hs6": 0.0,
+            "coverage": 1.0
+          }
+        },
+        "fused": {
+          "de": {
+            "n": 42,
+            "top1_hs6": 0.0238,
+            "top1_hs4": 0.0238,
+            "top3_hs6": 0.0476,
+            "coverage": 1.0
+          },
+          "en": {
+            "n": 54,
+            "top1_hs6": 0.2963,
+            "top1_hs4": 0.4259,
+            "top3_hs6": 0.3889,
+            "coverage": 1.0
+          },
+          "fr": {
+            "n": 18,
+            "top1_hs6": 0.1667,
+            "top1_hs4": 0.1667,
+            "top3_hs6": 0.1667,
+            "coverage": 1.0
+          },
+          "it": {
+            "n": 12,
+            "top1_hs6": 0.0,
+            "top1_hs4": 0.0833,
+            "top3_hs6": 0.0,
+            "coverage": 1.0
+          }
+        },
+        "retrieval_only": {
+          "de": {
+            "n": 42,
+            "top1_hs6": 0.0,
+            "top1_hs4": 0.0,
+            "top3_hs6": 0.0476,
+            "coverage": 0.0238
+          },
+          "en": {
+            "n": 54,
+            "top1_hs6": 0.0185,
+            "top1_hs4": 0.0185,
+            "top3_hs6": 0.3889,
+            "coverage": 0.037
+          },
+          "fr": {
+            "n": 18,
+            "top1_hs6": 0.0,
+            "top1_hs4": 0.0,
+            "top3_hs6": 0.1667,
+            "coverage": 0.0
+          },
+          "it": {
+            "n": 12,
+            "top1_hs6": 0.0,
+            "top1_hs4": 0.0,
+            "top3_hs6": 0.0,
+            "coverage": 0.0
+          }
+        },
+        "llm_small": {
+          "de": {
+            "n": 0,
+            "top1_hs6": null,
+            "top1_hs4": null,
+            "top3_hs6": null,
+            "coverage": null
+          },
+          "en": {
+            "n": 0,
+            "top1_hs6": null,
+            "top1_hs4": null,
+            "top3_hs6": null,
+            "coverage": null
+          },
+          "fr": {
+            "n": 0,
+            "top1_hs6": null,
+            "top1_hs4": null,
+            "top3_hs6": null,
+            "coverage": null
+          },
+          "it": {
+            "n": 0,
+            "top1_hs6": null,
+            "top1_hs4": null,
+            "top3_hs6": null,
+            "coverage": null
+          }
+        },
+        "llm_large": {
+          "de": {
+            "n": 0,
+            "top1_hs6": null,
+            "top1_hs4": null,
+            "top3_hs6": null,
+            "coverage": null
+          },
+          "en": {
+            "n": 0,
+            "top1_hs6": null,
+            "top1_hs4": null,
+            "top3_hs6": null,
+            "coverage": null
+          },
+          "fr": {
+            "n": 0,
+            "top1_hs6": null,
+            "top1_hs4": null,
+            "top3_hs6": null,
+            "coverage": null
+          },
+          "it": {
+            "n": 0,
+            "top1_hs6": null,
+            "top1_hs4": null,
+            "top3_hs6": null,
+            "coverage": null
+          }
+        }
+      },
+      "parallel": {
+        "bm25": {
+          "de": {
+            "n": 22,
+            "top1_hs6": 0.0455,
+            "top1_hs4": 0.0455,
+            "top3_hs6": 0.0455,
+            "coverage": 0.4545
+          },
+          "en": {
+            "n": 22,
+            "top1_hs6": 0.1818,
+            "top1_hs4": 0.5909,
+            "top3_hs6": 0.5455,
+            "coverage": 1.0
+          },
+          "fr": {
+            "n": 22,
+            "top1_hs6": 0.0909,
+            "top1_hs4": 0.2273,
+            "top3_hs6": 0.2273,
+            "coverage": 0.8636
+          },
+          "it": {
+            "n": 22,
+            "top1_hs6": 0.0,
+            "top1_hs4": 0.0455,
+            "top3_hs6": 0.0455,
+            "coverage": 0.5909
+          }
+        },
+        "tfidf": {
+          "de": {
+            "n": 22,
+            "top1_hs6": 0.0909,
+            "top1_hs4": 0.0909,
+            "top3_hs6": 0.0909,
+            "coverage": 1.0
+          },
+          "en": {
+            "n": 22,
+            "top1_hs6": 0.1818,
+            "top1_hs4": 0.5909,
+            "top3_hs6": 0.4545,
+            "coverage": 1.0
+          },
+          "fr": {
+            "n": 22,
+            "top1_hs6": 0.1364,
+            "top1_hs4": 0.3636,
+            "top3_hs6": 0.3182,
+            "coverage": 1.0
+          },
+          "it": {
+            "n": 22,
+            "top1_hs6": 0.0909,
+            "top1_hs4": 0.2727,
+            "top3_hs6": 0.2273,
+            "coverage": 1.0
+          }
+        },
+        "fused": {
+          "de": {
+            "n": 22,
+            "top1_hs6": 0.0455,
+            "top1_hs4": 0.0455,
+            "top3_hs6": 0.0455,
+            "coverage": 1.0
+          },
+          "en": {
+            "n": 22,
+            "top1_hs6": 0.1364,
+            "top1_hs4": 0.5455,
+            "top3_hs6": 0.5909,
+            "coverage": 1.0
+          },
+          "fr": {
+            "n": 22,
+            "top1_hs6": 0.1364,
+            "top1_hs4": 0.3182,
+            "top3_hs6": 0.2273,
+            "coverage": 1.0
+          },
+          "it": {
+            "n": 22,
+            "top1_hs6": 0.0455,
+            "top1_hs4": 0.2273,
+            "top3_hs6": 0.1364,
+            "coverage": 1.0
+          }
+        },
+        "retrieval_only": {
+          "de": {
+            "n": 22,
+            "top1_hs6": 0.0455,
+            "top1_hs4": 0.0455,
+            "top3_hs6": 0.0455,
+            "coverage": 0.0455
+          },
+          "en": {
+            "n": 22,
+            "top1_hs6": 0.0,
+            "top1_hs4": 0.0,
+            "top3_hs6": 0.5909,
+            "coverage": 0.0
+          },
+          "fr": {
+            "n": 22,
+            "top1_hs6": 0.0,
+            "top1_hs4": 0.0,
+            "top3_hs6": 0.2273,
+            "coverage": 0.1364
+          },
+          "it": {
+            "n": 22,
+            "top1_hs6": 0.0,
+            "top1_hs4": 0.0,
+            "top3_hs6": 0.1364,
+            "coverage": 0.0455
+          }
+        },
+        "llm_small": {
+          "de": {
+            "n": 0,
+            "top1_hs6": null,
+            "top1_hs4": null,
+            "top3_hs6": null,
+            "coverage": null
+          },
+          "en": {
+            "n": 0,
+            "top1_hs6": null,
+            "top1_hs4": null,
+            "top3_hs6": null,
+            "coverage": null
+          },
+          "fr": {
+            "n": 0,
+            "top1_hs6": null,
+            "top1_hs4": null,
+            "top3_hs6": null,
+            "coverage": null
+          },
+          "it": {
+            "n": 0,
+            "top1_hs6": null,
+            "top1_hs4": null,
+            "top3_hs6": null,
+            "coverage": null
+          }
+        },
+        "llm_large": {
+          "de": {
+            "n": 0,
+            "top1_hs6": null,
+            "top1_hs4": null,
+            "top3_hs6": null,
+            "coverage": null
+          },
+          "en": {
+            "n": 0,
+            "top1_hs6": null,
+            "top1_hs4": null,
+            "top3_hs6": null,
+            "coverage": null
+          },
+          "fr": {
+            "n": 0,
+            "top1_hs6": null,
+            "top1_hs4": null,
+            "top3_hs6": null,
+            "coverage": null
+          },
+          "it": {
+            "n": 0,
+            "top1_hs6": null,
+            "top1_hs4": null,
+            "top3_hs6": null,
+            "coverage": null
+          }
+        }
+      }
+    },
+    "cross_lingual": {
+      "bm25": {
+        "concepts": 22,
+        "all_languages_agree": 0.1364,
+        "agree_with_en": {
+          "de": 0.1818,
+          "fr": 0.2727,
+          "it": 0.1364
+        }
+      },
+      "tfidf": {
+        "concepts": 22,
+        "all_languages_agree": 0.0,
+        "agree_with_en": {
+          "de": 0.2727,
+          "fr": 0.2727,
+          "it": 0.1818
+        }
+      },
+      "fused": {
+        "concepts": 22,
+        "all_languages_agree": 0.0455,
+        "agree_with_en": {
+          "de": 0.0909,
+          "fr": 0.1364,
+          "it": 0.1818
+        }
+      },
+      "retrieval_only": {
+        "concepts": 22,
+        "all_languages_agree": 0.0,
+        "agree_with_en": {
+          "de": 0.0,
+          "fr": 0.0,
+          "it": 0.0
+        }
+      },
+      "llm_small": {
+        "concepts": 0,
+        "all_languages_agree": null,
+        "agree_with_en": {
+          "de": null,
+          "fr": null,
+          "it": null
+        }
+      },
+      "llm_large": {
+        "concepts": 0,
+        "all_languages_agree": null,
+        "agree_with_en": {
+          "de": null,
+          "fr": null,
+          "it": null
+        }
+      }
+    },
+    "examples": [
+      {
+        "id": "bom-de-002",
+        "lang": "de",
+        "text": "Kugellager Edelstahl 6204",
+        "gold": "848210",
+        "bm25": null,
+        "tfidf": "970121",
+        "fused": "970121",
+        "retrieval_only": null,
+        "llm_small": "not run",
+        "llm_large": "not run"
+      },
+      {
+        "id": "bom-de-003",
+        "lang": "de",
+        "text": "Zylinderrollenlager NU 206",
+        "gold": "848250",
+        "bm25": null,
+        "tfidf": "842091",
+        "fused": "842091",
+        "retrieval_only": null,
+        "llm_small": "not run",
+        "llm_large": "not run"
+      },
+      {
+        "id": "bom-de-004",
+        "lang": "de",
+        "text": "Innensechskantschraube M4x12 DIN 912 A4",
+        "gold": "731815",
+        "bm25": null,
+        "tfidf": "401390",
+        "fused": "401390",
+        "retrieval_only": null,
+        "llm_small": "not run",
+        "llm_large": "not run"
+      },
+      {
+        "id": "bom-de-005",
+        "lang": "de",
+        "text": "Sechskantmutter M10 verzinkt",
+        "gold": "731816",
+        "bm25": null,
+        "tfidf": "180400",
+        "fused": "180400",
+        "retrieval_only": null,
+        "llm_small": "not run",
+        "llm_large": "not run"
+      },
+      {
+        "id": "bom-de-006",
+        "lang": "de",
+        "text": "Unterlegscheibe M6 DIN 125 Edelstahl",
+        "gold": "731822",
+        "bm25": null,
+        "tfidf": "482040",
+        "fused": "482040",
+        "retrieval_only": null,
+        "llm_small": "not run",
+        "llm_large": "not run"
+      },
+      {
+        "id": "bom-de-007",
+        "lang": "de",
+        "text": "Druckfeder Federstahl 0,8x6x20",
+        "gold": "732020",
+        "bm25": null,
+        "tfidf": "843231",
+        "fused": "843231",
+        "retrieval_only": null,
+        "llm_small": "not run",
+        "llm_large": "not run"
+      },
+      {
+        "id": "bom-de-008",
+        "lang": "de",
+        "text": "Leiterplatte unbestückt FR4 2-lagig",
+        "gold": "853400",
+        "bm25": null,
+        "tfidf": "252410",
+        "fused": "252410",
+        "retrieval_only": null,
+        "llm_small": "not run",
+        "llm_large": "not run"
+      },
+      {
+        "id": "bom-de-009",
+        "lang": "de",
+        "text": "Leiterplatte bestückt, Steuerelektronik für Frequenzumrichter",
+        "gold": "850490",
+        "bm25": null,
+        "tfidf": "851840",
+        "fused": "851840",
+        "retrieval_only": null,
+        "llm_small": "not run",
+        "llm_large": "not run"
+      }
+    ]
+  },
+  "e2": {
+    "synthetic": {
+      "config": {
+        "seed": 2026,
+        "chapters": [
+          "84",
+          "85",
+          "90",
+          "91",
+          "73",
+          "83",
+          "94"
+        ],
+        "n_random": 300,
+        "rules_per_chapter": 3
+      },
+      "random": {
+        "n": 300,
+        "status_agreement": 1.0,
+        "full_agreement": 1.0,
+        "field_agreement": {
+          "rule": 1.0,
+          "nom_pct": 1.0,
+          "alternatives": 1.0,
+          "general": 1.0
+        },
+        "confusion_reference_x_engine": {
+          "PASS": {
+            "PASS": 211,
+            "FAIL": 0,
+            "UNSURE": 0
+          },
+          "FAIL": {
+            "PASS": 0,
+            "FAIL": 52,
+            "UNSURE": 0
+          },
+          "UNSURE": {
+            "PASS": 0,
+            "FAIL": 0,
+            "UNSURE": 37
+          }
+        },
+        "reference_status_counts": {
+          "PASS": 211,
+          "UNSURE": 37,
+          "FAIL": 52
+        },
+        "false_pass": 0,
+        "false_pass_rate": 0.0,
+        "false_fail": 0,
+        "by_chapter": {
+          "73": {
+            "n": 43,
+            "status_agreement": 1.0
+          },
+          "83": {
+            "n": 43,
+            "status_agreement": 1.0
+          },
+          "84": {
+            "n": 43,
+            "status_agreement": 1.0
+          },
+          "85": {
+            "n": 43,
+            "status_agreement": 1.0
+          },
+          "90": {
+            "n": 43,
+            "status_agreement": 1.0
+          },
+          "91": {
+            "n": 43,
+            "status_agreement": 1.0
+          },
+          "94": {
+            "n": 42,
+            "status_agreement": 1.0
+          }
+        }
+      },
+      "edge": {
+        "n": 150,
+        "status_agreement": 1.0,
+        "full_agreement": 1.0,
+        "field_agreement": {
+          "rule": 1.0,
+          "nom_pct": 1.0,
+          "alternatives": 1.0,
+          "general": 1.0
+        },
+        "confusion_reference_x_engine": {
+          "PASS": {
+            "PASS": 96,
+            "FAIL": 0,
+            "UNSURE": 0
+          },
+          "FAIL": {
+            "PASS": 0,
+            "FAIL": 23,
+            "UNSURE": 0
+          },
+          "UNSURE": {
+            "PASS": 0,
+            "FAIL": 0,
+            "UNSURE": 31
+          }
+        },
+        "reference_status_counts": {
+          "PASS": 96,
+          "FAIL": 23,
+          "UNSURE": 31
+        },
+        "false_pass": 0,
+        "false_pass_rate": 0.0,
+        "false_fail": 0,
+        "by_chapter": {
+          "73": {
+            "n": 20,
+            "status_agreement": 1.0
+          },
+          "83": {
+            "n": 20,
+            "status_agreement": 1.0
+          },
+          "84": {
+            "n": 15,
+            "status_agreement": 1.0
+          },
+          "85": {
+            "n": 45,
+            "status_agreement": 1.0
+          },
+          "90": {
+            "n": 15,
+            "status_agreement": 1.0
+          },
+          "91": {
+            "n": 15,
+            "status_agreement": 1.0
+          },
+          "94": {
+            "n": 20,
+            "status_agreement": 1.0
+          }
+        },
+        "kinds": 32
+      },
+      "disagreements": []
+    },
+    "demos": {
+      "table": [
+        {
+          "product_id": "aareventil-rv50",
+          "hs6": "848180",
+          "rule_id": "CHCN-84",
+          "lines": 13,
+          "lines_without_hs6": 3,
+          "nom_pct": 44.75,
+          "reference_status": "UNSURE",
+          "engine_status": "UNSURE",
+          "threshold_pct": 50.0
+        },
+        {
+          "product_id": "alpenmotion-ap80",
+          "hs6": "841370",
+          "rule_id": "CHCN-84",
+          "lines": 14,
+          "lines_without_hs6": 3,
+          "nom_pct": 51.21,
+          "reference_status": "FAIL",
+          "engine_status": "FAIL",
+          "threshold_pct": 50.0
+        },
+        {
+          "product_id": "lacfictif-auto40",
+          "hs6": "910221",
+          "rule_id": "CHCN-91",
+          "lines": 12,
+          "lines_without_hs6": 3,
+          "nom_pct": 2.79,
+          "reference_status": "PASS",
+          "engine_status": "PASS",
+          "threshold_pct": 40.0
+        },
+        {
+          "product_id": "leman-df25",
+          "hs6": "902610",
+          "rule_id": "CHCN-90",
+          "lines": 13,
+          "lines_without_hs6": 3,
+          "nom_pct": 19.89,
+          "reference_status": "PASS",
+          "engine_status": "PASS",
+          "threshold_pct": 55.0
+        },
+        {
+          "product_id": "medivalle-mv3",
+          "hs6": "901890",
+          "rule_id": "CHCN-90",
+          "lines": 12,
+          "lines_without_hs6": 3,
+          "nom_pct": 53.24,
+          "reference_status": "PASS",
+          "engine_status": "PASS",
+          "threshold_pct": 55.0
+        }
+      ],
+      "swaps": [
+        {
+          "product_id": "alpenmotion-ap80",
+          "swap": "L01: origin_country = CH, supplier = Elektromotoren Glattal-Fiktiv AG",
+          "before": "FAIL (51.21%)",
+          "after": "PASS (34.83%)"
+        },
+        {
+          "product_id": "medivalle-mv3",
+          "swap": "L03: origin_country = DE, supplier = Titanbearbeitung Schwaben-Fiktiv GmbH",
+          "before": "PASS (53.24%)",
+          "after": "FAIL (64.16%)"
+        }
+      ]
+    },
+    "llm_baseline": {
+      "items": 105,
+      "items_answered": 0,
+      "model_role": "large",
+      "max_tokens": 300,
+      "missing_cache_entries": 105,
+      "status": "not run",
+      "note": "no endpoint/cache: 105/105 items without a model answer",
+      "sample": {
+        "synthetic": 100,
+        "demos": 5,
+        "seed": "2026:llm-baseline"
+      }
+    }
+  },
+  "e3": {
+    "demos": [
+      {
+        "product_id": "aareventil-rv50",
+        "status": "UNSURE",
+        "texts": {
+          "explanation_en": {
+            "llm_source": "template",
+            "attempts": 1,
+            "checks_passed": 5,
+            "checks_total": 5,
+            "failed_checks": []
+          },
+          "explanation_de": {
+            "llm_source": "template",
+            "attempts": 1,
+            "checks_passed": 5,
+            "checks_total": 5,
+            "failed_checks": []
+          },
+          "letter_zh": {
+            "llm_source": "template",
+            "attempts": 1,
+            "checks_passed": 7,
+            "checks_total": 7,
+            "failed_checks": []
+          },
+          "back_translation_en": {
+            "llm_source": "template",
+            "attempts": 1,
+            "checks_passed": 4,
+            "checks_total": 4,
+            "failed_checks": []
+          }
+        },
+        "letter_glossary_ok": true,
+        "letter_glossary_missing": [],
+        "checklist_items": 5,
+        "duty_estimate": true
+      },
+      {
+        "product_id": "alpenmotion-ap80",
+        "status": "FAIL",
+        "texts": {
+          "explanation_en": {
+            "llm_source": "template",
+            "attempts": 1,
+            "checks_passed": 5,
+            "checks_total": 5,
+            "failed_checks": []
+          },
+          "explanation_de": {
+            "llm_source": "template",
+            "attempts": 1,
+            "checks_passed": 5,
+            "checks_total": 5,
+            "failed_checks": []
+          },
+          "letter_zh": {
+            "llm_source": "template",
+            "attempts": 1,
+            "checks_passed": 7,
+            "checks_total": 7,
+            "failed_checks": []
+          },
+          "back_translation_en": {
+            "llm_source": "template",
+            "attempts": 1,
+            "checks_passed": 4,
+            "checks_total": 4,
+            "failed_checks": []
+          }
+        },
+        "letter_glossary_ok": true,
+        "letter_glossary_missing": [],
+        "checklist_items": 6,
+        "duty_estimate": true
+      },
+      {
+        "product_id": "lacfictif-auto40",
+        "status": "PASS",
+        "texts": {
+          "explanation_en": {
+            "llm_source": "template",
+            "attempts": 1,
+            "checks_passed": 5,
+            "checks_total": 5,
+            "failed_checks": []
+          },
+          "explanation_de": {
+            "llm_source": "template",
+            "attempts": 1,
+            "checks_passed": 5,
+            "checks_total": 5,
+            "failed_checks": []
+          },
+          "letter_zh": {
+            "llm_source": "template",
+            "attempts": 1,
+            "checks_passed": 6,
+            "checks_total": 6,
+            "failed_checks": []
+          },
+          "back_translation_en": {
+            "llm_source": "template",
+            "attempts": 1,
+            "checks_passed": 3,
+            "checks_total": 3,
+            "failed_checks": []
+          }
+        },
+        "letter_glossary_ok": true,
+        "letter_glossary_missing": [],
+        "checklist_items": 6,
+        "duty_estimate": true
+      },
+      {
+        "product_id": "leman-df25",
+        "status": "PASS",
+        "texts": {
+          "explanation_en": {
+            "llm_source": "template",
+            "attempts": 1,
+            "checks_passed": 5,
+            "checks_total": 5,
+            "failed_checks": []
+          },
+          "explanation_de": {
+            "llm_source": "template",
+            "attempts": 1,
+            "checks_passed": 5,
+            "checks_total": 5,
+            "failed_checks": []
+          },
+          "letter_zh": {
+            "llm_source": "template",
+            "attempts": 1,
+            "checks_passed": 6,
+            "checks_total": 6,
+            "failed_checks": []
+          },
+          "back_translation_en": {
+            "llm_source": "template",
+            "attempts": 1,
+            "checks_passed": 3,
+            "checks_total": 3,
+            "failed_checks": []
+          }
+        },
+        "letter_glossary_ok": true,
+        "letter_glossary_missing": [],
+        "checklist_items": 6,
+        "duty_estimate": true
+      },
+      {
+        "product_id": "medivalle-mv3",
+        "status": "PASS",
+        "texts": {
+          "explanation_en": {
+            "llm_source": "template",
+            "attempts": 1,
+            "checks_passed": 5,
+            "checks_total": 5,
+            "failed_checks": []
+          },
+          "explanation_de": {
+            "llm_source": "template",
+            "attempts": 1,
+            "checks_passed": 5,
+            "checks_total": 5,
+            "failed_checks": []
+          },
+          "letter_zh": {
+            "llm_source": "template",
+            "attempts": 1,
+            "checks_passed": 6,
+            "checks_total": 6,
+            "failed_checks": []
+          },
+          "back_translation_en": {
+            "llm_source": "template",
+            "attempts": 1,
+            "checks_passed": 3,
+            "checks_total": 3,
+            "failed_checks": []
+          }
+        },
+        "letter_glossary_ok": true,
+        "letter_glossary_missing": [],
+        "checklist_items": 6,
+        "duty_estimate": true
+      }
+    ],
+    "fact_check_pass_rate": 1.0,
+    "texts_all_checks_passed": 1.0,
+    "letter_glossary_compliance": 1.0,
+    "model_texts": 15,
+    "model_written": 0,
+    "template_fallbacks": 15,
+    "attempts_total": 15,
+    "missing_cache_entries": 10,
+    "rating_sheet": "data/eval/e3_letters_for_rating.csv"
+  },
+  "e4": {
+    "measured": {
+      "cost_log": {
+        "usd_to_chf": 0.8,
+        "prices_usd_per_m": {
+          "8b": [
+            0.1,
+            0.2
+          ],
+          "70b": [
+            0.82,
+            2.92
+          ]
+        },
+        "by_model": {}
+      },
+      "per_experiment": {
+        "e1.llm_small": {
+          "calls_attempted": 362,
+          "calls_answered": 0,
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "cost_chf": 0.0,
+          "units_answered": 0,
+          "chf_per_unit": null
+        },
+        "e1.llm_large": {
+          "calls_attempted": 362,
+          "calls_answered": 0,
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "cost_chf": 0.0,
+          "units_answered": 0,
+          "chf_per_unit": null
+        },
+        "e2.llm_only": {
+          "calls_attempted": 105,
+          "calls_answered": 0,
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "cost_chf": 0.0,
+          "units_answered": 0,
+          "chf_per_unit": null
+        },
+        "e3.dossier": {
+          "calls_attempted": 10,
+          "calls_answered": 0,
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "cost_chf": 0.0,
+          "units_answered": 5,
+          "chf_per_unit": null
+        }
+      },
+      "calls_by_tag": {
+        "dossier.explain": 5,
+        "dossier.letter": 5,
+        "e2.llm_only": 105,
+        "hs_rewrite": 724
+      }
+    },
+    "projection": {
+      "label": "PROJECTION, not a measurement: token counts per call type as stated in 'token_profiles'",
+      "assumptions": {
+        "chars_per_token": 4.0,
+        "cjk_chars_per_token": 1,
+        "completion_tokens_if_unmeasured": "max_tokens cap of the call (upper bound)",
+        "dossier_attempts": 1,
+        "usd_to_chf": 0.8,
+        "prices_usd_per_m_tokens": {
+          "8b": [
+            0.1,
+            0.2
+          ],
+          "70b": [
+            0.82,
+            2.92
+          ]
+        },
+        "code_roles": {
+          "hs_rewrite": "small (swiss-ai/Apertus-v1.5-8B)",
+          "hs_rerank": "small (swiss-ai/Apertus-v1.5-8B)",
+          "dossier.explain": "large (swiss-ai/Apertus-v1.5-70B)",
+          "dossier.letter": "large (swiss-ai/Apertus-v1.5-70B)",
+          "dossier.back_translate": "small (swiss-ai/Apertus-v1.5-8B)"
+        }
+      },
+      "token_profiles": {
+        "hs_rewrite": {
+          "basis": "estimated from 724 attempted prompts; completion = max_tokens cap 120 (assumption)",
+          "prompt_tokens": 147,
+          "completion_tokens": 120
+        },
+        "hs_rerank": {
+          "basis": "estimated from 20 rebuilt prompts; completion = max_tokens cap 160 (assumption)",
+          "prompt_tokens": 1137,
+          "completion_tokens": 160
+        },
+        "dossier.explain": {
+          "basis": "estimated from 5 attempted prompts; completion = max_tokens cap 400 (assumption)",
+          "prompt_tokens": 519,
+          "completion_tokens": 400
+        },
+        "dossier.letter": {
+          "basis": "estimated from 5 attempted prompts; completion = max_tokens cap 700 (assumption)",
+          "prompt_tokens": 717,
+          "completion_tokens": 700
+        },
+        "dossier.back_translate": {
+          "basis": "estimated from 5 rebuilt prompts; completion = max_tokens cap 700 (assumption)",
+          "prompt_tokens": 292,
+          "completion_tokens": 700
+        }
+      },
+      "chf_per_1000_bom_lines": {
+        "8b_only": 0.1475,
+        "70b_only": 1.4964,
+        "code_roles": 0.1475
+      },
+      "chf_per_1000_dossiers": {
+        "8b_only": 0.4102,
+        "70b_only": 5.2072,
+        "code_roles": 3.5158
+      }
+    }
+  }
+}

@@ -8,6 +8,7 @@ compared exactly as the user typed them (CHF 10.00 of CHF 100.00 is exactly
 from __future__ import annotations
 
 import re
+import unicodedata
 from dataclasses import dataclass
 from decimal import ROUND_CEILING, ROUND_FLOOR, ROUND_HALF_UP, Decimal
 
@@ -15,7 +16,7 @@ from ..models import BomLine, GeneralProvisions
 from ..rulepack.loader import normalise_hs
 
 CENT = Decimal("0.01")
-_HS6_RE = re.compile(r"\d{6}")
+_HS6_RE = re.compile(r"[0-9]{6}")  # ASCII only: other Unicode digits would never match an HS prefix
 
 
 def dec(value: float) -> Decimal:
@@ -100,7 +101,7 @@ def assess_material(line: BomLine, parties: list[str]) -> Material:
     iff its origin country is a cumulation party (bilateral cumulation), on the
     stated assumption that the supplier provides proof of origin.
     """
-    country = line.origin_country.strip().upper()
+    country = unicodedata.normalize("NFKC", line.origin_country).strip().upper()  # 'ＣＮ' -> 'CN'
     if line.originating_override is True:
         originating, reason = True, "treated as originating: the exporter holds proof of origin (user override)"
     elif line.originating_override is False:

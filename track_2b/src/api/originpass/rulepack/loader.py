@@ -9,6 +9,7 @@ silently producing a wrong verdict.
 from __future__ import annotations
 
 import re
+import unicodedata
 from pathlib import Path
 
 from ..config import get_settings
@@ -17,8 +18,8 @@ from ..models import Criterion, CriterionKind, Rule, RulePack
 DEFAULT_PACK_ID = "ch-cn-2014"
 
 _PACK_ID_RE = re.compile(r"[a-z0-9][a-z0-9._-]*")  # no path separators
-_SCOPE_RE = re.compile(r"\d{2}|\d{4}|\d{6}")
-_PREFIX_RE = re.compile(r"\d{2,6}")
+_SCOPE_RE = re.compile(r"[0-9]{2}|[0-9]{4}|[0-9]{6}")
+_PREFIX_RE = re.compile(r"[0-9]{2,6}")
 _PARTY_RE = re.compile(r"[A-Z]{2}")
 _SHIFT_KINDS = frozenset({CriterionKind.CC, CriterionKind.CTH, CriterionKind.CTSH})
 _NO_TOLERANCE_KINDS = frozenset({CriterionKind.MAXNOM, CriterionKind.SPECIFIC})
@@ -29,8 +30,11 @@ class RulePackError(ValueError):
 
 
 def normalise_hs(code: str | None) -> str:
-    """Remove dots and whitespace from an HS code: '8471.30' -> '847130', None -> ''."""
-    return re.sub(r"[\s.]", "", code or "")
+    """Remove dots and whitespace from an HS code: '8471.30' -> '847130', None -> ''.
+
+    NFKC first, so full-width input from a Chinese IME ('８４７１．３０') becomes ASCII digits.
+    """
+    return re.sub(r"[\s.]", "", unicodedata.normalize("NFKC", code or ""))
 
 
 def load_rulepack(pack_id: str = DEFAULT_PACK_ID, data_dir: Path | None = None) -> RulePack:

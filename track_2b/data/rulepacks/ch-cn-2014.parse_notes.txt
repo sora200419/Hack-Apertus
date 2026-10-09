@@ -1,4 +1,5 @@
 ex 第七十二章: stripped trailing '第七十二章' from criterion '品目改变第七十二章'
+Section II: one SPECIFIC alternative added to each of the 31 entries of chapters 27-40
 0901.21: criterion kept as SPECIFIC (human judgement): '非原产材料价值30%，限从生咖啡豆制造，包括焙炒工序'
 0901.22: criterion kept as SPECIFIC (human judgement): '非原产材料价值30%，限从生咖啡豆制造，包括焙炒工序'
 0901.90: criterion kept as SPECIFIC (human judgement): '非原产材料价值30%，限从生咖啡豆制造，包括焙炒工序'
@@ -14,3 +15,7 @@ ex 第七十二章: stripped trailing '第七十二章' from criterion '品目�
 82.06: criterion kept as SPECIFIC (human judgement): '成套货品里的每项产品都必须满足它不作为成套货品时所适用的规则'
 96.05: criterion kept as SPECIFIC (human judgement): '成套货品里的每项产品都必须满足它不作为成套货品时所适用的规则'
 97.05: criterion kept as SPECIFIC (human judgement): '产品应在一方发现'
+HS 2022 382211, 382213: not in HS 2012, predecessors under CHCN-30; added to its scope
+HS 2022 810931, 810939: not in HS 2012, predecessors under CHCN-810930; added to its scope
+HS 2022 811261: not in HS 2012, predecessors under CHCN-810730; added to its scope
+HS 2022: 38 subheadings not in HS 2012 whose predecessors need the HS 2012 classification to pick or apply an entry -> 15 CHCN-HS2022-* rules with SPECIFIC criteria

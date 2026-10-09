@@ -179,7 +179,7 @@ def reference_verdict(product: Product, pack: RulePack) -> RefVerdict:
 
     code = hs6(product.hs6)
     rule = lookup_rule(pack, code) if code else None
-    if rule is None:
+    if code is None or rule is None:
         trace.append("no product HS6" if code is None else f"no rule for {code}")
         return RefVerdict("UNSURE", None, nom_pct, (), general, tuple(trace))
 
@@ -187,7 +187,9 @@ def reference_verdict(product: Product, pack: RulePack) -> RefVerdict:
     for i, alternative in enumerate(rule.alternatives, start=1):
         outcomes = [_criterion(c, code, nom, ex_works, pack) for c in alternative]
         met.append(_alternative([s for s, _ in outcomes]))
-        trace.append(f"alt {i}: {[(c.kind.value, s, t) for c, (s, t) in zip(alternative, outcomes)]} -> {met[-1]}")
+        trace.append(
+            f"alt {i}: {[(c.kind.value, s, t) for c, (s, t) in zip(alternative, outcomes, strict=True)]} -> {met[-1]}"
+        )
     if False in general or (met and all(m is False for m in met)):
         status = "FAIL"
     elif True in met and all(g is True for g in general):

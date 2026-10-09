@@ -133,12 +133,13 @@ class _Gen:
         lines = []
         for i, cents in enumerate(values, start=1):
             origin = rng.choice(PARTIES) if rng.random() < p_party else rng.choice(NON_PARTIES)
-            hs: str | None = self._material_code(code, excluded)
+            material = self._material_code(code, excluded)
+            hs: str | None = material
             r = rng.random()
             if r < 0.08:
                 hs = None
             elif r < 0.16:
-                hs = f"{hs[:4]}.{hs[4:]}"
+                hs = f"{material[:4]}.{material[4:]}"
             override = (rng.random() < 0.5) if rng.random() < 0.04 else None
             lines.append(_line(f"L{i:02d}", hs, origin, cents, override))
         processing = self._processing()
@@ -241,7 +242,7 @@ class _Gen:
         storage = Shipment(transit_countries=["SG"], transshipment_or_storage_in_transit=True)
         add("transit_with_storage", clean, shipment=storage)
         add("no_product_hs6", clean, hs=None)
-        dotted = [ln.model_copy(update={"hs6": f"{ln.hs6[:4]}.{ln.hs6[4:]}"}) for ln in clean]
+        dotted = [ln.model_copy(update={"hs6": f"{ln.hs6[:4]}.{ln.hs6[4:]}"}) for ln in clean if ln.hs6]
         add("dotted_codes", dotted, hs=f"{code[:4]}.{code[4:]}")
         return out
 
