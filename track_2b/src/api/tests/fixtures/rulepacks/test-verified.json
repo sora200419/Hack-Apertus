@@ -1,0 +1,66 @@
+{
+  "pack_id": "test-verified",
+  "agreement": "Synthetic test agreement",
+  "version_note": "SYNTHETIC TEST FIXTURE - not legal text",
+  "general": {
+    "tolerance_pct": 10.0,
+    "tolerance_applies_to": [
+      "CC",
+      "CTH",
+      "CTSH"
+    ],
+    "tolerance_text": "SYNTHETIC TEST FIXTURE - not legal text",
+    "insufficient_operations": [
+      "packing",
+      "repacking",
+      "labelling",
+      "affixing marks",
+      "simple assembly",
+      "washing",
+      "sorting"
+    ],
+    "insufficient_operations_text": "SYNTHETIC TEST FIXTURE - not legal text",
+    "cumulation_parties": [
+      "CH",
+      "CN"
+    ],
+    "direct_transport_text": "SYNTHETIC TEST FIXTURE - not legal text",
+    "max_items_per_certificate": null,
+    "source": "tests/fixtures (synthetic)",
+    "verified": true
+  },
+  "rules": [
+    {
+      "rule_id": "TEST-V-CH84-CTH",
+      "hs_scope": [
+        "84"
+      ],
+      "alternatives": [
+        [
+          {
+            "kind": "CTH"
+          }
+        ]
+      ],
+      "text": "SYNTHETIC TEST FIXTURE - not legal text: TEST-V-CH84-CTH",
+      "source": "tests/fixtures (synthetic)",
+      "verified": true
+    },
+    {
+      "rule_id": "TEST-V-CH85-CTH",
+      "hs_scope": [
+        "85"
+      ],
+      "alternatives": [
+        [
+          {
+            "kind": "CTH"
+          }
+        ]
+      ],
+      "text": "SYNTHETIC TEST FIXTURE - not legal text: TEST-V-CH85-CTH",
+      "source": "tests/fixtures (synthetic)",
+      "verified": false
+    }
+  ]
+}

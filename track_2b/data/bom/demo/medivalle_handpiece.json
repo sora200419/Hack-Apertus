@@ -1,0 +1,130 @@
+{
+  "product_id": "medivalle-mv3",
+  "name": "Surgical handpiece MV-3",
+  "description": "Medivalle SA (fictional demo company, Ticino): motorised handpiece for microsurgery with sterilisable burr set and foot pedal. Synthetic BOM; the ex-works price is tuned so that the product passes just under the rule pack's MAXNOM limit, and moving the titanium body (L03) to a German supplier flips it to FAIL.",
+  "hs6": "901890",
+  "ex_works_chf": 2380.0,
+  "exporter_country": "CH",
+  "processing": [
+    "Tornitura e fresatura CNC delle parti di precisione (CNC turning and milling)",
+    "Montaggio in camera bianca ISO 7 del manipolo e del riduttore",
+    "Collaudo funzionale, misura di rumorosità e prova di sterilizzazione",
+    "Etichettatura UDI e imballaggio"
+  ],
+  "bom": [
+    {
+      "line_id": "L01",
+      "description": "Micromotore DC brushless 40 W",
+      "hs6": "850131",
+      "origin_country": "JP",
+      "value_chf": 410.0,
+      "supplier": "Kakuu Micro Motors K.K.",
+      "originating_override": null
+    },
+    {
+      "line_id": "L02",
+      "description": "Riduttore planetario 4:1",
+      "hs6": "848340",
+      "origin_country": "DE",
+      "value_chf": 185.0,
+      "supplier": "Getriebebau Alb-Fiktiv GmbH",
+      "originating_override": null
+    },
+    {
+      "line_id": "L03",
+      "description": "Corpo manipolo in titanio Ti6Al4V, tornito",
+      "hs6": "810890",
+      "origin_country": "CH",
+      "value_chf": 260.0,
+      "supplier": "Meccanica Fine Mendrisio-Fittizia SA",
+      "originating_override": null
+    },
+    {
+      "line_id": "L04",
+      "description": "Albero porta-utensile in acciaio inox",
+      "hs6": null,
+      "origin_country": "CH",
+      "value_chf": 95.0,
+      "supplier": "Meccanica Fine Mendrisio-Fittizia SA",
+      "originating_override": null
+    },
+    {
+      "line_id": "L05",
+      "description": "Cuscinetti a sfere ibridi ceramici (2 pz)",
+      "hs6": "848210",
+      "origin_country": "DE",
+      "value_chf": 140.0,
+      "supplier": "Präzisionslager Franken-Fiktiv GmbH",
+      "originating_override": null
+    },
+    {
+      "line_id": "L06",
+      "description": "Scheda elettronica di controllo assemblata",
+      "hs6": null,
+      "origin_country": "CN",
+      "value_chf": 120.0,
+      "supplier": "Suzhou Xugou Electronics Co.",
+      "originating_override": null
+    },
+    {
+      "line_id": "L07",
+      "description": "Cavo di alimentazione siliconico con connettore",
+      "hs6": "854442",
+      "origin_country": "CN",
+      "value_chf": 48.0,
+      "supplier": "Suzhou Xugou Electronics Co.",
+      "originating_override": null
+    },
+    {
+      "line_id": "L08",
+      "description": "Guarnizioni e O-ring in silicone medicale",
+      "hs6": "401693",
+      "origin_country": "IT",
+      "value_chf": 12.0,
+      "supplier": "Gomma Tecnica Brianza-Fittizia S.r.l.",
+      "originating_override": null
+    },
+    {
+      "line_id": "L09",
+      "description": "Set di frese chirurgiche sterilizzabili (6 pz)",
+      "hs6": "901890",
+      "origin_country": "DE",
+      "value_chf": 360.0,
+      "supplier": "Chirurgie-Werkzeuge Donautal-Fiktiv GmbH",
+      "originating_override": null
+    },
+    {
+      "line_id": "L10",
+      "description": "Pedale di comando con interruttore",
+      "hs6": null,
+      "origin_country": "TW",
+      "value_chf": 75.0,
+      "supplier": "Taichung Xugou Foot Switch Co.",
+      "originating_override": null
+    },
+    {
+      "line_id": "L11",
+      "description": "Etichette UDI e istruzioni per l'uso",
+      "hs6": "482110",
+      "origin_country": "CH",
+      "value_chf": 4.5,
+      "supplier": "Tipografia Ceresio-Fittizia SA",
+      "originating_override": null
+    },
+    {
+      "line_id": "L12",
+      "description": "Valigetta di sterilizzazione in alluminio",
+      "hs6": "761699",
+      "origin_country": "IT",
+      "value_chf": 85.0,
+      "supplier": "Alluminio Varesino-Fittizio S.r.l.",
+      "originating_override": null
+    }
+  ],
+  "shipment": {
+    "destination": "CN",
+    "transit_countries": [],
+    "transshipment_or_storage_in_transit": false,
+    "order_quantity": 50
+  }
+}

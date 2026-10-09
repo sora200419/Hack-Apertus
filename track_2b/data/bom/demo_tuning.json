@@ -1,0 +1,22 @@
+{
+  "note": "Threshold demos for `python -m eval.demos --write` (from src/api). The MAXNOM limit is read from the loaded rule pack. Only ex_works_chf is changed, so that the non-originating share sits target_margin_pp below the limit (negative = above the limit, FAIL). The tool then checks that the single swap flips the verdict. Kept outside bom/demo/ because the API loads every *.json in that folder as a Product.",
+  "demos": [
+    {
+      "product_id": "alpenmotion-ap80",
+      "story": "FAIL just over the limit; buying the motor (L01) from a Swiss supplier flips it to PASS.",
+      "swing_line": "L01",
+      "swap": {"origin_country": "CH", "supplier": "Elektromotoren Glattal-Fiktiv AG"},
+      "target_margin_pp": -1.2,
+      "round_chf": 5
+    },
+    {
+      "product_id": "medivalle-mv3",
+      "story": "PASS just under the limit; moving the titanium body (L03) to a cheaper German supplier flips it to FAIL.",
+      "swing_line": "L03",
+      "swap": {"origin_country": "DE", "supplier": "Titanbearbeitung Schwaben-Fiktiv GmbH"},
+      "target_margin_pp": 1.8,
+      "round_chf": 5
+    }
+  ],
+  "csv_exports": ["alpenmotion-ap80", "leman-df25"]
+}

@@ -1,0 +1,382 @@
+=== ARTICLE {'number': 'ARTICLE 3.1', 'name': 'Definitions', 'article_identifier': '28542'}
+For the purposes ofthis Chapter: 
+
+
+(a) 	“Party” means either China or Switzerland. This Chapter applies to the customs territoryof China and the customs territoryof Switzerland as defined in paragraph 1 of Article 2.1; 
+
+
+(b) 	“production” means methods of obtaining products including, but not limited 
+
+to, growing, mining, harvesting, fishing, trapping, hunting, manufacturing, processing or assembling a product; 
+
+(c) 	“material” means ingredients, parts, components, subassemblies and/or products that were physically incorporated into another product or were subject to a process inthe productionofanother product; 
+
+
+(d) 	“nonoriginating product” or “nonoriginating material” mean a product or materialthat does not qualifyas originating under this Chapter; 
+
+
+(e) 	“originating product” or “originating material” mean a product or material that qualifies as originating under this Chapter; 
+
+
+(f) 	“customs value” means the value as determined in accordance with the Agreement on Implementation of Article VII of the General Agreement on Tariffs and Trade 1994 (Customs Valuation Agreement); 
+
+
+(g) 	“exworks price” means the price paid for the product exworks to the producer located in a Party in whose undertaking the last working or processing is carried out, provided that the price includes the value of all the materials used, wage and any other cost, and profit minus any internal taxes returned or repaid whenthe product obtained is exported; 
+
+
+(h) 	“Harmonized System” and “HS” mean the Harmonized Commodity Descriptionand Coding System; 
+
+
+(i) 	“chapter”, “heading” and “subheading” mean a chapter (twodigit codes), heading (fourdigit codes) or subheading (sixdigit codes) of the Harmonized System;and 
+
+
+(j) 	“authorised body” means any body designated under domestic law of a Party or bythe governmentalauthorityofa Partyto issue a Certificate ofOrigin.
+=== ARTICLE {'number': 'ARTICLE 3.2', 'name': 'Originating Products', 'article_identifier': '28543'}
+For the purpose of this Agreement, and unless otherwise required in this Chapter, a product shallbe considered as originating ina Party if: 
+
+
+(a) 	ithasbeenwhollyobtained ina Party,inaccordance withArticle 3.3; 
+
+
+(b) 	the nonoriginating materials used in the working or processing of that product have undergone substantial transformation in a Party 2, in accordance withArticle 3.4, and meets the other applicable provisions ofthis Chapter; or 
+
+
+(c) 	it has been produced in a Party exclusively from originating materials of one or bothParties.
+=== ARTICLE {'number': 'ARTICLE 3.3', 'name': 'Wholly Obtained Products', 'article_identifier': '28544'}
+For the purpose of subparagraph (a) of Article 3.2, the following products shall be considered as whollyobtained ina Party: 
+
+
+(a) 	mineral products and other nonliving naturally occurring substances extracted or taken from their soil, internal waters, territorial sea, seabed or subsoil; 
+
+
+(b) 	vegetable products harvested, picked or gathered there; 
+
+
+(c) 	live animalsbornand raised there,and productsobtained fromsuchanimals; 
+
+
+(d) 	products obtained by hunting, trapping, fishing, gathering, capturing or aquaculture conducted there; 
+
+
+(e) 	productsofseafishing and other productstakenfromthe territorialseaorthe Exclusive Economic Zone of a Partyby vessels registered with that Partyand flying the flag ofthat Party; 
+
+
+(f) 	products of sea fishing and other products taken from the high sea by vessels registered witha Partyand flying the flag ofthat Party; 
+
+
+(g) 	productsprocessed ormadeonboard factoryshipsregistered witha Partyand flying the flag of that Party, exclusively from products referred to in subparagraph(e) and (f); 
+
+
+(h) 	products taken from the seabed and subsoil outside the territorial waters of a Party, provided that the Party has the rights to exploit such seabed or subsoil under domestic law in accordance with internationallaw; 
+
+
+(i) 	waste and scrap resulting from manufacturing operations conducted there which fit only for the recoveryofraw materials; 
+
+
+(j) 	used productscollected there which fitonlyforthe recoveryofraw materials; and 
+
+
+(k) 	products obtained or produced there exclusively from products referred to in subparagraphs (a) to (j). 
+2 The workingor processing ofthat product maybe carried out in different factories within a Party.
+=== ARTICLE {'number': 'ARTICLE 3.4', 'name': 'Substantial Transformation', 'article_identifier': '28545'}
+1. A product obtained using nonoriginating materials shall be considered to have undergone substantial transformation if the requirements specified in Annex II are fulfilled. 
+
+
+2. For the purpose of paragraph 1, the operations provided for in Article 3.6 are considered as insufficient to obtainoriginating status. 
+
+
+3. Where Annex II refers to a percentage of the value of nonoriginating material (VNM), it shall mean the maximum percentage of the VNM allowed in relation to the exworks price ofa product. That percentage shallbe calculated as follows: 
+VNM% = VNM x100 
+
+exworks price 
+
+
+4. VNM shall be determined on the basis of the customs value at the time of importation of the nonoriginating materials, including materials of undetermined origin. If such value is unknown and cannot be ascertained, the first ascertainable price paid or payable for the materials in a Partyshallbe applied. 
+
+
+5. If a product which has acquired originating status in accordance with paragraph 1 in a Party is further processed in that Partyand used as material in the manufacture of another product, no account shall be taken of the nonoriginating components of that materialin the determinationofthe originating status ofthe product.
+=== ARTICLE {'number': 'ARTICLE 3.5', 'name': 'De Minimis', 'article_identifier': '28546'}
+1. Notwithstanding paragraph 1 of Article 3.4, nonoriginating materials do not have to fulfil the conditions set out in Annex II provided that their total value does not exceed 10% ofthe exworks price. 
+
+
+2. ThisArticle doesnot applyto value criteria setout inAnnexII.
+=== ARTICLE {'number': 'ARTICLE 3.6', 'name': 'Minimal Operations Or Processes', 'article_identifier': '28547'}
+1. Notwithstanding Article 3.4, a product shall not be considered as originating, if it has onlyundergone one or more ofthe following operations or processes: 
+
+
+(a) 	operations to ensure the preservation of products in good condition during transport and storage; 
+
+
+(b) 	freezing orthawing; 
+
+
+(c) 	packaging and repackaging; 
+
+
+(d) 	washing,cleaning,removalofdust,oxide, oil,paintorother coverings; 
+
+
+(e) 	ironing orpressing oftextilesortextile products; 
+
+
+(f) 	simple painting and polishing; 
+
+
+(g) 	husking,partialortotalbleaching,polishing,and glazing ofcerealsand rice; 
+
+
+(h) 	operationsto coloursugar orformsugar lumps; 
+
+
+(i) 	peeling and removalofstonesand shellsfromfruits,nutsand vegetables; 
+
+
+(j) 	sharpening, simple grinding or simple cutting; 
+
+
+(k) 	sifting, screening, sorting, classifying, grading, matching; 
+
+
+(l) 	simple placing in bottles, cans, flasks, bags, cases, boxes, fixing on cards or boards and allother simple packaging operations; 
+
+
+(m) 	affixing or printing marks, labels, logos and other like distinguishing signs onproductsortheir packaging; 
+
+
+(n) 	simple mixing ofproducts,whether ornot ofdifferentkinds; 
+
+
+(o) 	simple assembly of parts of articles to constitute a complete article or disassemblyofproducts into parts; 
+
+
+(p) 	slaughter ofanimals. 
+
+2. For the purpose of paragraph 1, “simple” describes activities which need neither special skills nor machines, apparatus or equipment especially produced or installed to carryout the activity. 
+
+
+3. All operations in the production of a given product carried out in a Party shall be taken into account when determining whether the working or processing undergone by that product is considered as minimal operations or processes referred to in paragraph1.
+=== ARTICLE {'number': 'ARTICLE 3.7', 'name': 'Accumulation', 'article_identifier': '28548'}
+1. Without prejudice to Article 3.2, a product originating in a Party, which is used as material in the production of a product in the other Party, shall be considered as originating in the Party where the last operations beyond those referred to in paragraph 1 of Article 3.6 have beencarried out. 
+
+
+2. A product originating in a Party, which is exported from a Party to the other Partyand does not undergo working or processing beyond those referred to inparagraph 1 of Article 3.6, shallretain its origin.
+=== ARTICLE {'number': 'ARTICLE 3.8', 'name': 'Unit Of Qualification', 'article_identifier': '28549'}
+1. For the purpose of determining the originating status, the unit of qualification of a product or material shall be considered as the basic unit and determined in accordance withthe Harmonized System. 
+
+
+2. Pursuantto paragraph1, 
+
+
+(a) 	where a set of articles is classified under a single heading or subheading in accordance with General Interpretative Rule 3 of the Harmonized System, it shallconstitute the unit ofqualification; 
+
+
+(b) 	where a consignment consists of a number of identical products classified under a single heading or subheading of the Harmonized System, each product shall be considered separately in determining whether it qualifies as anoriginating product ofa Party;and 
+
+
+(c) 	packaging shall be included with the product if it is included and classified with that product in accordance with General Interpretative Rule 5 of the Harmonized System. Packaging used for retail sale shall be considered as materials of the product in calculating the value of nonoriginating materials used in its production. 
+
+3. Packing materials and containers for shipment that are used to protect a product during transportationshallbe disregarded indetermining the origin ofthe product.
+=== ARTICLE {'number': 'ARTICLE 3.9', 'name': 'Accessories, Spare Parts And Tools', 'article_identifier': '28550'}
+1. Accessories, spare parts, tools and instruction and information material presented together and classified with the product shall be considered as part of the product inquestionprovided that: 
+
+
+(a) 	theyare invoiced together;and 
+
+
+(b) 	their quantities are considered as normal for this product. 
+2. Accessories, spare parts, tools and instruction and information material shall be considered as materials of the product in calculating the value of nonoriginating materials used in its production.
+=== ARTICLE {'number': 'ARTICLE 3.10', 'name': 'Neutral Elements', 'article_identifier': '28551'}
+When determining whether a product is an originating product, the origin of neutral elements used in the production, testing or inspection of the product but not physically incorporated into the product by themselves, shall not be taken into account. Such neutralelements include, but are not limited to the following: 
+
+
+(a) 	fuel, energy, catalysts and solvents; 
+
+
+(b) 	equipment, devices and supplies used for testing or inspecting the products; 
+
+
+(c) 	gloves,glasses,footwear,clothing,safetyequipmentand supplies; 
+
+
+(d) 	tools, dies and moulds; 
+
+
+(e) 	spare partsand materialsused inthe maintenanceofequipmentand buildings; and 
+
+
+(f) 	lubricants, greases, compounding materials and other materials used in productionor used to operateequipment and buildings.
+=== ARTICLE {'number': 'ARTICLE 3.11', 'name': 'Fungible Materials', 'article_identifier': '28552'}
+1. Where originating and nonoriginating fungible materials are used in the working or processing of a product, the determination of whether the materials used are originating maybe determined onthe basis ofan inventorymanagement system. 
+
+
+2. For the purpose of paragraph 1, “fungible materials” means interchangeable materials that are of the same kind and commercial quality, which cannot be distinguished fromone another once theyare incorporatedinto the finished product. 
+
+
+3. The inventory management system shall be based on generally accepted accounting principles applicable in the Party in which the product is manufactured and ensure that no more final products receive originating status than would have been the case if the materials had been physically segregated. A producer using such a system shall keep recordsof the operation of the systemthat are necessaryto verifycompliance withthe provisions ofthis Chapter. 
+
+
+4. For the purpose of this Article, a Party may require an inventory management systeminaccordance withthe legislationofthat Party.
+=== ARTICLE {'number': 'ARTICLE 3.12', 'name': 'Principle Of Territoriality', 'article_identifier': '28553'}
+The conditions for acquiring originating status set out in Articles 3.2 to 3.10 shall be fulfilled without anyinterruption ina Party.
+=== ARTICLE {'number': 'ARTICLE 3.13', 'name': 'Direct Transport', 'article_identifier': '28554'}
+1. Preferential tariff treatment under this Agreement shall only be granted to originating products whichare transported directly betweenthe Parties. 
+
+
+2. Notwithstanding paragraph 1, originating products which are transported through the territories of nonparties may still be considered as being transported directlybetweenthe Parties, provided that: 
+
+
+(a) 	they do not undergo operations other than unloading, reloading, or any operationconfined to preserve themingoodcondition;and 
+
+
+(b) 	theyremain under customscontrolinthose nonparties. 
+Consignments of originating products may be split up in nonparties for further transport subject to the fulfilment ofconditions listed insubparagraphs (a) and (b). 
+
+
+3. For the purpose of paragraph 1, an originating product may be transported by pipeline across territories of nonparties. 
+
+
+4. The customs authorities of the importing Party may require that the importer of the above products shall submit sufficient evidence to prove to their satisfaction that the conditions set out inparagraphs 2 and 3 have been fulfilled.
+=== ARTICLE {'number': 'ARTICLE 3.14', 'name': 'Documentary Evidence Of Origin', 'article_identifier': '28555'}
+To qualify for preferential tariff treatment under this Agreement, either of the following documentary evidences of origin shall be submitted to the customs authority ofthe importing Party: 
+
+
+(a) 	Certificate of Origin asreferred to in Article 3.15;or 
+
+
+(b) 	anOrigin DeclarationbyanApproved Exporterasreferred toinArticle 3.16.
+=== ARTICLE {'number': 'ARTICLE 3.15', 'name': 'Certificate Of Origin', 'article_identifier': '28556'}
+1. A Certificate of Origin shall be issued by the authorised body of the exporting Party. 
+
+
+2. The Certificate of Origin shall be issued before or at the time of exportation whenever the products to be exported can be considered originating in that Partysubject to the provisions of this Chapter. The exporter or, in accordance with the domestic legislation, his authorised representative shall submit a written application for the Certificate of Origin together with appropriate supporting documents proving that the productsto be exported qualifyfor the issuance of a Certificate ofOrigin. 
+
+
+3. In exceptional cases where a Certificate of Origin has not been issued before or at the time of exportation, the Certificate of Origin may be issued retrospectively bearing the remark “ISSUED RETROSPECTIVELY”. 
+
+
+4. The Certificate of Origin, based on the formats as set out in Annex III shall be completed in English and duly signed and stamped. A Certificate of Origin shall be valid onlywithintwelve months fromthe date of its issuance. 
+
+
+5. For cases of theft, loss or accidental destruction of a Certificate of Origin, the exporter or producer may make a written request to the authorised bodies of the exporting Party for issuing a certified copy, provided that the original copy previously issued has been verified not to be used. The certified copy shall bear the words either “CERTIFIED TRUE COPY ofthe originalCertificate ofOrigin number ___ dated ___” or “DUPLICATE” together with the reference number and the date of issuance of the original Certificate of Origin. The certified copy shall be valid during the term of validityofthe originalCertificate ofOrigin. 
+
+
+6. Certificates of Origin which are submitted to the customs authority of the importing Partyafter the validity maybe accepted when failure to observe the time limit is due to force majeure or other valid causes beyond the control of the exporter or importer.
+=== ARTICLE {'number': 'ARTICLE 3.16', 'name': 'Origin Declaration By Approved Exporter', 'article_identifier': '28557'}
+1. A Party may implement an Approved Exporter system under this Agreement, which allows the Approved Exporter to complete an Origin Declaration. The Approved Exporter shall be approved and administered by the exporting Party in accordance with its domestic legislation. 
+
+
+2. An Approved Exporter shall complete the Origin Declaration according to the text as provided for in Annex IV. The Origin Declaration shall contain the registration number of the Approved Exporter and the serial number of the Origin Declaration. An Origin Declaration shall be produced in accordance with the laws and regulations of the exporting Partyby an Approved Exporter bytyping, stamping or printing onthe invoice or other commercial documents, as deemed valid by the importing customs administration, which describe the product concerned in such a detail so as to render it identifiable. 
+
+
+3. AnOrigin Declarationshallbe valid onlywithin twelve monthsfromthe dateof the issuance of the invoice or other commercial documents, as deemed valid by the importing customs administration. 
+
+
+4. Before 31st of March each year, the exporting Party shall provide the importing Party with information on the name and registration number of each approved exporter, along with corresponding serial numbers of all the Origin Declaration made in the preceding year. If any discrepancies are discovered because of this information a Party shall inform the other Party of such discrepancies for further investigation or clarification on behalf of that Party. To facilitate the communication of the information above, the Parties shall work towards establishing an electronic systemon the exchange ofthat information.
+=== ARTICLE {'number': 'ARTICLE 3.17', 'name': 'Retention Of Origin Documents', 'article_identifier': '28558'}
+1. Each Party shall require its producers, exporters and importers to retain documents related to the origin of the products as well as the fulfilment of the other requirementsofthis Chapter for at least three years. 
+
+
+2. Each Party shall require that its authorised bodies retain copies of Certificates of Originand other documentaryevidence oforigin for at least three years. 
+
+
+3. Exporters and importers benefitting from this Agreement shall, within the framework of this Agreement and subject to domestic legislation of the exporting Party and importing Partyrespectively, complywiththe requirements ofthat Partyand submit, at their request, supporting documents regarding the fulfilment of the requirements of this Chapter.
+=== ARTICLE {'number': 'ARTICLE 3.18', 'name': 'Requirements Regarding Importation', 'article_identifier': '28559'}
+1. Each Party shall grant preferential tariff treatment in accordance with this Agreement to originating products imported from the other Party on the basis of a documentaryevidence oforigin as defined in Article 3.14. 
+
+
+2. In order to obtain preferential tariff treatment, the importer shall, in accordance with the procedures applicable in the importing Party, request preferential tariff treatment at the time of importation of an originating product and submit the documentary evidence of origin specified in Article 3.14, as well as other documentary evidence uponrequirements ofthe customs authorities ofthe importing Party. 
+
+
+3. For the purpose of paragraph 2, a documentary evidence of origin shall be submitted to the customs authorities of the importing Party within 12 months from the date of issuance. 
+
+
+4. If the importer is not in possession of a documentary evidence of origin at the time of importation, the importer may, in accordance with the domestic legislation of 
+the importing Party, make a claim for preferential tariff treatment at the time of importation and present the documentary evidence of origin and, if required, other documentation relating to the importation within a period as specified in the legislation of the importing Party. The customs authorities of the importing Party shall complete the import formalities inaccordance withthe domestic legislation.
+=== ARTICLE {'number': 'ARTICLE 3.19', 'name': 'Waiver Of Documentary Evidence Of Origin', 'article_identifier': '28560'}
+1. For the purpose of granting preferential tariff treatment under this Chapter, a Party may waive the requirements for the presentation of a documentary evidence of originand grant preferentialtarifftreatment to: 
+
+
+(a) 	anyconsignmentoforiginating productsofa value notexceeding US$ 600 or its equivalent amount inthe Party’s currency;or 
+
+
+(b) 	otheroriginating productsasprovided under itsdomestic legislation. 
+2. Waivers provided for in paragraph 1 shall not be applicable when it is established by the customs authorities of the importing Party that the importation forms part of a series of importations that may reasonably be considered to have been undertaken or arranged for the purpose of avoiding the submission of a formal documentaryevidence oforigin.
+=== ARTICLE {'number': 'ARTICLE 3.20', 'name': 'Origin Verification', 'article_identifier': '28561'}
+1. To ensure the effective application of this Chapter, the Parties shall assist each other to carryout verification onthe authenticityof the documentaryevidence of origin, the correctness of the information given therein, the originating status of the products concerned, and the fulfilment ofanyother requirements under this Chapter. 
+
+
+2. The competent governmental authorities of the exporting Party shall carry out verifications referred to in paragraph 1 upon request of the customs authority of the importing Party. 
+
+
+3. The importing Party shall submit the verification request to the exporting Party within 36 months from the completion or issuance of the documentary evidence of origin. The exporting Party is not obliged to conduct verifications based on verification requests received afterthat deadline. 
+
+
+4. The verification request shall include a copy of the documentary evidence of origin and, if appropriate, any other document or information giving reason to believe that the documentary evidence of origin is invalid. The reasons for the request shall be specified. 
+
+
+5. The customs authorities of the importing Party may, in accordance with their domestic legislation, suspend preferential tariff treatment or require payment of a 
+
+deposit equivalent to the full amount of duties on a product covered by a documentary evidence oforiginuntilthe verificationprocedure has beenaccomplished. 
+
+6. The competent governmental authorities of the exporting Party may request evidence, carry out inspections at exporter’s or producer’s premises, check the exporter’s and the producer’s accounts and take other appropriate measures to verify compliance withthis Chapter. 
+
+
+7. The requested Party shall notify the requesting Party of the results and findings of the verification within six months fromthe dateof the verification request, unless the Parties agree upon another time frame on justified grounds. If the requesting Party receives no replywithin six months or another time frame as agreed uponbythe Parties, or if the reply does not state clearly whether the documentaryevidence of origin is valid or whether a product is an originating product, the requesting Party may deny preferential tariff treatment to the product covered by the documentary evidence of originconcerned.
+=== ARTICLE {'number': 'ARTICLE 3.21', 'name': 'Denial Of Preferential Tariff Treatment', 'article_identifier': '28562'}
+Except as otherwise provided in this Chapter, the importing Party may deny a claim for preferentialtariff treatment, if: 
+
+a) 	the documentary evidence of origin does not meet the requirement of this Chapter; 
+
+b) 	the compliance with Article 3.13 is not proven; 
+
+c) 	it is proven based on the results of the origin verification in the exporting Partythat the documentaryevidence oforigin is not authentic or not accurate; 
+
+d) 	ina case according toparagraph7 ofArticle 3.20; or 
+
+e ) 	the productsdonot meetthe requirementsofthisChapter.
+=== ARTICLE {'number': 'ARTICLE 3.22', 'name': 'Notifications', 'article_identifier': '28563'}
+1. Prior to the entry into force of this Agreement, the Parties shall provide each other with: 
+
+a) 	for the purpose of Article 3.15, the names and addresses of the authorised bodies issuing the certificate of origin and specimen impressions of official seals used by such authorised bodies. Any change in names, addresses, or official seals shall be promptly notified to the customs administration of the importing Party; 
+
+b) 	for the purpose of Article 3.16, the names, registration numbers and contact details of the Approved Exporters. Any change in the information above shall be advised promptlyto the other Party; 
+
+
+(c) 	the addresses of the competent governmental authorities of the Parties responsible for verifications referred to in Article 3.20 and other issues related to the implementationor applicationofthis Chapter; and 
+
+
+(d) 	information on the interpretation, application and administration of this Chapter.
+=== ARTICLE {'number': 'ARTICLE 3.23', 'name': 'Confidentiality', 'article_identifier': '28564'}
+Subject to the domestic legislation of each Party, all information which is specified by a Party as confidential or provided on a confidential basis shall not be disclosed without the explicit permissionofthe personor authorityproviding it.
+=== ARTICLE {'number': 'ARTICLE 3.24', 'name': 'Subcommittee On The Implementation Of Origin Matters', 'article_identifier': '28565'}
+1. The SubCommittee on the Implementation of Origin Matters (hereinafter referred to in this Article as the “SubCommittee”) consisting of representatives of both Parties is herebyestablished under the Joint Committee. 
+
+
+2. The SubCommitteeshalldealwiththe following issues: 
+
+
+(a) 	monitorand reviewofmeasurestakenand implementationofcommitments; 
+
+
+(b) 	exchange ofinformationand review developments; 
+
+
+(c) 	other mattersasthe Partiesmayagree; 
+
+
+(d) 	other matters that are referred to the SubCommittee by the Joint Committee; and 
+
+
+(e) 	makerecommendationsand report tothe JointCommitteeasnecessary. 
+
+3. The SubCommittee shall be cochaired by representatives of the customs administrations of the Parties. The host Party shall act as the chair. The chairperson shall prepare a provisional agenda for each meeting of the SubCommittee in consultationwiththe other Partyand forward it to the other Partybefore the meeting. 
+
+
+4. The SubCommittee shall meet as often as necessary upon instruction of the Joint Committee or as agreed by the Parties. The meeting shall take place either in China or Switzerland as mutuallyagreed by the Parties. 
+
+
+5. The SubCommitteeshallprepare a writtenreport onthe resultsofeachmeeting.
+=== ARTICLE {'number': 'ARTICLE 3.25', 'name': 'Products Transported En Route After Exportation', 'article_identifier': '28566'}
+The provisions of this Chapter may be applied to products which, on the date of entry into force of this Agreement, are transported en route after exportation, including transit, before the arrivalin the other Party. For suchproducts, documentaryevidence of origin may be completed retrospectively up to six months after the entry into force of this Agreement, provided that the provisions of this Chapter and in particular Article 
+
+3.13 have been fulfilled.

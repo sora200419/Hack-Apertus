@@ -1,0 +1,142 @@
+{
+  "product_id": "aareventil-rv50",
+  "name": "Control valve RV-50 DN50 PN40",
+  "description": "Ventilwerk Aare-Fiktiv AG (fictional demo company): globe control valve DN50 PN40 with pneumatic diaphragm actuator and positioner, shipped by sea via Rotterdam. Synthetic BOM; several lines still lack an HS code and the transit makes direct transport evidence necessary.",
+  "hs6": "848180",
+  "ex_works_chf": 3480.0,
+  "exporter_country": "CH",
+  "processing": [
+    "Mechanical machining of body and bonnet (Drehen, Bohren, Gewinde)",
+    "Stellite hard-facing of the seat and lapping of plug and seat",
+    "Assembly of valve, actuator and positioner",
+    "Hydrostatic shell test 60 bar and seat leakage test class IV",
+    "Painting, labelling and packing"
+  ],
+  "bom": [
+    {
+      "line_id": "L01",
+      "description": "Ventilgehäuse GP240GH Stahlguss DN50, roh",
+      "hs6": "848190",
+      "origin_country": "CN",
+      "value_chf": 420.0,
+      "supplier": "Taiyuan Xugou Precision Castings Co.",
+      "originating_override": null
+    },
+    {
+      "line_id": "L02",
+      "description": "Kegel und Sitz (trim) 1.4571, Rohteile",
+      "hs6": "848190",
+      "origin_country": "CH",
+      "value_chf": 380.0,
+      "supplier": "Drehteile Tösstal-Fiktiv AG",
+      "originating_override": null
+    },
+    {
+      "line_id": "L03",
+      "description": "Pneumatischer Membranantrieb 250 cm²",
+      "hs6": null,
+      "origin_country": "DE",
+      "value_chf": 690.0,
+      "supplier": "Antriebstechnik Hegau-Fiktiv GmbH",
+      "originating_override": null
+    },
+    {
+      "line_id": "L04",
+      "description": "Elektropneumatischer Stellungsregler 4-20 mA HART",
+      "hs6": "903281",
+      "origin_country": "US",
+      "value_chf": 540.0,
+      "supplier": "Fictional Controls Inc.",
+      "originating_override": null
+    },
+    {
+      "line_id": "L05",
+      "description": "Ventilspindel 1.4122, geschliffen",
+      "hs6": "848190",
+      "origin_country": "CH",
+      "value_chf": 85.0,
+      "supplier": "Drehteile Tösstal-Fiktiv AG",
+      "originating_override": null
+    },
+    {
+      "line_id": "L06",
+      "description": "PTFE-Packungssatz V-Ring",
+      "hs6": null,
+      "origin_country": "IT",
+      "value_chf": 46.0,
+      "supplier": "Tenute Industriali Bergamo-Fittizie S.r.l.",
+      "originating_override": null
+    },
+    {
+      "line_id": "L07",
+      "description": "Spiraldichtung DN50 PN40",
+      "hs6": "848410",
+      "origin_country": "DE",
+      "value_chf": 22.0,
+      "supplier": "Dichtungstechnik Neckar-Fiktiv GmbH",
+      "originating_override": null
+    },
+    {
+      "line_id": "L08",
+      "description": "Stiftschrauben und Muttern 25CrMo4",
+      "hs6": "731815",
+      "origin_country": "DE",
+      "value_chf": 31.0,
+      "supplier": "Schraubenhandel Bodensee-Fiktiv GmbH",
+      "originating_override": null
+    },
+    {
+      "line_id": "L09",
+      "description": "Joch / yoke, Stahlguss",
+      "hs6": null,
+      "origin_country": "CH",
+      "value_chf": 160.0,
+      "supplier": "Giesserei Emmental-Fiktiv AG",
+      "originating_override": null
+    },
+    {
+      "line_id": "L10",
+      "description": "Grenzsignalgeber (limit switch box)",
+      "hs6": "853650",
+      "origin_country": "DE",
+      "value_chf": 210.0,
+      "supplier": "Antriebstechnik Hegau-Fiktiv GmbH",
+      "originating_override": null
+    },
+    {
+      "line_id": "L11",
+      "description": "Druckluftverschraubungen Messing",
+      "hs6": "741220",
+      "origin_country": "IT",
+      "value_chf": 18.4,
+      "supplier": "Raccorderia Bresciana-Fittizia S.r.l.",
+      "originating_override": null
+    },
+    {
+      "line_id": "L12",
+      "description": "Typenschild Edelstahl mit CE-Kennzeichnung",
+      "hs6": "831000",
+      "origin_country": "CH",
+      "value_chf": 5.2,
+      "supplier": "Gravuratelier Thur-Fiktiv GmbH",
+      "originating_override": null
+    },
+    {
+      "line_id": "L13",
+      "description": "Epoxy-Grundierung und Decklack",
+      "hs6": "320890",
+      "origin_country": "CH",
+      "value_chf": 14.0,
+      "supplier": "Farbwerk Glatt-Fiktiv AG",
+      "originating_override": null
+    }
+  ],
+  "shipment": {
+    "destination": "CN",
+    "transit_countries": [
+      "NL"
+    ],
+    "transshipment_or_storage_in_transit": true,
+    "order_quantity": 12
+  }
+}

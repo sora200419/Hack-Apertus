@@ -1,0 +1,296 @@
+{
+  "pack_id": "test-basic",
+  "agreement": "Synthetic test agreement",
+  "version_note": "SYNTHETIC TEST FIXTURE - not legal text",
+  "general": {
+    "tolerance_pct": 10.0,
+    "tolerance_applies_to": [
+      "CC",
+      "CTH",
+      "CTSH"
+    ],
+    "tolerance_text": "SYNTHETIC TEST FIXTURE - not legal text",
+    "insufficient_operations": [
+      "packing",
+      "repacking",
+      "labelling",
+      "affixing marks",
+      "simple assembly",
+      "washing",
+      "sorting"
+    ],
+    "insufficient_operations_text": "SYNTHETIC TEST FIXTURE - not legal text",
+    "cumulation_parties": [
+      "CH",
+      "CN"
+    ],
+    "direct_transport_text": "SYNTHETIC TEST FIXTURE - not legal text",
+    "max_items_per_certificate": null,
+    "source": "tests/fixtures (synthetic)",
+    "verified": false
+  },
+  "rules": [
+    {
+      "rule_id": "TEST-CH84-CTH",
+      "hs_scope": [
+        "84"
+      ],
+      "alternatives": [
+        [
+          {
+            "kind": "CTH"
+          }
+        ]
+      ],
+      "text": "SYNTHETIC TEST FIXTURE - not legal text: TEST-CH84-CTH",
+      "source": "tests/fixtures (synthetic)",
+      "verified": false
+    },
+    {
+      "rule_id": "TEST-8471-CTH-OR-MAXNOM50",
+      "hs_scope": [
+        "8471"
+      ],
+      "alternatives": [
+        [
+          {
+            "kind": "CTH"
+          }
+        ],
+        [
+          {
+            "kind": "MAXNOM",
+            "max_nom_pct": 50
+          }
+        ]
+      ],
+      "text": "SYNTHETIC TEST FIXTURE - not legal text: TEST-8471-CTH-OR-MAXNOM50",
+      "source": "tests/fixtures (synthetic)",
+      "verified": false
+    },
+    {
+      "rule_id": "TEST-847130-CTSH-AND-MAXNOM40",
+      "hs_scope": [
+        "847130"
+      ],
+      "alternatives": [
+        [
+          {
+            "kind": "CTSH"
+          },
+          {
+            "kind": "MAXNOM",
+            "max_nom_pct": 40
+          }
+        ]
+      ],
+      "text": "SYNTHETIC TEST FIXTURE - not legal text: TEST-847130-CTSH-AND-MAXNOM40",
+      "source": "tests/fixtures (synthetic)",
+      "verified": true
+    },
+    {
+      "rule_id": "TEST-CH85-CC",
+      "hs_scope": [
+        "85"
+      ],
+      "alternatives": [
+        [
+          {
+            "kind": "CC"
+          }
+        ]
+      ],
+      "text": "SYNTHETIC TEST FIXTURE - not legal text: TEST-CH85-CC",
+      "source": "tests/fixtures (synthetic)",
+      "verified": false
+    },
+    {
+      "rule_id": "TEST-9101-CTH-EXCEPT-9114",
+      "hs_scope": [
+        "9101",
+        "9102"
+      ],
+      "alternatives": [
+        [
+          {
+            "kind": "CTH",
+            "except_from": [
+              "9114"
+            ]
+          }
+        ]
+      ],
+      "text": "SYNTHETIC TEST FIXTURE - not legal text: TEST-9101-CTH-EXCEPT-9114",
+      "source": "tests/fixtures (synthetic)",
+      "verified": false
+    },
+    {
+      "rule_id": "TEST-CH01-WO",
+      "hs_scope": [
+        "01"
+      ],
+      "alternatives": [
+        [
+          {
+            "kind": "WO"
+          }
+        ]
+      ],
+      "text": "SYNTHETIC TEST FIXTURE - not legal text: TEST-CH01-WO",
+      "source": "tests/fixtures (synthetic)",
+      "verified": false
+    },
+    {
+      "rule_id": "TEST-3004-SPECIFIC-OR-MAXNOM50",
+      "hs_scope": [
+        "3004"
+      ],
+      "alternatives": [
+        [
+          {
+            "kind": "SPECIFIC",
+            "note": "synthetic specific process"
+          }
+        ],
+        [
+          {
+            "kind": "MAXNOM",
+            "max_nom_pct": 50
+          }
+        ]
+      ],
+      "text": "SYNTHETIC TEST FIXTURE - not legal text: TEST-3004-SPECIFIC-OR-MAXNOM50",
+      "source": "tests/fixtures (synthetic)",
+      "verified": false
+    },
+    {
+      "rule_id": "TEST-CH90-MAXNOM50",
+      "hs_scope": [
+        "90"
+      ],
+      "alternatives": [
+        [
+          {
+            "kind": "MAXNOM",
+            "max_nom_pct": 50
+          }
+        ]
+      ],
+      "text": "SYNTHETIC TEST FIXTURE - not legal text: TEST-CH90-MAXNOM50",
+      "source": "tests/fixtures (synthetic)",
+      "verified": false
+    },
+    {
+      "rule_id": "TEST-7308-FIRST",
+      "hs_scope": [
+        "7308"
+      ],
+      "alternatives": [
+        [
+          {
+            "kind": "CTH"
+          }
+        ]
+      ],
+      "text": "SYNTHETIC TEST FIXTURE - not legal text: TEST-7308-FIRST",
+      "source": "tests/fixtures (synthetic)",
+      "verified": false
+    },
+    {
+      "rule_id": "TEST-7308-SECOND",
+      "hs_scope": [
+        "7308"
+      ],
+      "alternatives": [
+        [
+          {
+            "kind": "MAXNOM",
+            "max_nom_pct": 40
+          }
+        ]
+      ],
+      "text": "SYNTHETIC TEST FIXTURE - not legal text: TEST-7308-SECOND",
+      "source": "tests/fixtures (synthetic)",
+      "verified": false
+    },
+    {
+      "rule_id": "TEST-9403-CC-OR-CTH-MAXNOM30",
+      "hs_scope": [
+        "9403"
+      ],
+      "alternatives": [
+        [
+          {
+            "kind": "CC"
+          }
+        ],
+        [
+          {
+            "kind": "CTH"
+          },
+          {
+            "kind": "MAXNOM",
+            "max_nom_pct": 30
+          }
+        ]
+      ],
+      "text": "SYNTHETIC TEST FIXTURE - not legal text: TEST-9403-CC-OR-CTH-MAXNOM30",
+      "source": "tests/fixtures (synthetic)",
+      "verified": false
+    },
+    {
+      "rule_id": "TEST-8501-CTSH",
+      "hs_scope": [
+        "8501"
+      ],
+      "alternatives": [
+        [
+          {
+            "kind": "CTSH"
+          }
+        ]
+      ],
+      "text": "SYNTHETIC TEST FIXTURE - not legal text: TEST-8501-CTSH",
+      "source": "tests/fixtures (synthetic)",
+      "verified": false
+    },
+    {
+      "rule_id": "TEST-CH02-SPECIFIC",
+      "hs_scope": [
+        "02"
+      ],
+      "alternatives": [
+        [
+          {
+            "kind": "SPECIFIC"
+          }
+        ]
+      ],
+      "text": "SYNTHETIC TEST FIXTURE - not legal text: TEST-CH02-SPECIFIC",
+      "source": "tests/fixtures (synthetic)",
+      "verified": false
+    },
+    {
+      "rule_id": "TEST-CH39-WO-OR-MAXNOM20",
+      "hs_scope": [
+        "39"
+      ],
+      "alternatives": [
+        [
+          {
+            "kind": "WO"
+          }
+        ],
+        [
+          {
+            "kind": "MAXNOM",
+            "max_nom_pct": 20
+          }
+        ]
+      ],
+      "text": "SYNTHETIC TEST FIXTURE - not legal text: TEST-CH39-WO-OR-MAXNOM20",
+      "source": "tests/fixtures (synthetic)",
+      "verified": false
+    }
+  ]
+}

@@ -1,0 +1,130 @@
+{
+  "product_id": "lacfictif-auto40",
+  "name": "Automatic wristwatch LF Automatique 40",
+  "description": "Montres Lac-Fictif SA (fictional demo company, Jura arc): mechanical self-winding wristwatch, 316L steel case 40 mm, calf-leather strap. Synthetic BOM; shows bilateral cumulation (CN parts count as originating) and a line to classify (sapphire crystal).",
+  "hs6": "910221",
+  "ex_works_chf": 1450.0,
+  "exporter_country": "CH",
+  "processing": [
+    "Emboîtage : pose du cadran et des aiguilles, emboîtage du mouvement (casing-up)",
+    "Réglage et contrôle chronométrique sur 7 jours en 5 positions",
+    "Contrôle d'étanchéité 10 bar et contrôle final",
+    "Montage du bracelet et emballage"
+  ],
+  "bom": [
+    {
+      "line_id": "L01",
+      "description": "Mouvement automatique calibre LF-24, assemblé et réglé",
+      "hs6": "910820",
+      "origin_country": "CH",
+      "value_chf": 310.0,
+      "supplier": "Manufacture de Calibres Jura-Fictif SA",
+      "originating_override": null
+    },
+    {
+      "line_id": "L02",
+      "description": "Boîte acier 316L 40 mm, fond vissé saphir",
+      "hs6": "911120",
+      "origin_country": "CH",
+      "value_chf": 165.0,
+      "supplier": "Boîtiers du Doubs-Fictif SA",
+      "originating_override": null
+    },
+    {
+      "line_id": "L03",
+      "description": "Glace saphir bombée, traitement antireflet",
+      "hs6": null,
+      "origin_country": "CN",
+      "value_chf": 28.0,
+      "supplier": "Shenzhen Xugou Crystal Co.",
+      "originating_override": null
+    },
+    {
+      "line_id": "L04",
+      "description": "Cadran laiton galvanique, index appliqués",
+      "hs6": "911430",
+      "origin_country": "CH",
+      "value_chf": 62.0,
+      "supplier": "Cadranerie des Franches-Fictives SA",
+      "originating_override": null
+    },
+    {
+      "line_id": "L05",
+      "description": "Aiguilles heures/minutes/secondes, Super-LumiNova",
+      "hs6": "911490",
+      "origin_country": "CH",
+      "value_chf": 18.0,
+      "supplier": "Aiguilles Vallon-Fictif Sàrl",
+      "originating_override": null
+    },
+    {
+      "line_id": "L06",
+      "description": "Couronne vissée acier avec joints",
+      "hs6": "911490",
+      "origin_country": "CH",
+      "value_chf": 14.5,
+      "supplier": "Boîtiers du Doubs-Fictif SA",
+      "originating_override": null
+    },
+    {
+      "line_id": "L07",
+      "description": "Bracelet cuir de veau, cousu main, 20 mm",
+      "hs6": "911390",
+      "origin_country": "IT",
+      "value_chf": 38.0,
+      "supplier": "Pelletteria Brenta-Fittizia S.r.l.",
+      "originating_override": null
+    },
+    {
+      "line_id": "L08",
+      "description": "Boucle ardillon acier 18 mm",
+      "hs6": "911320",
+      "origin_country": "CN",
+      "value_chf": 6.8,
+      "supplier": "Dongguan Xugou Metal Works",
+      "originating_override": null
+    },
+    {
+      "line_id": "L09",
+      "description": "Jeu de joints d'étanchéité (fond, couronne, glace)",
+      "hs6": null,
+      "origin_country": "DE",
+      "value_chf": 2.4,
+      "supplier": "Dichtungstechnik Neckar-Fiktiv GmbH",
+      "originating_override": null
+    },
+    {
+      "line_id": "L10",
+      "description": "Masse oscillante gravée au laser",
+      "hs6": "911490",
+      "origin_country": "CH",
+      "value_chf": 22.0,
+      "supplier": "Manufacture de Calibres Jura-Fictif SA",
+      "originating_override": null
+    },
+    {
+      "line_id": "L11",
+      "description": "Écrin de présentation en bois avec coussin",
+      "hs6": null,
+      "origin_country": "CN",
+      "value_chf": 12.0,
+      "supplier": "Xiamen Xugou Packaging Co.",
+      "originating_override": null
+    },
+    {
+      "line_id": "L12",
+      "description": "Notice et carte de garantie imprimées",
+      "hs6": "490199",
+      "origin_country": "CH",
+      "value_chf": 1.2,
+      "supplier": "Imprimerie Ajoie-Fictive SA",
+      "originating_override": null
+    }
+  ],
+  "shipment": {
+    "destination": "CN",
+    "transit_countries": [],
+    "transshipment_or_storage_in_transit": false,
+    "order_quantity": 200
+  }
+}
